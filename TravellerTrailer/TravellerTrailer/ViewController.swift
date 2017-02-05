@@ -29,11 +29,66 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    
+}
+
+
+
+
+
+class locationResultPage: UIViewController {
     
 }
 
 
-class locationResultPage: UIViewController {
+
+
+
+class movieResultPage: UIViewController {
+    
+}
+
+
+
+
+
+class userReviewInputPage: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0 {
+            return "영화 제목 및 지역 등록"
+        } else if section == 1 {
+            return "영화와 지역에 대한 리뷰"
+        } else {
+            return "사진 등록 (선택)"
+        }
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return 3
+        } else {
+            return 1
+        }
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        let cell: MyCustomeTableViewCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "reviewInfoTypingCell", for: indexPath) as! MyCustomeTableViewCell
+        
+        return cell
+        
+    }
+    
     
 }

@@ -25,5 +25,7 @@ class MyCustomeTableViewCell: UITableViewCell {
     @IBOutlet var movieTitleHomeLabel: UILabel!
     @IBOutlet weak var locationHomeLabel: UILabel!
     
+    
+    @IBOutlet weak var whatToWriteForReviewLabel: UILabel!
 
 }

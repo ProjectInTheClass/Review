@@ -104,11 +104,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="앱 이름" id="mLu-5k-8Pb">
-                        <barButtonItem key="rightBarButtonItem" title="My Page" id="ko0-by-7pw">
-                            <connections>
-                                <segue destination="HUJ-wt-NTU" kind="show" id="ZdL-kP-Ph5"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="My Page" id="ko0-by-7pw"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Cvs-fy-5H2" id="9rm-Cj-4cy"/>
@@ -127,10 +123,67 @@
             </objects>
             <point key="canvasLocation" x="450.39999999999998" y="187.55622188905548"/>
         </scene>
+        <!--reviewInputPage-->
+        <scene sceneID="rQR-9C-KHX">
+            <objects>
+                <viewController title="reviewInputPage" id="Im1-0q-8MZ" customClass="userReviewInputPage" customModule="TravellerTrailer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hkt-Gb-ZcM"/>
+                        <viewControllerLayoutGuide type="bottom" id="r2r-Ub-Kca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r7T-gv-j7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-Ap-yak">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewInfoTypingCell" id="YYv-Ui-YDC" customClass="MyCustomeTableViewCell" customModule="TravellerTrailer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YYv-Ui-YDC" id="1ZK-ln-iEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiC-j1-bb8">
+                                                    <rect key="frame" x="34" y="8" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="whatToWriteForReviewLabel" destination="AiC-j1-bb8" id="2Cs-RJ-9IO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Im1-0q-8MZ" id="9tV-zk-XIA"/>
+                                    <outlet property="delegate" destination="Im1-0q-8MZ" id="OKd-z9-nnp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r2r-Ub-Kca" firstAttribute="top" secondItem="qBd-Ap-yak" secondAttribute="bottom" id="8D4-UZ-f5Z"/>
+                            <constraint firstItem="qBd-Ap-yak" firstAttribute="leading" secondItem="r7T-gv-j7K" secondAttribute="leading" id="Lfl-Gj-ZO6"/>
+                            <constraint firstAttribute="trailing" secondItem="qBd-Ap-yak" secondAttribute="trailing" id="qnn-gY-RDi"/>
+                            <constraint firstItem="qBd-Ap-yak" firstAttribute="top" secondItem="Hkt-Gb-ZcM" secondAttribute="bottom" id="yTk-hO-GuP"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lR3-Qh-4GO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="1371.3643178410796"/>
+        </scene>
         <!--movieResultPage-->
         <scene sceneID="KEL-DM-JN2">
             <objects>
-                <viewController title="movieResultPage" id="oNy-tE-0g9" sceneMemberID="viewController">
+                <viewController title="movieResultPage" id="oNy-tE-0g9" customClass="movieResultPage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqf-Bz-OaK"/>
                         <viewControllerLayoutGuide type="bottom" id="nYg-l4-yuK"/>
