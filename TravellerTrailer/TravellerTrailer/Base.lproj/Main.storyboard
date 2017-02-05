@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UtT-Zc-lDu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--homePageView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="homePageView" id="BYZ-38-t0r" customClass="ViewController" customModule="TravellerTrailer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="관심 지역 혹은 영화 제목을 검색해보세요" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-vB-42C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KLe-DS-Gdi"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="31u-L7-gFT" customClass="homePage">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="showReviewListCell" rowHeight="170" id="XAp-j7-lBL" customClass="MyCustomeTableViewCell" customModule="TravellerTrailer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAp-j7-lBL" id="TMB-nB-Ljj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oml-0K-y8s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8D-4M-Ofd">
+                                                    <rect key="frame" x="158" y="26" width="59.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="m8S-oW-6NZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-p5-axd">
+                                                    <rect key="frame" x="152" y="74" width="71" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5Xy-lX-hA7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t8D-4M-Ofd" firstAttribute="centerX" secondItem="TMB-nB-Ljj" secondAttribute="centerX" id="9oB-Z6-MSj"/>
+                                                <constraint firstAttribute="bottom" secondItem="oml-0K-y8s" secondAttribute="bottom" id="Eat-wD-FPs"/>
+                                                <constraint firstItem="EhA-p5-axd" firstAttribute="centerX" secondItem="TMB-nB-Ljj" secondAttribute="centerX" id="KnN-ud-Csc"/>
+                                                <constraint firstItem="oml-0K-y8s" firstAttribute="leading" secondItem="TMB-nB-Ljj" secondAttribute="leading" id="PUD-y3-MmJ"/>
+                                                <constraint firstItem="t8D-4M-Ofd" firstAttribute="top" secondItem="TMB-nB-Ljj" secondAttribute="topMargin" constant="18" id="cjO-Vd-Bc9"/>
+                                                <constraint firstItem="EhA-p5-axd" firstAttribute="top" secondItem="t8D-4M-Ofd" secondAttribute="bottom" constant="27" id="lCI-93-WOk"/>
+                                                <constraint firstItem="oml-0K-y8s" firstAttribute="top" secondItem="TMB-nB-Ljj" secondAttribute="top" id="qg0-ix-ZBe"/>
+                                                <constraint firstAttribute="trailing" secondItem="oml-0K-y8s" secondAttribute="trailing" id="y7F-iz-MaT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationHomeLabel" destination="EhA-p5-axd" id="iWf-I1-LoC"/>
+                                            <outlet property="movieTitleHomeLabel" destination="t8D-4M-Ofd" id="f1I-23-5ed"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Db5-um-FA6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LfO-Zw-7Kt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="31u-L7-gFT" secondAttribute="trailing" id="3i5-Tr-9aW"/>
+                            <constraint firstItem="b9j-vB-42C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7tq-hA-bXk"/>
+                            <constraint firstItem="31u-L7-gFT" firstAttribute="top" secondItem="b9j-vB-42C" secondAttribute="bottom" id="8MJ-Og-V86"/>
+                            <constraint firstItem="31u-L7-gFT" firstAttribute="top" secondItem="b9j-vB-42C" secondAttribute="bottom" id="9ht-2t-0D1"/>
+                            <constraint firstItem="b9j-vB-42C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fig-XV-6dY"/>
+                            <constraint firstItem="31u-L7-gFT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NRd-Ic-wdQ"/>
+                            <constraint firstItem="31u-L7-gFT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5M-dk-yjS"/>
+                            <constraint firstItem="b9j-vB-42C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XZw-Pd-r1N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="31u-L7-gFT" secondAttribute="bottom" id="caj-YG-lUZ"/>
+                            <constraint firstAttribute="trailing" secondItem="b9j-vB-42C" secondAttribute="trailing" id="yrc-Yr-vZ6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="앱 이름" id="mLu-5k-8Pb">
+                        <barButtonItem key="rightBarButtonItem" title="My Page" id="ko0-by-7pw">
+                            <connections>
+                                <segue destination="HUJ-wt-NTU" kind="show" id="ZdL-kP-Ph5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Cvs-fy-5H2" id="9rm-Cj-4cy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Cvs-fy-5H2">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="FFp-TK-kBH"/>
+                        <outlet property="searchBar" destination="b9j-vB-42C" id="TIH-zz-3MY"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="wK2-lk-31o"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="gHD-oZ-LDN"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="xwY-22-pmR"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="450.39999999999998" y="187.55622188905548"/>
+        </scene>
+        <!--movieResultPage-->
+        <scene sceneID="KEL-DM-JN2">
+            <objects>
+                <viewController title="movieResultPage" id="oNy-tE-0g9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aqf-Bz-OaK"/>
+                        <viewControllerLayoutGuide type="bottom" id="nYg-l4-yuK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cvl-GR-eGS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tet-T4-Pdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="531"/>
+        </scene>
+        <!--myPageSetting-->
+        <scene sceneID="Za0-6L-aTS">
+            <objects>
+                <viewController title="myPageSetting" id="HUJ-wt-NTU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIU-DW-QJa"/>
+                        <viewControllerLayoutGuide type="bottom" id="84l-nE-eAC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDM-Ng-H3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="328-pB-2R9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-738"/>
+        </scene>
+        <!--locationResultPage-->
+        <scene sceneID="XGZ-gY-oX6">
+            <objects>
+                <viewController title="locationResultPage" id="QKv-yW-sRL" customClass="locationResultPage" customModule="TravellerTrailer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qNx-hv-VnM"/>
+                        <viewControllerLayoutGuide type="bottom" id="bce-La-YkR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="68i-LB-250">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QI0-kI-DMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.5999999999999" y="-188.45577211394306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KVK-K9-7xJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UtT-Zc-lDu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DoY-lm-hD7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WyR-w3-Kov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jye-Hp-mhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-350" y="188"/>
+        </scene>
+    </scenes>
+</document>
