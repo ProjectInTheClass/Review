@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     

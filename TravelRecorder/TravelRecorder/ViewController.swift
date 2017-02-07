@@ -13,9 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     
-    @IBAction func tapMainImage(_ sender: Any) {
-        
-    }
+    
     
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
