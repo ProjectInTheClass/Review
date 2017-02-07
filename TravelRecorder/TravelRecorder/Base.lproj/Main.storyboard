@@ -37,6 +37,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Ig4-tT-IQ2" appends="YES" id="0v5-jE-cgg"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-jd-7xH">
                                                     <rect key="frame" x="8" y="8" width="50" height="21"/>
@@ -80,6 +84,11 @@
                     <navigationItem key="navigationItem" id="xAJ-Ir-faE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ig4-tT-IQ2">
+                    <connections>
+                        <action selector="tapMainImage:" destination="BYZ-38-t0r" id="vGb-F0-kaw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
@@ -101,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="777.66116941529242"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondViewController-->
         <scene sceneID="QMj-kk-j33">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="OM6-zi-t9z" customClass="ViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" automaticallyAdjustsScrollViewInsets="NO" id="OM6-zi-t9z" customClass="SecondViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WDe-TB-MnH"/>
                         <viewControllerLayoutGuide type="bottom" id="a1k-Qd-yyM"/>
