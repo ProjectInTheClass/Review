@@ -7,21 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var mainImage: UIImageView!
     
-    @IBAction func clickAddButton(_ sender: Any) {
-        
-        if let SecondViewController = self.storyboard?.instantiateViewController(withIdentifier: "second") {
-            self.present(SecondViewController, animated:  true, completion: {
-                
-            })
-        }
-        
-    }
-    
+       
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }

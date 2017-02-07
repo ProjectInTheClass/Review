@@ -12,9 +12,11 @@
 		669EBA151E486762004F5CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA131E486762004F5CCB /* Main.storyboard */; };
 		669EBA171E486762004F5CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA161E486762004F5CCB /* Assets.xcassets */; };
 		669EBA1A1E486762004F5CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA181E486762004F5CCB /* LaunchScreen.storyboard */; };
+		A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0C1E486762004F5CCB /* TravelRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0F1E486762004F5CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669EBA111E486762004F5CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		669EBA161E486762004F5CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		669EBA191E486762004F5CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		669EBA1B1E486762004F5CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19E01078ECAD740ACFDB7F0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		669EBA031E486762004F5CCB = {
 			isa = PBXGroup;
 			children = (
 				669EBA0E1E486762004F5CCB /* TravelRecorder */,
 				669EBA0D1E486762004F5CCB /* Products */,
+				AE61F675F7D2365E38DE69E3 /* Pods */,
+				19E01078ECAD740ACFDB7F0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = TravelRecorder;
 			sourceTree = "<group>";
 		};
+		AE61F675F7D2365E38DE69E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */,
+				F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 669EBA1E1E486762004F5CCB /* Build configuration list for PBXNativeTarget "TravelRecorder" */;
 			buildPhases = (
+				416DAB9915473327743690FD /* [CP] Check Pods Manifest.lock */,
 				669EBA081E486762004F5CCB /* Sources */,
 				669EBA091E486762004F5CCB /* Frameworks */,
 				669EBA0A1E486762004F5CCB /* Resources */,
+				9A8D614CD141BEF29E7026B4 /* [CP] Embed Pods Frameworks */,
+				4E3681E1ED45842F119AFFA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		416DAB9915473327743690FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E3681E1ED45842F119AFFA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8D614CD141BEF29E7026B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		669EBA081E486762004F5CCB /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		669EBA1F1E486762004F5CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TravelRecorder/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		669EBA201E486762004F5CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TravelRecorder/Info.plist;
