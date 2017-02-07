@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1D8466E1E46E585000FA47E"
+               BlueprintIdentifier = "661968B31E49A9BA00E87F97"
                BuildableName = "TravellerTrailer.app"
                BlueprintName = "TravellerTrailer"
                ReferencedContainer = "container:TravellerTrailer.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1D846821E46E585000FA47E"
-               BuildableName = "TravellerTrailerTests.xctest"
-               BlueprintName = "TravellerTrailerTests"
-               ReferencedContainer = "container:TravellerTrailer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1D8468D1E46E585000FA47E"
-               BuildableName = "TravellerTrailerUITests.xctest"
-               BlueprintName = "TravellerTrailerUITests"
-               ReferencedContainer = "container:TravellerTrailer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D8466E1E46E585000FA47E"
+            BlueprintIdentifier = "661968B31E49A9BA00E87F97"
             BuildableName = "TravellerTrailer.app"
             BlueprintName = "TravellerTrailer"
             ReferencedContainer = "container:TravellerTrailer.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D8466E1E46E585000FA47E"
+            BlueprintIdentifier = "661968B31E49A9BA00E87F97"
             BuildableName = "TravellerTrailer.app"
             BlueprintName = "TravellerTrailer"
             ReferencedContainer = "container:TravellerTrailer.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D8466E1E46E585000FA47E"
+            BlueprintIdentifier = "661968B31E49A9BA00E87F97"
             BuildableName = "TravellerTrailer.app"
             BlueprintName = "TravellerTrailer"
             ReferencedContainer = "container:TravellerTrailer.xcodeproj">

@@ -7,66 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1D846731E46E585000FA47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D846721E46E585000FA47E /* AppDelegate.swift */; };
-		C1D846751E46E585000FA47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D846741E46E585000FA47E /* ViewController.swift */; };
-		C1D8467A1E46E585000FA47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D846791E46E585000FA47E /* Assets.xcassets */; };
-		C1D8467D1E46E585000FA47E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D8467B1E46E585000FA47E /* LaunchScreen.storyboard */; };
-		C1D846881E46E585000FA47E /* TravellerTrailerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D846871E46E585000FA47E /* TravellerTrailerTests.swift */; };
-		C1D846931E46E585000FA47E /* TravellerTrailerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D846921E46E585000FA47E /* TravellerTrailerUITests.swift */; };
-		C1D846A11E46EFCE000FA47E /* MyCustomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D846A01E46EFCE000FA47E /* MyCustomeTableViewCell.swift */; };
-		C1D846A41E472422000FA47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D846A21E472422000FA47E /* Main.storyboard */; };
+		661968B81E49A9BA00E87F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661968B71E49A9BA00E87F97 /* AppDelegate.swift */; };
+		661968BA1E49A9BA00E87F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661968B91E49A9BA00E87F97 /* ViewController.swift */; };
+		661968BD1E49A9BA00E87F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661968BB1E49A9BA00E87F97 /* Main.storyboard */; };
+		661968BF1E49A9BA00E87F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661968BE1E49A9BA00E87F97 /* Assets.xcassets */; };
+		661968C21E49A9BA00E87F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661968C01E49A9BA00E87F97 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C1D846841E46E585000FA47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1D846671E46E585000FA47E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1D8466E1E46E585000FA47E;
-			remoteInfo = TravellerTrailer;
-		};
-		C1D8468F1E46E585000FA47E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1D846671E46E585000FA47E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1D8466E1E46E585000FA47E;
-			remoteInfo = TravellerTrailer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		C1D8466F1E46E585000FA47E /* TravellerTrailer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravellerTrailer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D846721E46E585000FA47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1D846741E46E585000FA47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C1D846791E46E585000FA47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1D8467C1E46E585000FA47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C1D8467E1E46E585000FA47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1D846831E46E585000FA47E /* TravellerTrailerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerTrailerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D846871E46E585000FA47E /* TravellerTrailerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTrailerTests.swift; sourceTree = "<group>"; };
-		C1D846891E46E585000FA47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1D8468E1E46E585000FA47E /* TravellerTrailerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerTrailerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D846921E46E585000FA47E /* TravellerTrailerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTrailerUITests.swift; sourceTree = "<group>"; };
-		C1D846941E46E585000FA47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1D846A01E46EFCE000FA47E /* MyCustomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomeTableViewCell.swift; sourceTree = "<group>"; };
-		C1D846A31E472422000FA47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		661968B41E49A9BA00E87F97 /* TravellerTrailer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravellerTrailer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		661968B71E49A9BA00E87F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		661968B91E49A9BA00E87F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		661968BC1E49A9BA00E87F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		661968BE1E49A9BA00E87F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		661968C11E49A9BA00E87F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		661968C31E49A9BA00E87F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C1D8466C1E46E585000FA47E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D846801E46E585000FA47E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D8468B1E46E585000FA47E /* Frameworks */ = {
+		661968B11E49A9BA00E87F97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,68 +35,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C1D846661E46E585000FA47E = {
+		661968AB1E49A9B900E87F97 = {
 			isa = PBXGroup;
 			children = (
-				C1D846711E46E585000FA47E /* TravellerTrailer */,
-				C1D846861E46E585000FA47E /* TravellerTrailerTests */,
-				C1D846911E46E585000FA47E /* TravellerTrailerUITests */,
-				C1D846701E46E585000FA47E /* Products */,
+				661968B61E49A9BA00E87F97 /* TravellerTrailer */,
+				661968B51E49A9BA00E87F97 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C1D846701E46E585000FA47E /* Products */ = {
+		661968B51E49A9BA00E87F97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1D8466F1E46E585000FA47E /* TravellerTrailer.app */,
-				C1D846831E46E585000FA47E /* TravellerTrailerTests.xctest */,
-				C1D8468E1E46E585000FA47E /* TravellerTrailerUITests.xctest */,
+				661968B41E49A9BA00E87F97 /* TravellerTrailer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1D846711E46E585000FA47E /* TravellerTrailer */ = {
+		661968B61E49A9BA00E87F97 /* TravellerTrailer */ = {
 			isa = PBXGroup;
 			children = (
-				C1D846721E46E585000FA47E /* AppDelegate.swift */,
-				C1D846741E46E585000FA47E /* ViewController.swift */,
-				C1D846A01E46EFCE000FA47E /* MyCustomeTableViewCell.swift */,
-				C1D846A21E472422000FA47E /* Main.storyboard */,
-				C1D846791E46E585000FA47E /* Assets.xcassets */,
-				C1D8467B1E46E585000FA47E /* LaunchScreen.storyboard */,
-				C1D8467E1E46E585000FA47E /* Info.plist */,
+				661968B71E49A9BA00E87F97 /* AppDelegate.swift */,
+				661968B91E49A9BA00E87F97 /* ViewController.swift */,
+				661968BB1E49A9BA00E87F97 /* Main.storyboard */,
+				661968BE1E49A9BA00E87F97 /* Assets.xcassets */,
+				661968C01E49A9BA00E87F97 /* LaunchScreen.storyboard */,
+				661968C31E49A9BA00E87F97 /* Info.plist */,
 			);
 			path = TravellerTrailer;
-			sourceTree = "<group>";
-		};
-		C1D846861E46E585000FA47E /* TravellerTrailerTests */ = {
-			isa = PBXGroup;
-			children = (
-				C1D846871E46E585000FA47E /* TravellerTrailerTests.swift */,
-				C1D846891E46E585000FA47E /* Info.plist */,
-			);
-			path = TravellerTrailerTests;
-			sourceTree = "<group>";
-		};
-		C1D846911E46E585000FA47E /* TravellerTrailerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C1D846921E46E585000FA47E /* TravellerTrailerUITests.swift */,
-				C1D846941E46E585000FA47E /* Info.plist */,
-			);
-			path = TravellerTrailerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1D8466E1E46E585000FA47E /* TravellerTrailer */ = {
+		661968B31E49A9BA00E87F97 /* TravellerTrailer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1D846971E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailer" */;
+			buildConfigurationList = 661968C61E49A9BA00E87F97 /* Build configuration list for PBXNativeTarget "TravellerTrailer" */;
 			buildPhases = (
-				C1D8466B1E46E585000FA47E /* Sources */,
-				C1D8466C1E46E585000FA47E /* Frameworks */,
-				C1D8466D1E46E585000FA47E /* Resources */,
+				661968B01E49A9BA00E87F97 /* Sources */,
+				661968B11E49A9BA00E87F97 /* Frameworks */,
+				661968B21E49A9BA00E87F97 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,75 +81,26 @@
 			);
 			name = TravellerTrailer;
 			productName = TravellerTrailer;
-			productReference = C1D8466F1E46E585000FA47E /* TravellerTrailer.app */;
+			productReference = 661968B41E49A9BA00E87F97 /* TravellerTrailer.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C1D846821E46E585000FA47E /* TravellerTrailerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1D8469A1E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailerTests" */;
-			buildPhases = (
-				C1D8467F1E46E585000FA47E /* Sources */,
-				C1D846801E46E585000FA47E /* Frameworks */,
-				C1D846811E46E585000FA47E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1D846851E46E585000FA47E /* PBXTargetDependency */,
-			);
-			name = TravellerTrailerTests;
-			productName = TravellerTrailerTests;
-			productReference = C1D846831E46E585000FA47E /* TravellerTrailerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C1D8468D1E46E585000FA47E /* TravellerTrailerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1D8469D1E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailerUITests" */;
-			buildPhases = (
-				C1D8468A1E46E585000FA47E /* Sources */,
-				C1D8468B1E46E585000FA47E /* Frameworks */,
-				C1D8468C1E46E585000FA47E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1D846901E46E585000FA47E /* PBXTargetDependency */,
-			);
-			name = TravellerTrailerUITests;
-			productName = TravellerTrailerUITests;
-			productReference = C1D8468E1E46E585000FA47E /* TravellerTrailerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C1D846671E46E585000FA47E /* Project object */ = {
+		661968AC1E49A9B900E87F97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CAUADC;
 				TargetAttributes = {
-					C1D8466E1E46E585000FA47E = {
+					661968B31E49A9BA00E87F97 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3K2547XM85;
 						ProvisioningStyle = Automatic;
-					};
-					C1D846821E46E585000FA47E = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3K2547XM85;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C1D8466E1E46E585000FA47E;
-					};
-					C1D8468D1E46E585000FA47E = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3K2547XM85;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C1D8466E1E46E585000FA47E;
 					};
 				};
 			};
-			buildConfigurationList = C1D8466A1E46E585000FA47E /* Build configuration list for PBXProject "TravellerTrailer" */;
+			buildConfigurationList = 661968AF1E49A9B900E87F97 /* Build configuration list for PBXProject "TravellerTrailer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,108 +108,62 @@
 				en,
 				Base,
 			);
-			mainGroup = C1D846661E46E585000FA47E;
-			productRefGroup = C1D846701E46E585000FA47E /* Products */;
+			mainGroup = 661968AB1E49A9B900E87F97;
+			productRefGroup = 661968B51E49A9BA00E87F97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1D8466E1E46E585000FA47E /* TravellerTrailer */,
-				C1D846821E46E585000FA47E /* TravellerTrailerTests */,
-				C1D8468D1E46E585000FA47E /* TravellerTrailerUITests */,
+				661968B31E49A9BA00E87F97 /* TravellerTrailer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C1D8466D1E46E585000FA47E /* Resources */ = {
+		661968B21E49A9BA00E87F97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D846A41E472422000FA47E /* Main.storyboard in Resources */,
-				C1D8467D1E46E585000FA47E /* LaunchScreen.storyboard in Resources */,
-				C1D8467A1E46E585000FA47E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D846811E46E585000FA47E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D8468C1E46E585000FA47E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				661968C21E49A9BA00E87F97 /* LaunchScreen.storyboard in Resources */,
+				661968BF1E49A9BA00E87F97 /* Assets.xcassets in Resources */,
+				661968BD1E49A9BA00E87F97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C1D8466B1E46E585000FA47E /* Sources */ = {
+		661968B01E49A9BA00E87F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D846A11E46EFCE000FA47E /* MyCustomeTableViewCell.swift in Sources */,
-				C1D846751E46E585000FA47E /* ViewController.swift in Sources */,
-				C1D846731E46E585000FA47E /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D8467F1E46E585000FA47E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1D846881E46E585000FA47E /* TravellerTrailerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1D8468A1E46E585000FA47E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1D846931E46E585000FA47E /* TravellerTrailerUITests.swift in Sources */,
+				661968BA1E49A9BA00E87F97 /* ViewController.swift in Sources */,
+				661968B81E49A9BA00E87F97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C1D846851E46E585000FA47E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1D8466E1E46E585000FA47E /* TravellerTrailer */;
-			targetProxy = C1D846841E46E585000FA47E /* PBXContainerItemProxy */;
-		};
-		C1D846901E46E585000FA47E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1D8466E1E46E585000FA47E /* TravellerTrailer */;
-			targetProxy = C1D8468F1E46E585000FA47E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		C1D8467B1E46E585000FA47E /* LaunchScreen.storyboard */ = {
+		661968BB1E49A9BA00E87F97 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C1D8467C1E46E585000FA47E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C1D846A21E472422000FA47E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C1D846A31E472422000FA47E /* Base */,
+				661968BC1E49A9BA00E87F97 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		661968C01E49A9BA00E87F97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				661968C11E49A9BA00E87F97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C1D846951E46E585000FA47E /* Debug */ = {
+		661968C41E49A9BA00E87F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		C1D846961E46E585000FA47E /* Release */ = {
+		661968C51E49A9BA00E87F97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,127 +256,51 @@
 			};
 			name = Release;
 		};
-		C1D846981E46E585000FA47E /* Debug */ = {
+		661968C71E49A9BA00E87F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3K2547XM85;
 				INFOPLIST_FILE = TravellerTrailer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailer;
+				PRODUCT_BUNDLE_IDENTIFIER = codershigh.TravellerTrailer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		C1D846991E46E585000FA47E /* Release */ = {
+		661968C81E49A9BA00E87F97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3K2547XM85;
 				INFOPLIST_FILE = TravellerTrailer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailer;
+				PRODUCT_BUNDLE_IDENTIFIER = codershigh.TravellerTrailer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		C1D8469B1E46E585000FA47E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3K2547XM85;
-				INFOPLIST_FILE = TravellerTrailerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravellerTrailer.app/TravellerTrailer";
-			};
-			name = Debug;
-		};
-		C1D8469C1E46E585000FA47E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3K2547XM85;
-				INFOPLIST_FILE = TravellerTrailerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravellerTrailer.app/TravellerTrailer";
-			};
-			name = Release;
-		};
-		C1D8469E1E46E585000FA47E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 3K2547XM85;
-				INFOPLIST_FILE = TravellerTrailerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TravellerTrailer;
-			};
-			name = Debug;
-		};
-		C1D8469F1E46E585000FA47E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 3K2547XM85;
-				INFOPLIST_FILE = TravellerTrailerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.cau.TravellerTrailerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TravellerTrailer;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1D8466A1E46E585000FA47E /* Build configuration list for PBXProject "TravellerTrailer" */ = {
+		661968AF1E49A9B900E87F97 /* Build configuration list for PBXProject "TravellerTrailer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D846951E46E585000FA47E /* Debug */,
-				C1D846961E46E585000FA47E /* Release */,
+				661968C41E49A9BA00E87F97 /* Debug */,
+				661968C51E49A9BA00E87F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1D846971E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailer" */ = {
+		661968C61E49A9BA00E87F97 /* Build configuration list for PBXNativeTarget "TravellerTrailer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D846981E46E585000FA47E /* Debug */,
-				C1D846991E46E585000FA47E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C1D8469A1E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1D8469B1E46E585000FA47E /* Debug */,
-				C1D8469C1E46E585000FA47E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C1D8469D1E46E585000FA47E /* Build configuration list for PBXNativeTarget "TravellerTrailerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1D8469E1E46E585000FA47E /* Debug */,
-				C1D8469F1E46E585000FA47E /* Release */,
+				661968C71E49A9BA00E87F97 /* Debug */,
+				661968C81E49A9BA00E87F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C1D846671E46E585000FA47E /* Project object */;
+	rootObject = 661968AC1E49A9B900E87F97 /* Project object */;
 }

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TravellerTrailer
 //
-//  Created by 임예진 on 2017. 2. 5..
+//  Created by CAUADC on 2017. 2. 7..
 //  Copyright © 2017년 CAUADC. All rights reserved.
 //
 
