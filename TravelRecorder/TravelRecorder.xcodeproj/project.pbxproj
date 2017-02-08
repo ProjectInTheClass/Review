@@ -14,6 +14,8 @@
 		669EBA171E486762004F5CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA161E486762004F5CCB /* Assets.xcassets */; };
 		669EBA1A1E486762004F5CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA181E486762004F5CCB /* LaunchScreen.storyboard */; };
 		66CA48F61E49CF680063E705 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA48F51E49CF680063E705 /* EditViewController.swift */; };
+		66D3DBB01E4AEB7E00864139 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */; };
+		66D3DBB21E4AEB8A00864139 /* PhotoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */; };
 		A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		669EBA191E486762004F5CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		669EBA1B1E486762004F5CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66CA48F51E49CF680063E705 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoView.storyboard; sourceTree = "<group>"; };
 		A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,8 @@
 				669EBA111E486762004F5CCB /* ViewController.swift */,
 				6690AB051E49B626004FAD9A /* SecondViewController.swift */,
 				669EBA131E486762004F5CCB /* Main.storyboard */,
+				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
+				66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */,
 				66CA48F51E49CF680063E705 /* EditViewController.swift */,
 				669EBA161E486762004F5CCB /* Assets.xcassets */,
 				669EBA181E486762004F5CCB /* LaunchScreen.storyboard */,
@@ -156,8 +162,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D3DBB21E4AEB8A00864139 /* PhotoView.storyboard in Resources */,
 				669EBA1A1E486762004F5CCB /* LaunchScreen.storyboard in Resources */,
 				669EBA171E486762004F5CCB /* Assets.xcassets in Resources */,
+				66D3DBB01E4AEB7E00864139 /* MapView.storyboard in Resources */,
 				669EBA151E486762004F5CCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

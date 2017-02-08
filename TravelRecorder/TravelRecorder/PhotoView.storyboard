@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X4u-ub-8Ny">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gxF-OI-3nK">
+            <objects>
+                <viewController id="X4u-ub-8Ny" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Zd-2J-db7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecY-gd-1hu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Rk-ct-6KU">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="287"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-ra-sBY">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="287"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6CT-r1-sI0">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="230"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-mu-dSx">
+                                        <rect key="frame" x="0.0" y="230" width="355" height="57"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dmx-ra-sBY" firstAttribute="top" secondItem="2Rk-ct-6KU" secondAttribute="top" id="M4o-fr-RZ3"/>
+                            <constraint firstAttribute="bottom" secondItem="dmx-ra-sBY" secondAttribute="bottom" id="cAI-rO-2RE"/>
+                            <constraint firstItem="dmx-ra-sBY" firstAttribute="leading" secondItem="2Rk-ct-6KU" secondAttribute="leading" id="h8C-Iy-kHd"/>
+                            <constraint firstAttribute="trailing" secondItem="dmx-ra-sBY" secondAttribute="trailing" id="iME-eH-ALG"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="355" height="287"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNM-Fd-Ct9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418" y="739"/>
+        </scene>
+    </scenes>
+</document>
