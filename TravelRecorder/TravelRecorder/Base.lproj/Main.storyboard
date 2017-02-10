@@ -144,19 +144,22 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-Mj-Htu">
-                                <rect key="frame" x="159.5" y="72" width="55" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="164.5" y="72" width="46" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="showDateButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="n일차">
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-Ud-JF7">
-                                <rect key="frame" x="8" y="72" width="46" height="41"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-Ud-JF7">
+                                <rect key="frame" x="8" y="72" width="40" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="beforeDayButton"/>
+                                <state key="normal" image="Chevron Left_40"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-we-3sX">
-                                <rect key="frame" x="321" y="72" width="46" height="41"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-we-3sX">
+                                <rect key="frame" x="327" y="72" width="40" height="40"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nextDayButton"/>
+                                <state key="normal" image="Chevron Right_40"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,7 +193,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -212,4 +215,8 @@
             <point key="canvasLocation" x="1423" y="687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Chevron Left_40" width="40" height="40"/>
+        <image name="Chevron Right_40" width="40" height="40"/>
+    </resources>
 </document>
