@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6621C3191E4D7FDA00B65A57 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */; };
+		6621C31B1E4D88A000B65A57 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */; };
 		669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA0F1E486762004F5CCB /* AppDelegate.swift */; };
 		669EBA121E486762004F5CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA111E486762004F5CCB /* ViewController.swift */; };
 		669EBA151E486762004F5CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA131E486762004F5CCB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		669EBA0C1E486762004F5CCB /* TravelRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0F1E486762004F5CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669EBA111E486762004F5CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
 				66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */,
 				66CA48F51E49CF680063E705 /* EditViewController.swift */,
+				6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */,
 				6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */,
 				669EBA161E486762004F5CCB /* Assets.xcassets */,
 				669EBA181E486762004F5CCB /* LaunchScreen.storyboard */,
@@ -233,6 +236,7 @@
 				669F39931E4D8F5400CDB5E5 /* MyCustomerTableViewCell.swift in Sources */,
 				669EBA121E486762004F5CCB /* ViewController.swift in Sources */,
 				669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */,
+				6621C31B1E4D88A000B65A57 /* PhotoInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

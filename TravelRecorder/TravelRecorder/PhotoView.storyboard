@@ -72,6 +72,7 @@
                     <connections>
                         <outlet property="PhotoImageView" destination="6CT-r1-sI0" id="KaQ-pr-6x3"/>
                         <outlet property="PhotoTextView" destination="K9G-B9-Rra" id="iLC-ua-hYB"/>
+                        <outlet property="StackView" destination="dmx-ra-sBY" id="Au1-b6-x73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNM-Fd-Ct9" userLabel="First Responder" sceneMemberID="firstResponder"/>
