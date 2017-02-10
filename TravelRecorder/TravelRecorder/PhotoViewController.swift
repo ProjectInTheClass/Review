@@ -40,11 +40,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         try? realm?.write {
             realm?.add(photoInfo)
-        // save -> add 버튼 바뀌는 부분
+        // 버튼이 바뀌는 부분
         }
     }
     @IBAction func clickAddButton(_ sender: UIButton) {
         print("Add Button이 Click 되었습니다.")
+        
         
         let actionSheet: UIAlertController
         actionSheet = UIAlertController(title: "사진 선택", message: "사진을 가져오시겠습니까?", preferredStyle: UIAlertControllerStyle.actionSheet)

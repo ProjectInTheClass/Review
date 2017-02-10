@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="trailing" secondItem="6CT-r1-sI0" secondAttribute="trailing" id="xX6-6Q-udc"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="addButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
                                 <rect key="frame" x="318" y="197" width="22" height="22"/>
                                 <connections>
                                     <action selector="clickAddButton:" destination="X4u-ub-8Ny" eventType="touchUpInside" id="hMt-TJ-eac"/>
