@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="gxF-OI-3nK">
             <objects>
-                <viewController id="X4u-ub-8Ny" sceneMemberID="viewController">
+                <viewController id="X4u-ub-8Ny" customClass="PhotoViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Zd-2J-db7"/>
                         <viewControllerLayoutGuide type="bottom" id="ecY-gd-1hu"/>
@@ -24,43 +25,58 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-ra-sBY">
                                 <rect key="frame" x="0.0" y="0.0" width="355" height="287"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6CT-r1-sI0">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="PhotoImageView" translatesAutoresizingMaskIntoConstraints="NO" id="6CT-r1-sI0">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="230"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-mu-dSx">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="PhotoTextView" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-B9-Rra">
                                         <rect key="frame" x="0.0" y="230" width="355" height="57"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="3NA-Lk-tN8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6CT-r1-sI0" firstAttribute="leading" secondItem="dmx-ra-sBY" secondAttribute="leading" id="0f0-1y-JrW"/>
-                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="leading" secondItem="dmx-ra-sBY" secondAttribute="leading" id="71t-1m-ZOR"/>
+                                    <constraint firstItem="K9G-B9-Rra" firstAttribute="leading" secondItem="dmx-ra-sBY" secondAttribute="leading" id="BnO-Bp-9aB"/>
+                                    <constraint firstItem="K9G-B9-Rra" firstAttribute="top" secondItem="6CT-r1-sI0" secondAttribute="bottom" id="Dea-xz-klC"/>
                                     <constraint firstItem="6CT-r1-sI0" firstAttribute="centerX" secondItem="dmx-ra-sBY" secondAttribute="centerX" id="FOh-7B-jTM"/>
-                                    <constraint firstAttribute="trailing" secondItem="6RB-mu-dSx" secondAttribute="trailing" id="IVg-QH-ZMg"/>
-                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="centerX" secondItem="dmx-ra-sBY" secondAttribute="centerX" id="Kdd-c5-njT"/>
-                                    <constraint firstAttribute="bottom" secondItem="6RB-mu-dSx" secondAttribute="bottom" id="X7a-1f-ZT4"/>
+                                    <constraint firstAttribute="bottom" secondItem="K9G-B9-Rra" secondAttribute="bottom" id="Gmz-Ca-hxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="K9G-B9-Rra" secondAttribute="trailing" id="O1M-T2-ujq"/>
+                                    <constraint firstItem="K9G-B9-Rra" firstAttribute="centerX" secondItem="dmx-ra-sBY" secondAttribute="centerX" id="bcb-bC-sEz"/>
                                     <constraint firstItem="6CT-r1-sI0" firstAttribute="top" secondItem="dmx-ra-sBY" secondAttribute="top" id="dAs-SE-GCA"/>
-                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="top" secondItem="6CT-r1-sI0" secondAttribute="bottom" id="wHj-d6-Ogm"/>
                                     <constraint firstAttribute="trailing" secondItem="6CT-r1-sI0" secondAttribute="trailing" id="xX6-6Q-udc"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
+                                <rect key="frame" x="318" y="197" width="22" height="22"/>
+                                <connections>
+                                    <action selector="clickAddButton:" destination="X4u-ub-8Ny" eventType="touchUpInside" id="hMt-TJ-eac"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="top" secondItem="2Rk-ct-6KU" secondAttribute="top" id="M4o-fr-RZ3"/>
                             <constraint firstAttribute="bottom" secondItem="dmx-ra-sBY" secondAttribute="bottom" id="cAI-rO-2RE"/>
+                            <constraint firstItem="fnT-7v-Dic" firstAttribute="centerY" secondItem="2Rk-ct-6KU" secondAttribute="centerY" multiplier="1.45" id="dZE-WT-pWX"/>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="leading" secondItem="2Rk-ct-6KU" secondAttribute="leading" id="h8C-Iy-kHd"/>
                             <constraint firstAttribute="trailing" secondItem="dmx-ra-sBY" secondAttribute="trailing" id="iME-eH-ALG"/>
+                            <constraint firstItem="fnT-7v-Dic" firstAttribute="centerX" secondItem="2Rk-ct-6KU" secondAttribute="centerX" multiplier="1.85" id="zYq-XG-7tk"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="355" height="287"/>
+                    <connections>
+                        <outlet property="PhotoImageView" destination="6CT-r1-sI0" id="KaQ-pr-6x3"/>
+                        <outlet property="PhotoTextView" destination="K9G-B9-Rra" id="iLC-ua-hYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNM-Fd-Ct9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1028" y="342"/>
+            <point key="canvasLocation" x="-863" y="334"/>
         </scene>
     </scenes>
 </document>
