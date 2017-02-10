@@ -12,19 +12,7 @@ import RealmSwift
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
-  
-    @IBAction func clickEditButton(_ sender: Any) {
-        
-        print("edit버튼이 눌렸습니다")
-        
-        if let EditViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditView") {
-            
-            self.present(EditViewController, animated: true, completion: {
-                print("edit화면이 올라옵니다")})
-        }
-    }
-   
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
