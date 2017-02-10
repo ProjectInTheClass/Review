@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		665EF4BC1E4D80C00058C52C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EF4BB1E4D80C00058C52C /* MapViewController.swift */; };
+		665EF4BE1E4D83830058C52C /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665EF4BD1E4D83830058C52C /* GoogleMapsViewController.swift */; };
 		669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA0F1E486762004F5CCB /* AppDelegate.swift */; };
 		669EBA121E486762004F5CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA111E486762004F5CCB /* ViewController.swift */; };
 		669EBA151E486762004F5CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA131E486762004F5CCB /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		665EF4BB1E4D80C00058C52C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		665EF4BD1E4D83830058C52C /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		669EBA0C1E486762004F5CCB /* TravelRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0F1E486762004F5CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669EBA111E486762004F5CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +82,9 @@
 				669EBA0F1E486762004F5CCB /* AppDelegate.swift */,
 				669EBA111E486762004F5CCB /* ViewController.swift */,
 				669EBA131E486762004F5CCB /* Main.storyboard */,
+				665EF4BD1E4D83830058C52C /* GoogleMapsViewController.swift */,
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
+				665EF4BB1E4D80C00058C52C /* MapViewController.swift */,
 				66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */,
 				66CA48F51E49CF680063E705 /* EditViewController.swift */,
 				669EBA161E486762004F5CCB /* Assets.xcassets */,
@@ -223,8 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CA48F61E49CF680063E705 /* EditViewController.swift in Sources */,
+				665EF4BE1E4D83830058C52C /* GoogleMapsViewController.swift in Sources */,
 				669EBA121E486762004F5CCB /* ViewController.swift in Sources */,
 				669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */,
+				665EF4BC1E4D80C00058C52C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
