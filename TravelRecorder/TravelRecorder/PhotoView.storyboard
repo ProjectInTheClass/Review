@@ -34,6 +34,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="6CT-r1-sI0" firstAttribute="leading" secondItem="dmx-ra-sBY" secondAttribute="leading" id="0f0-1y-JrW"/>
+                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="leading" secondItem="dmx-ra-sBY" secondAttribute="leading" id="71t-1m-ZOR"/>
+                                    <constraint firstItem="6CT-r1-sI0" firstAttribute="centerX" secondItem="dmx-ra-sBY" secondAttribute="centerX" id="FOh-7B-jTM"/>
+                                    <constraint firstAttribute="trailing" secondItem="6RB-mu-dSx" secondAttribute="trailing" id="IVg-QH-ZMg"/>
+                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="centerX" secondItem="dmx-ra-sBY" secondAttribute="centerX" id="Kdd-c5-njT"/>
+                                    <constraint firstAttribute="bottom" secondItem="6RB-mu-dSx" secondAttribute="bottom" id="X7a-1f-ZT4"/>
+                                    <constraint firstItem="6CT-r1-sI0" firstAttribute="top" secondItem="dmx-ra-sBY" secondAttribute="top" id="dAs-SE-GCA"/>
+                                    <constraint firstItem="6RB-mu-dSx" firstAttribute="top" secondItem="6CT-r1-sI0" secondAttribute="bottom" id="wHj-d6-Ogm"/>
+                                    <constraint firstAttribute="trailing" secondItem="6CT-r1-sI0" secondAttribute="trailing" id="xX6-6Q-udc"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
