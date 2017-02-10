@@ -11,22 +11,44 @@ import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    struct Event {
+        
+        var eventTitle: String
+        var eventDate = Date()
+        var withWhom: String
+        var collapsed: Bool!
     
+        init(eventTitle: String, withWhom: String, collapsed: Bool = false) {
+            self.eventTitle = eventTitle
+            self.withWhom = withWhom
+            self.collapsed = collapsed
+        }
+    }
+    
+    
+    var events = [Event]()
     
     
     
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.events.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell
-        cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
         
-        return cell
+        if indexPath.row == 0 {
+            let cell: MyCustomerTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "willExpandLabel", for: indexPath) as! MyCustomerTableViewCell
+            return cell
+        } else {
+            let cell: UITableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
+            return cell
+        }
+
     }
     
     
