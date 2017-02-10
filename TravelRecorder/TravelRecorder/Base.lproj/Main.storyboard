@@ -127,6 +127,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xAJ-Ir-faE"/>
+                    <connections>
+                        <outlet property="tableView" destination="i7n-Ra-LPH" id="XWi-Fw-ms9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="dLX-kx-PQN"/>

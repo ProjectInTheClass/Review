@@ -14,4 +14,6 @@ class MyCustomerTableViewCell: UITableViewCell {
     @IBOutlet weak var eventPicInput: UIImageView!
     @IBOutlet weak var withWhomInput: UITextField!
     
+    
+    
 }
