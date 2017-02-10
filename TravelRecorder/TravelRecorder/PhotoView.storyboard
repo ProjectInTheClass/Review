@@ -50,16 +50,25 @@
                                     <constraint firstAttribute="trailing" secondItem="6CT-r1-sI0" secondAttribute="trailing" id="xX6-6Q-udc"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="addButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
                                 <rect key="frame" x="318" y="197" width="22" height="22"/>
                                 <connections>
                                     <action selector="clickAddButton:" destination="X4u-ub-8Ny" eventType="touchUpInside" id="hMt-TJ-eac"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPn-nq-xdx">
+                                <rect key="frame" x="311.5" y="128" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="clickSaveButton:" destination="X4u-ub-8Ny" eventType="touchUpInside" id="Idg-UW-WJq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dPn-nq-xdx" firstAttribute="centerY" secondItem="2Rk-ct-6KU" secondAttribute="centerY" id="JtY-iR-gtA"/>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="top" secondItem="2Rk-ct-6KU" secondAttribute="top" id="M4o-fr-RZ3"/>
+                            <constraint firstItem="dPn-nq-xdx" firstAttribute="centerX" secondItem="2Rk-ct-6KU" secondAttribute="centerX" multiplier="1.85" id="QFB-91-4ik"/>
                             <constraint firstAttribute="bottom" secondItem="dmx-ra-sBY" secondAttribute="bottom" id="cAI-rO-2RE"/>
                             <constraint firstItem="fnT-7v-Dic" firstAttribute="centerY" secondItem="2Rk-ct-6KU" secondAttribute="centerY" multiplier="1.45" id="dZE-WT-pWX"/>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="leading" secondItem="2Rk-ct-6KU" secondAttribute="leading" id="h8C-Iy-kHd"/>
