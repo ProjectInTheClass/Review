@@ -12,7 +12,13 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var calendarPopView: UIView!
     
+    
+    @IBAction func clickNDayButton (sender: UIButton) {
+        
+        
+    }
     
     var events: Results<EventInfo>?
     
