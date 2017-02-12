@@ -41,7 +41,7 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-QQ-aqy">
                                                     <rect key="frame" x="1" y="43" width="375" height="179.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="여행 이름을 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwV-Lx-HUY">
                                                     <rect key="frame" x="88" y="117" width="202" height="30"/>
@@ -139,7 +139,7 @@
         <!--View Controller-->
         <scene sceneID="Bpz-t0-gXw">
             <objects>
-                <viewController id="4jr-gm-PYi" sceneMemberID="viewController">
+                <viewController id="4jr-gm-PYi" customClass="ViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dRO-tb-JF8"/>
                         <viewControllerLayoutGuide type="bottom" id="vUS-6H-3gZ"/>
@@ -185,26 +185,16 @@
                                 <state key="normal" title="n일차">
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showCalendarButton:" destination="4jr-gm-PYi" eventType="touchUpInside" id="h5q-4N-ojh"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-c4-rzA">
-                                <rect key="frame" x="67" y="103" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="mcU-4E-igA">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-Gh-j2t">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="nTQ-ER-nQi">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="light"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -222,6 +212,10 @@
                             <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="kOt-Mj-Htu" secondAttribute="bottom" constant="8" id="jRe-MI-4WL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarPopView" destination="ElO-Wt-qZu" id="x1a-H0-5Tz"/>
+                        <outlet property="visualEffectView" destination="7f8-c4-rzA" id="s8g-0Y-yPV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVU-uv-U0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="ElO-Wt-qZu">

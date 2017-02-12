@@ -12,13 +12,7 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet var calendarPopView: UIView!
     
-    
-    @IBAction func clickNDayButton (sender: UIButton) {
-        
-        
-    }
     
     var events: Results<EventInfo>?
     
@@ -110,15 +104,54 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-  
+    // n일차 버튼을 누르면, 캘린더 팝오버와 뒷배경 블러처리를 한다.
     
+    @IBOutlet var calendarPopView: UIView!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
+    var blurEffect: UIVisualEffect!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        blurEffect = visualEffectView.effect
+        visualEffectView.effect = nil
+        
+        calendarPopView.layer.cornerRadius = 5
     }
+    
+    
+    func animateIn () {
+        self.view.addSubview(calendarPopView)
+        // calendarPopView.center = self.view.center (위치 수정 후, 코드 추가하기)
+        
+        calendarPopView.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+        calendarPopView.alpha = 0
+        
+        UIView.animate(withDuration: 0.2) { 
+            self.visualEffectView.effect = self.blurEffect
+            self.calendarPopView.alpha = 1
+            self.calendarPopView.transform = CGAffineTransform.identity
+        }
+        
+    }
+    
+    
+    // 캘린더 팝오버에서 나오는 함수 - 문제는 이 이후에 다른 뷰로 넘어가야 함.
+    
+    func animateOut () {
+        
+    }
+    
+    
+    
+    
+    @IBAction func showCalendarButton(_ sender: Any) {
+        
+        animateIn()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
