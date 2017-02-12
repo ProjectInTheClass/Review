@@ -19,6 +19,8 @@
 		66CA48F61E49CF680063E705 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA48F51E49CF680063E705 /* EditViewController.swift */; };
 		66D3DBB01E4AEB7E00864139 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */; };
 		66D3DBB21E4AEB8A00864139 /* PhotoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */; };
+		7AE1051D1E5046290059F9C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051C1E5046290059F9C0 /* MapViewController.swift */; };
+		7AE1051F1E5046380059F9C0 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */; };
 		A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		66CA48F51E49CF680063E705 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoView.storyboard; sourceTree = "<group>"; };
+		7AE1051C1E5046290059F9C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,8 @@
 				669F39921E4D8F5400CDB5E5 /* MyCustomerTableViewCell.swift */,
 				669EBA131E486762004F5CCB /* Main.storyboard */,
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
+				7AE1051C1E5046290059F9C0 /* MapViewController.swift */,
+				7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */,
 				66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */,
 				66CA48F51E49CF680063E705 /* EditViewController.swift */,
 				6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */,
@@ -241,6 +247,8 @@
 				669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */,
 				6621C31B1E4D88A000B65A57 /* PhotoInfo.swift in Sources */,
 				6605832E1E4D970E007D9F1D /* EventInfo.swift in Sources */,
+				7AE1051D1E5046290059F9C0 /* MapViewController.swift in Sources */,
+				7AE1051F1E5046380059F9C0 /* GoogleMapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

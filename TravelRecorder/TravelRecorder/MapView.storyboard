@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="eFn-sF-OQn">
             <objects>
-                <viewController id="A7D-gv-MWh" sceneMemberID="viewController">
+                <viewController id="A7D-gv-MWh" customClass="MapViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bSR-Bt-22t"/>
                         <viewControllerLayoutGuide type="bottom" id="pwq-8b-hS3"/>
@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="355" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FJM-PL-APM">
-                                <rect key="frame" x="0.0" y="0.0" width="355" height="203"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="355" id="3S4-4D-ztz"/>
-                                    <constraint firstAttribute="height" constant="203" id="skI-dD-IHd"/>
-                                </constraints>
-                            </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R2h-4K-lEP">
                                 <rect key="frame" x="26" y="227" width="82" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,21 +39,35 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-Bx-2CW">
+                                <rect key="frame" x="0.0" y="28" width="355" height="191"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="J9c-aR-QaK" kind="embed" id="jyz-x6-JhC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FJM-PL-APM" firstAttribute="leading" secondItem="oHE-nC-TLw" secondAttribute="leading" id="85s-43-KKj"/>
-                            <constraint firstAttribute="trailing" secondItem="FJM-PL-APM" secondAttribute="trailing" id="9vW-x7-Ah2"/>
-                            <constraint firstItem="FJM-PL-APM" firstAttribute="centerX" secondItem="oHE-nC-TLw" secondAttribute="centerX" id="JVf-2a-jJe"/>
-                            <constraint firstItem="FJM-PL-APM" firstAttribute="top" secondItem="oHE-nC-TLw" secondAttribute="top" id="Yc8-SL-pob"/>
-                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="355" height="256"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZk-Bb-915" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="757.42128935532241"/>
+            <point key="canvasLocation" x="25" y="361"/>
+        </scene>
+        <!--Google Maps View Controller-->
+        <scene sceneID="w9R-FC-TsM">
+            <objects>
+                <viewController id="J9c-aR-QaK" customClass="GoogleMapsViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6P-0R-5wN">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="191"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCx-BR-MNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
