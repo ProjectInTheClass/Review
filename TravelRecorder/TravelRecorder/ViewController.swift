@@ -24,7 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let realm = try? Realm()
         self.events = realm?.objects(EventInfo.self)
         self.tableView.reloadData()
-        // 메인 화면을 띄우기 전에 새로고침항, 테이블 뷰가 다시 row의 개수와 데이터를 요청한다.
+        print("변경된 정보가 있는지 확인합니다")
+        // 메인 화면을 띄우기 전에 새로고침하여, 테이블 뷰가 다시 row의 개수와 데이터를 요청한다.
     }
     
     
@@ -68,20 +69,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.events?.count ?? 1
+        
+        if self.events?.count == 0 {    // 사용자가 입력한 데이터가 없을 시엔 추가를 위한 cell 한 개만 보여준다.
+            return 1
+        } else {
+            return self.events?.count ?? 1  // 사용자가 입력한 데이터가 있을 시, 데이터 양만큼 보여준다.
+        }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        if indexPath.row == 0 {
+        if indexPath.row == 0 {     // 항상 메인 화면의 첫번째 cell은 추가 버튼을 보여준다.
             let cell: MyCustomerTableViewCell
             cell = tableView.dequeueReusableCell(withIdentifier: "willExpandLabel", for: indexPath) as! MyCustomerTableViewCell
+            
             return cell
         } else {
             let cell: UITableViewCell
             cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
+            
+            
+            // cell에 출력될 정보를 각각 label(IBOutlet으로 지정 후)로 연결 및 호출
+            
             return cell
         }
 

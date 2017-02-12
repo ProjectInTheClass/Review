@@ -89,7 +89,6 @@
 			children = (
 				669EBA0F1E486762004F5CCB /* AppDelegate.swift */,
 				669EBA111E486762004F5CCB /* ViewController.swift */,
-				6605832D1E4D970E007D9F1D /* EventInfo.swift */,
 				669F39921E4D8F5400CDB5E5 /* MyCustomerTableViewCell.swift */,
 				669EBA131E486762004F5CCB /* Main.storyboard */,
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
@@ -97,9 +96,10 @@
 				7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */,
 				66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */,
 				66CA48F51E49CF680063E705 /* EditViewController.swift */,
-				6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */,
 				6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */,
 				669EBA161E486762004F5CCB /* Assets.xcassets */,
+				6605832D1E4D970E007D9F1D /* EventInfo.swift */,
+				6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */,
 				669EBA181E486762004F5CCB /* LaunchScreen.storyboard */,
 				669EBA1B1E486762004F5CCB /* Info.plist */,
 			);

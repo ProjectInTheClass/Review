@@ -11,6 +11,7 @@ import RealmSwift
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var clickAddButton: UIButton!
     @IBOutlet weak var StackView: UIStackView!
     @IBOutlet weak var PhotoImageView: UIImageView!
     @IBOutlet weak var PhotoTextView: UITextView!
@@ -64,8 +65,9 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 원형 버튼으로 출력하기
+        clickAddButton.layer.cornerRadius = clickAddButton.frame.size.width / 2
     }
 
     override func didReceiveMemoryWarning() {
