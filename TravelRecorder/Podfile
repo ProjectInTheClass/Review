@@ -7,11 +7,11 @@ target 'TravelRecorder' do
 
   # Pods for TravelRecorder
 pod 'RealmSwift', '~> 2.4'
+pod 'CVCalendar', '~> 1.4'
 
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.1'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'GooglePlacePicker'
-pod 'CVCalendar', '~> 1.4'
 end
