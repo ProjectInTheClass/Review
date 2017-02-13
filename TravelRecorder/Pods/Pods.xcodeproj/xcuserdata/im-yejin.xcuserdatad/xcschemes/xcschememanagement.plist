@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Pods-TravelRecorder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,26 @@
 			<true/>
 		</dict>
 		<key>3735878D99957F37DA9E638FC32EF125</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4FDB355082FB72277ED236A34F9E4C83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CECD82196B5C92C41FE094FB8C8BF94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90A78AE2608F46A3FDD68AFF83E3D7FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2EF0A874A01FFC4D77FBAEED4802A12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

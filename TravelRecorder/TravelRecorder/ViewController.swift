@@ -81,20 +81,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        if indexPath.row == 0 {     // 항상 메인 화면의 첫번째 cell은 추가 버튼을 보여준다.
-            let cell: MyCustomerTableViewCell
-            cell = tableView.dequeueReusableCell(withIdentifier: "willExpandLabel", for: indexPath) as! MyCustomerTableViewCell
-            
-            return cell
-        } else {
-            let cell: UITableViewCell
+        let cell: UITableViewCell
             cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
             
             
-            // cell에 출력될 정보를 각각 label(IBOutlet으로 지정 후)로 연결 및 호출
+        // cell에 출력될 정보를 각각 label(IBOutlet으로 지정 후)로 연결 및 호출
             
-            return cell
-        }
+        return cell
 
     }
     
