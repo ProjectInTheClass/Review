@@ -12,6 +12,16 @@ class AddEventViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var saveExitButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
+    }
+    
+    
+    @IBOutlet weak var titleInputField: UITextField!
+    @IBOutlet weak var withInputField: UITextField!
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
@@ -38,6 +48,7 @@ class AddEventViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
+    // 이미지 탭해서 사진 추가하는 것 필요
     
     
     
@@ -46,13 +57,6 @@ class AddEventViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

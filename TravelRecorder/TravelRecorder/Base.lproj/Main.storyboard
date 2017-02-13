@@ -11,160 +11,91 @@
     </dependencies>
     <scenes>
         <!--Add Event View Controller-->
-        <scene sceneID="x5O-pb-B2R">
+        <scene sceneID="NAK-4T-v9U">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="l88-En-9ZA" customClass="AddEventViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tQu-K4-mMb" customClass="AddEventViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KPC-Nd-e6s"/>
-                        <viewControllerLayoutGuide type="bottom" id="LxX-MD-daC"/>
+                        <viewControllerLayoutGuide type="top" id="INi-3U-gME"/>
+                        <viewControllerLayoutGuide type="bottom" id="d6N-1B-kYo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mhg-Yj-kBB">
+                    <view key="view" contentMode="scaleToFill" id="6gW-Rw-edG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cDT-8G-AZF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="342"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDW-tj-7LM">
+                                <rect key="frame" x="167" y="72" width="40" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="342" id="5bF-as-MBX"/>
+                                    <constraint firstAttribute="height" constant="40" id="eJv-oa-v8k"/>
+                                    <constraint firstAttribute="width" constant="40" id="snM-fL-RLq"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="willSaveAndExitCell" rowHeight="55" id="UDw-Zg-PZA" customClass="MyCustomerTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UDw-Zg-PZA" id="aNx-mO-y2f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbQ-km-amj">
-                                                    <rect key="frame" x="167" y="10.5" width="40" height="40"/>
-                                                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="7FM-Vx-8Zh"/>
-                                                        <constraint firstAttribute="height" constant="40" id="CPw-wK-PzU"/>
-                                                    </constraints>
-                                                    <state key="normal" image="Ok_40"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="jbQ-km-amj" firstAttribute="centerX" secondItem="aNx-mO-y2f" secondAttribute="centerX" id="1Ne-vy-boW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="jbQ-km-amj" secondAttribute="bottom" constant="2" id="4v0-ME-fFW"/>
-                                                <constraint firstItem="jbQ-km-amj" firstAttribute="top" secondItem="aNx-mO-y2f" secondAttribute="topMargin" constant="2" id="qwc-pM-w3H"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <gestureRecognizers/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventTitleInputCell" id="FCW-C6-loa" customClass="MyCustomerTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FCW-C6-loa" id="qIk-Un-Q82">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 이벤트 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7z-2q-IGc">
-                                                    <rect key="frame" x="16" y="11" width="112" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mw-2J-4nn">
-                                                    <rect key="frame" x="143" y="9" width="219" height="25"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="u7z-2q-IGc" firstAttribute="leading" secondItem="qIk-Un-Q82" secondAttribute="leadingMargin" constant="8" id="6hI-0V-jeD"/>
-                                                <constraint firstItem="u7z-2q-IGc" firstAttribute="top" secondItem="qIk-Un-Q82" secondAttribute="topMargin" constant="3" id="DiO-sm-fOf"/>
-                                                <constraint firstItem="1mw-2J-4nn" firstAttribute="top" secondItem="qIk-Un-Q82" secondAttribute="topMargin" constant="1" id="H5T-KG-Qc8"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1mw-2J-4nn" secondAttribute="bottom" constant="2" id="Lyk-3k-QDa"/>
-                                                <constraint firstItem="1mw-2J-4nn" firstAttribute="leading" secondItem="u7z-2q-IGc" secondAttribute="trailing" constant="15" id="Qyg-9U-M7t"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="1mw-2J-4nn" secondAttribute="trailing" constant="5" id="Res-19-9OA"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="u7z-2q-IGc" secondAttribute="bottom" constant="3" id="X8G-u5-QGw"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="putEventTitleText" destination="1mw-2J-4nn" id="Wp5-r0-54r"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventWithInputCell" id="jPb-nn-QeD" customClass="MyCustomerTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="127" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jPb-nn-QeD" id="jnq-Dn-pSi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="누구와 함께 여행했나요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80r-U6-utQ">
-                                                    <rect key="frame" x="143" y="9" width="219" height="25"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="travel with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77n-Ad-ICi">
-                                                    <rect key="frame" x="16" y="11" width="112" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="112" id="9Gn-Rr-g6a"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="77n-Ad-ICi" firstAttribute="top" secondItem="jnq-Dn-pSi" secondAttribute="topMargin" constant="3" id="8xn-24-Aep"/>
-                                                <constraint firstItem="80r-U6-utQ" firstAttribute="leading" secondItem="77n-Ad-ICi" secondAttribute="trailing" constant="15" id="LVf-gc-fPJ"/>
-                                                <constraint firstItem="80r-U6-utQ" firstAttribute="top" secondItem="jnq-Dn-pSi" secondAttribute="topMargin" constant="1" id="avl-IL-0rS"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="80r-U6-utQ" secondAttribute="trailing" constant="5" id="emi-EX-8EK"/>
-                                                <constraint firstItem="77n-Ad-ICi" firstAttribute="leading" secondItem="jnq-Dn-pSi" secondAttribute="leadingMargin" constant="8" id="fbr-WU-Oep"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="77n-Ad-ICi" secondAttribute="bottom" constant="3" id="gVN-Yg-QmL"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="80r-U6-utQ" secondAttribute="bottom" constant="1" id="rei-p3-roW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="putEventWithText" destination="80r-U6-utQ" id="82L-bJ-mVL"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventShowingPicInput" rowHeight="180" id="wTA-IQ-eq0" customClass="MyCustomerTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="171" width="375" height="180"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wTA-IQ-eq0" id="RNU-pu-VqK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1tD-2m-yiq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1tD-2m-yiq" firstAttribute="top" secondItem="RNU-pu-VqK" secondAttribute="top" id="2UK-ct-hJs"/>
-                                                <constraint firstAttribute="trailing" secondItem="1tD-2m-yiq" secondAttribute="trailing" id="jww-Ws-an4"/>
-                                                <constraint firstItem="1tD-2m-yiq" firstAttribute="leading" secondItem="RNU-pu-VqK" secondAttribute="leading" id="sJL-jp-Gzf"/>
-                                                <constraint firstAttribute="bottom" secondItem="1tD-2m-yiq" secondAttribute="bottom" id="sf2-bG-PAX"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="l88-En-9ZA" id="CnW-UN-LZl"/>
-                                    <outlet property="delegate" destination="l88-En-9ZA" id="A8N-Tm-Dy4"/>
-                                </connections>
-                            </tableView>
+                                <state key="normal" image="Ok_40"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 이벤트 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4F-VN-Zzb">
+                                <rect key="frame" x="16" y="144" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lzs-Zj-rw9">
+                                <rect key="frame" x="143" y="141" width="216" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="누구와 함께 여행했나요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHw-6V-5iy">
+                                <rect key="frame" x="143" y="186" width="216" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="travel with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoA-gF-m8R">
+                                <rect key="frame" x="16" y="190" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="aQP-0W-I24"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-z7-9ID">
+                                <rect key="frame" x="0.0" y="236" width="375" height="179.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="13L-iN-ZkO"/>
+                                    <constraint firstAttribute="width" constant="375" id="aku-zj-QVO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cDT-8G-AZF" firstAttribute="top" secondItem="KPC-Nd-e6s" secondAttribute="bottom" id="GZu-9m-c0a"/>
-                            <constraint firstAttribute="trailing" secondItem="cDT-8G-AZF" secondAttribute="trailing" id="JGV-4t-shw"/>
-                            <constraint firstItem="cDT-8G-AZF" firstAttribute="leading" secondItem="mhg-Yj-kBB" secondAttribute="leading" id="yYq-lZ-e4y"/>
+                            <constraint firstItem="BEy-z7-9ID" firstAttribute="leading" secondItem="6gW-Rw-edG" secondAttribute="leading" id="2lr-DB-pcd"/>
+                            <constraint firstItem="PoA-gF-m8R" firstAttribute="top" secondItem="d4F-VN-Zzb" secondAttribute="bottom" constant="25" id="5d2-i3-5M7"/>
+                            <constraint firstItem="d4F-VN-Zzb" firstAttribute="leading" secondItem="6gW-Rw-edG" secondAttribute="leadingMargin" id="Br7-eh-WUu"/>
+                            <constraint firstItem="BEy-z7-9ID" firstAttribute="centerX" secondItem="6gW-Rw-edG" secondAttribute="centerX" id="DMy-98-Gay"/>
+                            <constraint firstItem="RDW-tj-7LM" firstAttribute="centerX" secondItem="6gW-Rw-edG" secondAttribute="centerX" id="KvW-35-Cp4"/>
+                            <constraint firstItem="BEy-z7-9ID" firstAttribute="top" secondItem="gHw-6V-5iy" secondAttribute="bottom" constant="20" id="LbU-yX-r3X"/>
+                            <constraint firstItem="Lzs-Zj-rw9" firstAttribute="leading" secondItem="d4F-VN-Zzb" secondAttribute="trailing" constant="15" id="M9f-uw-xsm"/>
+                            <constraint firstItem="RDW-tj-7LM" firstAttribute="top" secondItem="INi-3U-gME" secondAttribute="bottom" constant="10" id="NBP-ju-YRD"/>
+                            <constraint firstItem="gHw-6V-5iy" firstAttribute="leading" secondItem="PoA-gF-m8R" secondAttribute="trailing" constant="15" id="No8-YY-Emz"/>
+                            <constraint firstItem="d4F-VN-Zzb" firstAttribute="top" secondItem="INi-3U-gME" secondAttribute="bottom" constant="80" id="OYB-vd-bH5"/>
+                            <constraint firstItem="gHw-6V-5iy" firstAttribute="trailing" secondItem="6gW-Rw-edG" secondAttribute="trailingMargin" id="RA8-2I-crD"/>
+                            <constraint firstAttribute="trailing" secondItem="BEy-z7-9ID" secondAttribute="trailing" id="k0B-SR-KlR"/>
+                            <constraint firstItem="PoA-gF-m8R" firstAttribute="leading" secondItem="6gW-Rw-edG" secondAttribute="leadingMargin" id="nWl-Up-sOZ"/>
+                            <constraint firstItem="Lzs-Zj-rw9" firstAttribute="top" secondItem="RDW-tj-7LM" secondAttribute="bottom" constant="27" id="rCx-RY-Osn"/>
+                            <constraint firstItem="Lzs-Zj-rw9" firstAttribute="trailing" secondItem="6gW-Rw-edG" secondAttribute="trailingMargin" id="s5N-sn-BFn"/>
+                            <constraint firstItem="gHw-6V-5iy" firstAttribute="top" secondItem="Lzs-Zj-rw9" secondAttribute="bottom" constant="15" id="wmA-et-FLD"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="saveExitButton" destination="jbQ-km-amj" id="zME-98-MfK"/>
+                        <outlet property="saveExitButton" destination="RDW-tj-7LM" id="Xe7-hl-hCJ"/>
+                        <outlet property="titleInputField" destination="Lzs-Zj-rw9" id="Gef-0U-XQ2"/>
+                        <outlet property="withInputField" destination="gHw-6V-5iy" id="OdU-db-hy1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pf-2k-eKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zb4-AK-bZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="-920.68965517241384"/>
+            <point key="canvasLocation" x="1951" y="-920"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -185,11 +116,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="willExpandLabel" rowHeight="55" id="c8v-pi-K32" customClass="MyCustomerTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8v-pi-K32" id="ePk-Su-ZPL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="c8v-pi-K32" id="ePk-Su-ZPL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64F-NG-Ts2">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64F-NG-Ts2">
                                                     <rect key="frame" x="167" y="9.5" width="40" height="40"/>
                                                     <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
