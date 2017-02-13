@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '90A78AE2608F46A3FDD68AFF83E3D7FA'
-               BlueprintName = 'Pods-TravelRecorder'
+               BlueprintIdentifier = 'E2EF0A874A01FFC4D77FBAEED4802A12'
+               BlueprintName = 'CVCalendar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-TravelRecorder.framework'>
+               BuildableName = 'CVCalendar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

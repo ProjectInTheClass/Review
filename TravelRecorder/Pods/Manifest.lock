@@ -1,4 +1,5 @@
 PODS:
+  - CVCalendar (1.4.1)
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -16,18 +17,20 @@ PODS:
     - Realm (= 2.4.2)
 
 DEPENDENCIES:
+  - CVCalendar (~> 1.4)
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
   - RealmSwift (~> 2.4)
 
 SPEC CHECKSUMS:
+  CVCalendar: 61912eb5dc39c3bcfe22a731147a559a696fbc15
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
 
-PODFILE CHECKSUM: d9908b8e34ee5e68c9f80e1ca3b20d84825e42c9
+PODFILE CHECKSUM: 490757a2f825a10577f4a50ca784b0ecc7c343af
 
 COCOAPODS: 1.2.0
