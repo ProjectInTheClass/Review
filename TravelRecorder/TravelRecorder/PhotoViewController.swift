@@ -38,6 +38,18 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             
         
         })
+        
+        let libraryAction: UIAlertAction
+        libraryAction = UIAlertAction(title: "사진 불러오기", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            print("사진첩에서 사진 가져오기 선택")
+            self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
+        })
+        
+        actionSheet.addAction(cancelAction)
+        actionSheet.addAction(libraryAction)
+        
+        self.present(actionSheet, animated: true, completion: nil)
+        
     }
     func showImagePicker(type: UIImagePickerControllerSourceType) {
         
@@ -51,6 +63,11 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("사용자가 사진을 선택했습니다")
         
+        if let pickedImage: UIImage = info[UIImagePickerControllerEditedImage] as? UIImage{
+            self.PhotoImageView.image = pickedImage
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
     }
     
     
