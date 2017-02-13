@@ -9,11 +9,8 @@
 import UIKit
 
 class MyCustomerTableViewCell: UITableViewCell {
-    
-    @IBOutlet var eventTitleInput: UITextField!
-    @IBOutlet weak var eventPicInput: UIImageView!
-    @IBOutlet weak var withWhomInput: UITextField!
-    
-    
+
+    @IBOutlet weak var putEventTitleText: UITextField!
+    @IBOutlet weak var putEventWithText: UITextField!
     
 }
