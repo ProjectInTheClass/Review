@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X4u-ub-8Ny">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X4u-ub-8Ny">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,18 +52,25 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-7v-Dic">
                                 <rect key="frame" x="309" y="188" width="40" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="Plus Math_40"/>
+                                <state key="normal" image="Plus Math_40">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="clickAddButton:" destination="X4u-ub-8Ny" eventType="touchUpInside" id="hMt-TJ-eac"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca4-yE-f9D">
+                                <rect key="frame" x="311.5" y="42.5" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ca4-yE-f9D" firstAttribute="centerY" secondItem="2Rk-ct-6KU" secondAttribute="centerY" multiplier="0.4" id="29l-vQ-a8E"/>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="top" secondItem="2Rk-ct-6KU" secondAttribute="top" id="M4o-fr-RZ3"/>
                             <constraint firstAttribute="bottom" secondItem="dmx-ra-sBY" secondAttribute="bottom" id="cAI-rO-2RE"/>
                             <constraint firstItem="fnT-7v-Dic" firstAttribute="centerY" secondItem="2Rk-ct-6KU" secondAttribute="centerY" multiplier="1.45" id="dZE-WT-pWX"/>
+                            <constraint firstItem="ca4-yE-f9D" firstAttribute="centerX" secondItem="2Rk-ct-6KU" secondAttribute="centerX" multiplier="1.85" id="dcf-T5-omd"/>
                             <constraint firstItem="dmx-ra-sBY" firstAttribute="leading" secondItem="2Rk-ct-6KU" secondAttribute="leading" id="h8C-Iy-kHd"/>
                             <constraint firstAttribute="trailing" secondItem="dmx-ra-sBY" secondAttribute="trailing" id="iME-eH-ALG"/>
                             <constraint firstItem="fnT-7v-Dic" firstAttribute="centerX" secondItem="2Rk-ct-6KU" secondAttribute="centerX" multiplier="1.85" id="zYq-XG-7tk"/>

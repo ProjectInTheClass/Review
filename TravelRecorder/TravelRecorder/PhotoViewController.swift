@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
 
     @IBOutlet weak var clickAddButton: UIButton!
     @IBOutlet weak var StackView: UIStackView!
