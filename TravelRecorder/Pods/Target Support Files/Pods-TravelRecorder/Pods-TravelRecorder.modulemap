@@ -1,6 +1,0 @@
-framework module Pods_TravelRecorder {
-  umbrella header "Pods-TravelRecorder-umbrella.h"
-
-  export *
-  module * { export * }
-}
