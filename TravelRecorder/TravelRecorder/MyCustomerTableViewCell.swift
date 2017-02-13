@@ -15,5 +15,4 @@ class MyCustomerTableViewCell: UITableViewCell {
     @IBOutlet weak var withWhomInput: UITextField!
     
     
-    
 }
