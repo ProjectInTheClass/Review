@@ -12,6 +12,7 @@
         <!--Map View Controller-->
         <scene sceneID="eFn-sF-OQn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZk-Bb-915" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="A7D-gv-MWh" customClass="MapViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bSR-Bt-22t"/>
@@ -26,13 +27,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="경로" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-fC-eJY">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-bL-oq9">
-                                        <rect key="frame" x="40" y="0.0" width="42" height="21"/>
+                                        <rect key="frame" x="39.5" y="0.0" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -46,27 +47,38 @@
                                     <segue destination="J9c-aR-QaK" kind="embed" id="jyz-x6-JhC"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-XC-o7J">
+                                <rect key="frame" x="124" y="222" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addLocation:" destination="A7D-gv-MWh" eventType="touchUpInside" id="LfD-G4-OlE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="355" height="256"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OZk-Bb-915" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="25" y="361"/>
         </scene>
         <!--Google Maps View Controller-->
         <scene sceneID="w9R-FC-TsM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCx-BR-MNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="J9c-aR-QaK" customClass="GoogleMapsViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4uG-Cg-7V9"/>
+                        <viewControllerLayoutGuide type="bottom" id="NiS-QH-I7h"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d6P-0R-5wN">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="191"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tCx-BR-MNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
