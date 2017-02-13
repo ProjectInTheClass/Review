@@ -11,26 +11,15 @@ import RealmSwift
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    func photoCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.green
-        view.addSubview(collectionView)
-    }
-    
     var photoInfos: Results<PhotoInfo>?
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
         let realm = try? Realm()
-        
         self.photoInfos = realm?.objects(PhotoInfo.self)
-        
         self.collectionView.reloadData()
     }
     
@@ -46,11 +35,13 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PhotoCollectionViewCell
         
         if let info = self.photoInfos?[indexPath.item] {
+            if let imageData = info.imageData {
+                cell.imageView.image = UIImage(data: imageData)
+            }
             
-                
             }
         return cell
         }
@@ -58,11 +49,19 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
 
 
+    @IBAction func tapPhotoCell(_ sender: UITapGestureRecognizer) {
+        
+        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+            self.present(photoEditViewController, animated: true, completion: nil)
+        }
+        
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoCollectionView()
+    
         
         
     }
@@ -72,15 +71,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
+    
+    
+    
 }

@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class PhotoInfo: Object {
+    
     dynamic var imageData: Data? = nil
     dynamic var text: String? = nil
+    
 }
