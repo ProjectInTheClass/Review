@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Nth Day View Controller-->
         <scene sceneID="Bpz-t0-gXw">
             <objects>
-                <viewController id="4jr-gm-PYi" customClass="ViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4jr-gm-PYi" customClass="NthDayViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dRO-tb-JF8"/>
                         <viewControllerLayoutGuide type="bottom" id="vUS-6H-3gZ"/>
@@ -186,7 +186,7 @@
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showCalendarButton:" destination="4jr-gm-PYi" eventType="touchUpInside" id="h5q-4N-ojh"/>
+                                    <action selector="showCalendarButton:" destination="4jr-gm-PYi" eventType="touchUpInside" id="SGD-av-3Wt"/>
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-c4-rzA">
@@ -213,25 +213,24 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calendarPopView" destination="ElO-Wt-qZu" id="x1a-H0-5Tz"/>
-                        <outlet property="dismissMoveViewButton" destination="HlG-ke-UcW" id="Ivv-2T-xd6"/>
-                        <outlet property="visualEffectView" destination="7f8-c4-rzA" id="s8g-0Y-yPV"/>
+                        <outlet property="calendarPopView" destination="ElO-Wt-qZu" id="JpP-ov-35D"/>
+                        <outlet property="visualEffectView" destination="7f8-c4-rzA" id="Xg1-IY-hks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVU-uv-U0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="ElO-Wt-qZu">
                     <rect key="frame" x="0.0" y="0.0" width="263" height="233"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlG-ke-UcW">
                             <rect key="frame" x="116" y="203" width="30" height="30"/>
                             <state key="normal" title="이동"/>
                             <connections>
-                                <action selector="dismissPopUp:" destination="4jr-gm-PYi" eventType="touchUpInside" id="gJz-xc-Zca"/>
+                                <action selector="dismissPopUp:" destination="4jr-gm-PYi" eventType="touchUpInside" id="1IO-lZ-JsC"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="HlG-ke-UcW" firstAttribute="centerX" secondItem="ElO-Wt-qZu" secondAttribute="centerX" id="9xu-VY-r88"/>
                         <constraint firstAttribute="bottom" secondItem="HlG-ke-UcW" secondAttribute="bottom" id="rJM-Is-moo"/>

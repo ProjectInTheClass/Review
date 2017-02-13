@@ -11,6 +11,7 @@
 		6621C3191E4D7FDA00B65A57 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */; };
 		6621C31B1E4D88A000B65A57 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */; };
 		662C1FBB1E5177AB00ECF54F /* CVCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 662C1FBA1E5177AB00ECF54F /* CVCalendar */; };
+		662C1FBD1E517E8B00ECF54F /* NthDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */; };
 		669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA0F1E486762004F5CCB /* AppDelegate.swift */; };
 		669EBA121E486762004F5CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA111E486762004F5CCB /* ViewController.swift */; };
 		669EBA151E486762004F5CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA131E486762004F5CCB /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		6621C3181E4D7FDA00B65A57 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		6621C31A1E4D88A000B65A57 /* PhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		662C1FBA1E5177AB00ECF54F /* CVCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CVCalendar; path = Pods/CVCalendar; sourceTree = "<group>"; };
+		662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NthDayViewController.swift; sourceTree = "<group>"; };
 		669EBA0C1E486762004F5CCB /* TravelRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0F1E486762004F5CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669EBA111E486762004F5CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				669EBA0F1E486762004F5CCB /* AppDelegate.swift */,
 				669EBA131E486762004F5CCB /* Main.storyboard */,
 				669EBA111E486762004F5CCB /* ViewController.swift */,
+				662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */,
 				669F39921E4D8F5400CDB5E5 /* MyCustomerTableViewCell.swift */,
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
 				7AE1051C1E5046290059F9C0 /* MapViewController.swift */,
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662C1FBD1E517E8B00ECF54F /* NthDayViewController.swift in Sources */,
 				6621C3191E4D7FDA00B65A57 /* PhotoViewController.swift in Sources */,
 				669F39931E4D8F5400CDB5E5 /* MyCustomerTableViewCell.swift in Sources */,
 				669EBA121E486762004F5CCB /* ViewController.swift in Sources */,
