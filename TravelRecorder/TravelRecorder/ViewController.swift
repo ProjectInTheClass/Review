@@ -100,12 +100,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    @IBOutlet weak var addEventButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
-    }
+
+    
+    
 
 
 }
