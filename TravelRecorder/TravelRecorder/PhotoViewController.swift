@@ -9,83 +9,62 @@
 import UIKit
 import RealmSwift
 
-class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-
-    @IBOutlet weak var clickAddButton: UIButton!
-    @IBOutlet weak var StackView: UIStackView!
-    @IBOutlet weak var PhotoImageView: UIImageView!
-    @IBOutlet weak var PhotoTextView: UITextView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func photoCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.green
+        view.addSubview(collectionView)
+    }
     
     var photoInfos: Results<PhotoInfo>?
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         let realm = try? Realm()
+        
         self.photoInfos = realm?.objects(PhotoInfo.self)
         
+        self.collectionView.reloadData()
     }
     
-    @IBAction func clickAddButton(_ sender: UIButton) {
-        print("Add Button이 Click 되었습니다.")
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.photoInfos?.count ?? 0
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let actionSheet: UIAlertController
-        actionSheet = UIAlertController(title: "사진 선택", message: "사진을 가져오시겠습니까?", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-        let cancelAction: UIAlertAction
-        cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (UIAlertAction) in
-            print("사용자가 Cancel을 누름")
+        if let info = self.photoInfos?[indexPath.item] {
             
-        
-        })
-        
-        let libraryAction: UIAlertAction
-        libraryAction = UIAlertAction(title: "사진 불러오기", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
-            print("사진첩에서 사진 가져오기 선택")
-            self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
-        })
-        
-        actionSheet.addAction(cancelAction)
-        actionSheet.addAction(libraryAction)
-        
-        self.present(actionSheet, animated: true, completion: nil)
-        
-    }
-    func showImagePicker(type: UIImagePickerControllerSourceType) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = type
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("사용자가 사진을 선택했습니다")
-        
-        if let pickedImage: UIImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-            self.PhotoImageView.image = pickedImage
+                
+            }
+        return cell
         }
         
-        picker.dismiss(animated: true, completion: nil)
-    }
     
-    
-    
-    
-    
-    
-    
-    
-    
+
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoCollectionView()
         
-        // 원형 버튼으로 출력하기
-        clickAddButton.layer.cornerRadius = clickAddButton.frame.size.width / 2
+        
     }
 
     override func didReceiveMemoryWarning() {
