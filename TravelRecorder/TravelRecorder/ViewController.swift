@@ -105,8 +105,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     // n일차 버튼을 누르면, 캘린더 팝오버와 뒷배경 블러처리를 한다.
-    /*
+    
     @IBOutlet var calendarPopView: UIView!
+    @IBOutlet var calendarMenuPopView: UIView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     var blurEffect: UIVisualEffect!
@@ -138,10 +139,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    /*
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        calendarMenuPopView.commitCalendarMenuPopViewUpdate()
+        calendarPopView.commitCalendarPopViewUpdate()
     }
+    */
+    
     
     @IBAction func showCalendarButton(_ sender: Any) {
         
@@ -156,7 +162,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         }
     }
-    */
     
     
     
