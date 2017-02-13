@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     // n일차 버튼을 누르면, 캘린더 팝오버와 뒷배경 블러처리를 한다.
-    
+    /*
     @IBOutlet var calendarPopView: UIView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
@@ -138,26 +138,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    // 캘린더 팝오버에서 나오는 함수 - 문제는 이 이후에 다른 뷰로 넘어가야 함.
-    
-    func animateOut () {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
     }
-    
-    
-    
     
     @IBAction func showCalendarButton(_ sender: Any) {
         
         animateIn()
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func dismissPopUp(_ sender: Any) {
+    // 캘린더 팝오버에서 나오는 함수 - 문제는 이 이후에 다른 뷰로 넘어가야 함.
+    
+    func animateOut () {
+        
+        }
     }
+    */
+    
+    
+    
 
 
 }
-

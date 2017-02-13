@@ -214,6 +214,7 @@
                     </view>
                     <connections>
                         <outlet property="calendarPopView" destination="ElO-Wt-qZu" id="x1a-H0-5Tz"/>
+                        <outlet property="dismissMoveViewButton" destination="HlG-ke-UcW" id="Ivv-2T-xd6"/>
                         <outlet property="visualEffectView" destination="7f8-c4-rzA" id="s8g-0Y-yPV"/>
                     </connections>
                 </viewController>
@@ -221,7 +222,21 @@
                 <view contentMode="scaleToFill" id="ElO-Wt-qZu">
                     <rect key="frame" x="0.0" y="0.0" width="263" height="224"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlG-ke-UcW">
+                            <rect key="frame" x="112" y="194" width="38" height="30"/>
+                            <state key="normal" title="Move"/>
+                            <connections>
+                                <action selector="dismissPopUp:" destination="4jr-gm-PYi" eventType="touchUpInside" id="gJz-xc-Zca"/>
+                                <action selector="dismissPopup:" destination="4jr-gm-PYi" eventType="touchUpInside" id="OR6-Tz-Uxa"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="HlG-ke-UcW" firstAttribute="centerX" secondItem="ElO-Wt-qZu" secondAttribute="centerX" id="9xu-VY-r88"/>
+                        <constraint firstAttribute="bottom" secondItem="HlG-ke-UcW" secondAttribute="bottom" id="rJM-Is-moo"/>
+                    </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="2021.5999999999999" y="123.68815592203899"/>
