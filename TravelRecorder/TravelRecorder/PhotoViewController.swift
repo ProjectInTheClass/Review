@@ -11,6 +11,7 @@ import RealmSwift
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
     var photoInfos: Results<PhotoInfo>?
@@ -77,7 +78,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         
     }
-    
+
     
     
     

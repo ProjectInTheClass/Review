@@ -68,7 +68,7 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
-        print("이미지 피커뷰를 탭했당")
+        print("이미지를 탭했당")
         self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
         
         
@@ -89,6 +89,11 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
             self.selectedImage.image = pickedImage
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        textView.endEditing(true)
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
