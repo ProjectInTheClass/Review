@@ -25,6 +25,7 @@
 		7AE1051D1E5046290059F9C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051C1E5046290059F9C0 /* MapViewController.swift */; };
 		7AE1051F1E5046380059F9C0 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */; };
 		A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */; };
+		C104EEC81E52FB190095B4D5 /* MainViewButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104EEC71E52FB190095B4D5 /* MainViewButtonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		7AE1051C1E5046290059F9C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		C104EEC71E52FB190095B4D5 /* MainViewButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewButtonController.swift; sourceTree = "<group>"; };
 		F57BB953CC30F37D959080CB /* Pods-TravelRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */,
+				C104EEC71E52FB190095B4D5 /* MainViewButtonController.swift */,
 			);
 			name = SeparatedMainstoryboard;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				662C1FBD1E517E8B00ECF54F /* NthDayViewController.swift in Sources */,
+				C104EEC81E52FB190095B4D5 /* MainViewButtonController.swift in Sources */,
 				6627D42E1E5183BC0095B024 /* PhotoEditViewController.swift in Sources */,
 				6621C3191E4D7FDA00B65A57 /* PhotoViewController.swift in Sources */,
 				669EBA121E486762004F5CCB /* ViewController.swift in Sources */,

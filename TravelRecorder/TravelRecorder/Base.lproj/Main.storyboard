@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JPE-9b-MvM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -97,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xAJ-Ir-faE"/>
                     <connections>
+                        <outlet property="addEventButton" destination="j2w-cD-a1C" id="lup-Pd-Tir"/>
                         <outlet property="tableView" destination="i7n-Ra-LPH" id="XWi-Fw-ms9"/>
                     </connections>
                 </viewController>
@@ -105,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="-430.43478260869568"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Button Controller-->
         <scene sceneID="i41-kU-OSY">
             <objects>
-                <viewController id="FvH-yM-Fjv" sceneMemberID="viewController">
+                <viewController id="FvH-yM-Fjv" customClass="MainViewButtonController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vph-Dv-Dae"/>
                         <viewControllerLayoutGuide type="bottom" id="GaE-fd-T83"/>
@@ -133,6 +134,9 @@
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="top" secondItem="Vph-Dv-Dae" secondAttribute="bottom" constant="5" id="S0P-Fe-IDx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="saveExitButton" destination="ymD-9O-mDd" id="RLJ-x5-yJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFn-nU-EKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
