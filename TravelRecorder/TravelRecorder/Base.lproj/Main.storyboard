@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JPE-9b-MvM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QUY-Fm-jZY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -254,7 +254,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -274,6 +274,188 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLQ-hi-OJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1423" y="687"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="29b-3S-vUV">
+            <objects>
+                <viewController storyboardIdentifier="PhotoView" id="QUY-Fm-jZY" customClass="PhotoViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zYH-QX-6gZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bo2-d4-fEm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dT-R5-eKe">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="287"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="collection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZkF-1f-a5P">
+                                <rect key="frame" x="0.0" y="20" width="355" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tGc-0N-hfg">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoAddCell" id="qZg-F5-sc0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <size key="customSize" width="50" height="50"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Odq-xI-Bn4" appends="YES" id="I7f-O5-n9h"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCollectionViewCell" id="QNc-zh-CtV" customClass="PhotoCollectionViewCell" customModule="TravelRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YN2-O1-BFO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YN2-O1-BFO" secondAttribute="trailing" id="BeH-EG-74p"/>
+                                            <constraint firstAttribute="bottom" secondItem="YN2-O1-BFO" secondAttribute="bottom" id="WNT-nU-44U"/>
+                                            <constraint firstItem="YN2-O1-BFO" firstAttribute="top" secondItem="QNc-zh-CtV" secondAttribute="top" id="XYX-4c-xOj"/>
+                                            <constraint firstItem="YN2-O1-BFO" firstAttribute="leading" secondItem="QNc-zh-CtV" secondAttribute="leading" id="q4I-qe-YaS"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="YN2-O1-BFO" id="5zS-pa-pgd"/>
+                                            <outletCollection property="gestureRecognizers" destination="fi8-Aq-1Ed" appends="YES" id="8Xa-6X-HCR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="QUY-Fm-jZY" id="Tlm-ct-cvO"/>
+                                    <outlet property="delegate" destination="QUY-Fm-jZY" id="eMb-S6-Yfq"/>
+                                    <outlet property="prefetchDataSource" destination="QUY-Fm-jZY" id="QzV-oH-ahn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bo2-d4-fEm" firstAttribute="top" secondItem="ZkF-1f-a5P" secondAttribute="bottom" id="3Su-JB-xhG"/>
+                            <constraint firstItem="ZkF-1f-a5P" firstAttribute="top" secondItem="zYH-QX-6gZ" secondAttribute="bottom" id="CWK-tO-Agd"/>
+                            <constraint firstAttribute="trailing" secondItem="ZkF-1f-a5P" secondAttribute="trailing" id="Oai-55-oyl"/>
+                            <constraint firstItem="ZkF-1f-a5P" firstAttribute="leading" secondItem="2dT-R5-eKe" secondAttribute="leading" id="TtR-S0-rZE"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="355" height="287"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZkF-1f-a5P" id="h0a-eW-L74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaX-Su-8ZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fi8-Aq-1Ed">
+                    <connections>
+                        <action selector="tapPhotoCell:" destination="QUY-Fm-jZY" id="SeX-Rg-qhj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Odq-xI-Bn4">
+                    <connections>
+                        <action selector="tapAddCell:" destination="QUY-Fm-jZY" id="oZk-3A-lKi"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-858.39999999999998" y="308.9955022488756"/>
+        </scene>
+        <!--Photo Edit View Controller-->
+        <scene sceneID="QZk-uy-WnN">
+            <objects>
+                <viewController storyboardIdentifier="Edit" id="ex3-UD-PyO" customClass="PhotoEditViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NPf-QC-y7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpp-a2-8KO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o9l-Jj-NRe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hic-BY-1Jg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-Wf-Oxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                                        <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" id="Zux-Ac-Mg8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DD8-0k-ogf" appends="YES" id="Auc-9l-TZa"/>
+                                        </connections>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-QI-5AZ">
+                                        <rect key="frame" x="0.0" y="330" width="375" height="280"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="280" id="nHi-eG-idz"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDg-59-mcf">
+                                        <rect key="frame" x="0.0" y="610" width="375" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dml-Fr-asm">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="37"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="clickSaveButton" destination="ex3-UD-PyO" eventType="touchUpInside" id="jg4-g1-JFj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCN-M6-bKO">
+                                                <rect key="frame" x="188" y="0.0" width="187" height="37"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="clickCancelButton" destination="ex3-UD-PyO" eventType="touchUpInside" id="aad-cT-Kmp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OCN-M6-bKO" firstAttribute="width" secondItem="dml-Fr-asm" secondAttribute="width" id="8NY-C6-cKx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hic-BY-1Jg" secondAttribute="bottom" id="ABc-pS-ERm"/>
+                            <constraint firstAttribute="trailing" secondItem="hic-BY-1Jg" secondAttribute="trailing" id="GKR-Xv-GwO"/>
+                            <constraint firstItem="hic-BY-1Jg" firstAttribute="leading" secondItem="o9l-Jj-NRe" secondAttribute="leading" id="dEr-Zx-42i"/>
+                            <constraint firstItem="hic-BY-1Jg" firstAttribute="top" secondItem="NPf-QC-y7E" secondAttribute="bottom" id="mgO-Df-HGl"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="TextField" destination="kdS-QI-5AZ" id="QhT-pn-4vG"/>
+                        <outlet property="selectedImage" destination="2AM-Wf-Oxk" id="7OU-Fy-WrJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dv6-zo-2BH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DD8-0k-ogf">
+                    <connections>
+                        <action selector="tapImageView:" destination="ex3-UD-PyO" id="eJI-5W-m9f"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
     <resources>

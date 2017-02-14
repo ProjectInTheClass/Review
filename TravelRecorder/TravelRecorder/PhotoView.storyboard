@@ -95,11 +95,13 @@
                 <tapGestureRecognizer id="9U9-ny-fx9">
                     <connections>
                         <action selector="tapPhotoCell:" destination="X4u-ub-8Ny" id="t6B-5H-Fnt"/>
+                        <segue destination="4QE-Ug-6hD" kind="show" id="45q-GJ-8RS"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bZg-dx-IAj">
                     <connections>
                         <action selector="tapAddCell:" destination="X4u-ub-8Ny" id="789-c6-i5P"/>
+                        <segue destination="4QE-Ug-6hD" kind="show" id="2T5-e8-pLt"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -192,4 +194,7 @@
             <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2T5-e8-pLt"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -59,25 +59,27 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
 
         }
+    
+
         
     
 
-    @IBAction func tapAddCell(_ sender: UITapGestureRecognizer) {
-        if let PhotoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
-            self.present(PhotoEditViewController, animated: true, completion: nil)
-        }
-        
-    }
-
-    @IBAction func tapPhotoCell(_ sender: UITapGestureRecognizer) {
-        
-        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
-            
-            self.present(photoEditViewController, animated: true, completion: nil)
-        }
-        
-        
-    }
+//    @IBAction func tapAddCell(_ sender: UITapGestureRecognizer) {
+//        if let PhotoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+//            self.present(PhotoEditViewController, animated: true, completion: nil)
+//        }
+//        
+//    }
+//
+//    @IBAction func tapPhotoCell(_ sender: UITapGestureRecognizer) {
+//        
+//        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+//            
+//            self.present(photoEditViewController, animated: true, completion: nil)
+//        }
+//        
+//        
+//    }
 
     
     
