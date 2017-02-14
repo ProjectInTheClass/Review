@@ -18,6 +18,15 @@ class MainViewButtonController: UIViewController {
         saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
     }
 
+    @IBAction func dismissSecondVC(_ sender: Any) {
+        
+        print("이벤트 추가 창을 닫습니다.")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

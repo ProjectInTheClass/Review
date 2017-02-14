@@ -80,7 +80,7 @@
                                 </constraints>
                                 <state key="normal" image="Plus Math_40"/>
                                 <connections>
-                                    <segue destination="FvH-yM-Fjv" kind="show" id="dmg-T8-kFX"/>
+                                    <segue destination="FvH-yM-Fjv" kind="presentation" id="dmg-T8-kFX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,13 +109,13 @@
         <!--Main View Button Controller-->
         <scene sceneID="i41-kU-OSY">
             <objects>
-                <viewController id="FvH-yM-Fjv" customClass="MainViewButtonController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="FvH-yM-Fjv" customClass="MainViewButtonController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vph-Dv-Dae"/>
                         <viewControllerLayoutGuide type="bottom" id="GaE-fd-T83"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JTW-Wr-xEa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymD-9O-mDd">
@@ -125,15 +125,22 @@
                                     <constraint firstAttribute="height" constant="40" id="ZMM-gM-VCx"/>
                                     <constraint firstAttribute="width" constant="40" id="dkf-G8-9Q5"/>
                                 </constraints>
-                                <state key="normal" image="Ok-40"/>
+                                <state key="normal" image="Ok Filled-40"/>
+                                <connections>
+                                    <action selector="dismissSecondVC:" destination="FvH-yM-Fjv" eventType="touchUpInside" id="89t-Om-8cm"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="Ane-SR-vow"/>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="top" secondItem="Vph-Dv-Dae" secondAttribute="bottom" constant="5" id="S0P-Fe-IDx"/>
                         </constraints>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="400"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
                     <connections>
                         <outlet property="saveExitButton" destination="ymD-9O-mDd" id="RLJ-x5-yJP"/>
                     </connections>
@@ -283,7 +290,7 @@
     <resources>
         <image name="Chevron Left_40" width="40" height="40"/>
         <image name="Chevron Right_40" width="40" height="40"/>
-        <image name="Ok-40" width="40" height="40"/>
+        <image name="Ok Filled-40" width="40" height="40"/>
         <image name="Plus Math_40" width="40" height="40"/>
     </resources>
 </document>

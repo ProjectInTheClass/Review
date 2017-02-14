@@ -9,13 +9,15 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     
     var events: Results<EventInfo>?
     
+    
+    // 메인 화면을 띄우기 전에 새로고침하여, 테이블 뷰가 다시 row의 개수와 데이터를 요청한다.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -25,12 +27,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.events = realm?.objects(EventInfo.self)
         self.tableView.reloadData()
         print("변경된 정보가 있는지 확인합니다")
-        // 메인 화면을 띄우기 전에 새로고침하여, 테이블 뷰가 다시 row의 개수와 데이터를 요청한다.
     }
     
     
     
+    
+    // 이벤트 추가 페이지로 연결
     @IBOutlet weak var addEventButton: UIButton!
+    
+    let transition = ButtonTransitionController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +44,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondVC = segue.destination as! MainViewButtonController
+        secondVC.transitioningDelegate = self
+        secondVC.modalPresentationStyle = .custom
+    }
     
     
-    // expandable & collapsible cell 추가
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = addEventButton.center
+        transition.recColor = addEventButton.backgroundColor!
+        
+        return transition
+    }
+    
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = addEventButton.center
+        transition.recColor = addEventButton.backgroundColor!
+        
+        return transition
+    }
     
     
 
@@ -78,7 +103,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
- 
+    // 메인 뷰의 테이블셀(여행 이벤트) 정렬
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if self.events?.count == 0 {    // 사용자가 입력한 데이터가 없을 시엔 추가를 위한 cell 한 개만 보여준다.
