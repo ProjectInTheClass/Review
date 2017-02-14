@@ -10,9 +10,7 @@ import UIKit
 
 class MainViewButtonController: UIViewController {
 
-    @IBOutlet weak var saveExitButton: UIButton!
-    @IBOutlet var pOView: UIView!
-    
+    @IBOutlet weak var saveExitButton: UIButton!    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,11 +27,18 @@ class MainViewButtonController: UIViewController {
 
     }
     
+    @IBOutlet weak var addEventPopOver: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
-        pOView.layer.cornerRadius = 15
+        
+        /*
+        let screenBounds = UIScreen.main.bounds
+        addEventPopOver.center = CGPoint(x: screenBounds.width / 2 , y: 64)
+        */
+        
         
         self.reloadInputViews()
     }

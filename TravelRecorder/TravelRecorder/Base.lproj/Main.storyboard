@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hcM-M9-HZc" id="ksS-Hr-Tvy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-ss-uve">
@@ -342,7 +342,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="470"/>
                     <connections>
-                        <outlet property="pOView" destination="JTW-Wr-xEa" id="m7m-fD-I95"/>
+                        <outlet property="addEventPopOver" destination="JTW-Wr-xEa" id="uch-6F-cbt"/>
                         <outlet property="saveExitButton" destination="ymD-9O-mDd" id="RLJ-x5-yJP"/>
                     </connections>
                 </viewController>

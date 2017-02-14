@@ -34,7 +34,6 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     
     // 이벤트 추가 페이지로 연결
     @IBOutlet weak var addEventButton: UIButton!
-    @IBOutlet weak var addEventPopOver: UIView!
     
     let transition = ButtonTransitionController()
     
@@ -42,6 +41,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         super.viewDidLoad()
         
         addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
+        
     }
     
     
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         
         return transition
     }
-    
+
     
 
     
