@@ -37,16 +37,11 @@ extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        let screenBounds = UIScreen.main.bounds
-        
         let containerView = transitionContext.containerView
-        containerView.frame = CGRect.init(x:0, y: 0, width: screenBounds.width, height: 500)
         
         if transitionMode == .present {
             
             if let presentedView = transitionContext.view(forKey: UITransitionContextViewKey.to){
-                
-                presentedView.frame = CGRect.init(x: 0, y: 0, width: screenBounds.width, height: 500)
                 
                 let viewCenter = presentedView.center
                 let viewSize = presentedView.frame.size
@@ -83,10 +78,6 @@ extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
             let transitionModeKey = (transitionMode == .pop) ? UITransitionContextViewKey.to : UITransitionContextViewKey.from
             
             if let returningView = transitionContext.view(forKey: transitionModeKey) {
-                
-                let screenBounds = UIScreen.main.bounds
-                
-                returningView.frame = CGRect.init(x: 0, y: 0, width: screenBounds.width, height: 500)
                 
                 let viewCenter = returningView.center
                 let viewSize = returningView.frame.size

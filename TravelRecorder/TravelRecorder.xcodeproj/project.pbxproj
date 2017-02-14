@@ -131,9 +131,9 @@
 		C1DAF5131E5205E900FF7D90 /* SeparatedMainstoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */,
 				C104EEC71E52FB190095B4D5 /* MainViewButtonController.swift */,
 				C104EEC91E5305D00095B4D5 /* ButtonTransitionController.swift */,
+				662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */,
 			);
 			name = SeparatedMainstoryboard;
 			sourceTree = "<group>";
