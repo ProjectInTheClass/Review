@@ -29,34 +29,56 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photoInfos?.count ?? 0
+        
+        if section == 0 {
+            return 1
+        } else{
+            return self.photoInfos?.count ?? 0
+        }
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PhotoCollectionViewCell
-        
-        if let info = self.photoInfos?[indexPath.item] {
-            if let imageData = info.imageData {
-                cell.imageView.image = UIImage(data: imageData)
-            }
+        if indexPath.section == 0 {
             
+            let cell: UICollectionViewCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoAddCell", for: indexPath)
+            
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+            if let info = self.photoInfos?[indexPath.item] {
+                if let imageData = info.imageData {
+                    cell.imageView.image = UIImage(data: imageData)
+                }
             }
-        return cell
+            return cell
+        }
+
         }
         
     
 
+    @IBAction func tapAddCell(_ sender: UITapGestureRecognizer) {
+        if let PhotoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+            self.present(PhotoEditViewController, animated: true, completion: nil)
+        }
+        
+    }
 
     @IBAction func tapPhotoCell(_ sender: UITapGestureRecognizer) {
         
         if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+            
             self.present(photoEditViewController, animated: true, completion: nil)
         }
         
         
     }
+    
+    
     
     
     override func viewDidLoad() {

@@ -68,8 +68,8 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
-        
-        
+        print("이미지 피커뷰를 탭했당")
+        self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
         
         
     }

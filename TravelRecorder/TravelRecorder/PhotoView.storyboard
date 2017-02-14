@@ -12,7 +12,7 @@
         <!--Photo View Controller-->
         <scene sceneID="gxF-OI-3nK">
             <objects>
-                <viewController id="X4u-ub-8Ny" customClass="PhotoViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoView" id="X4u-ub-8Ny" customClass="PhotoViewController" customModule="TravelRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Zd-2J-db7"/>
                         <viewControllerLayoutGuide type="bottom" id="ecY-gd-1hu"/>
@@ -24,10 +24,28 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-TC-UFX">
                                 <rect key="frame" x="0.0" y="20" width="355" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="v2j-Iy-d1u"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cgk-wD-Epc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="P1G-Ul-XF6" customClass="PhotoCollectionViewCell" customModule="TravelRecorder" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoAddCell" id="Pfz-c5-3Q9">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bZg-dx-IAj" appends="YES" id="VTT-5y-9rK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCollectionViewCell" id="P1G-Ul-XF6" customClass="PhotoCollectionViewCell" customModule="TravelRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -79,6 +97,12 @@
                         <outlet property="delegate" destination="X4u-ub-8Ny" id="L3z-p1-0Vd"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="bZg-dx-IAj">
+                    <connections>
+                        <action selector="tapAddCell:" destination="X4u-ub-8Ny" id="789-c6-i5P"/>
+                        <outlet property="delegate" destination="X4u-ub-8Ny" id="w8Q-OE-dJW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-857" y="309"/>
         </scene>
@@ -97,8 +121,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-sR-fSa">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-zD-bqY">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-zD-bqY">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                                        <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="330" id="97S-DJ-MV0"/>
