@@ -34,6 +34,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     
     // 이벤트 추가 페이지로 연결
     @IBOutlet weak var addEventButton: UIButton!
+    @IBOutlet weak var addEventPopOver: UIView!
     
     let transition = ButtonTransitionController()
     
@@ -54,7 +55,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = addEventButton.center
-        transition.recColor = addEventButton.backgroundColor!
+        transition.circleColor = addEventButton.backgroundColor!
         
         return transition
     }
@@ -63,7 +64,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         transition.startingPoint = addEventButton.center
-        transition.recColor = addEventButton.backgroundColor!
+        transition.circleColor = addEventButton.backgroundColor!
+        
         
         return transition
     }

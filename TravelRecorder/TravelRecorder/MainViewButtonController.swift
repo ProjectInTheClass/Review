@@ -11,12 +11,34 @@ import UIKit
 class MainViewButtonController: UIViewController {
 
     @IBOutlet weak var saveExitButton: UIButton!
+    @IBOutlet var pOView: UIView!
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // 이벤트 추가 viewController의 사이즈를 조정합니다.
+        func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize {
+            let screenBounds = UIScreen.main.bounds
+            
+            let size = CGSize(width: screenBounds.width - 20 , height: 500)
+            
+            return size
+        }
+        
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
+        pOView.layer.cornerRadius = 15
+        
+        self.reloadInputViews()
     }
+    
+    
 
     @IBAction func dismissSecondVC(_ sender: Any) {
         

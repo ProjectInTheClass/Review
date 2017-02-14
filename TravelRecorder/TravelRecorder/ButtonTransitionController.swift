@@ -10,23 +10,23 @@ import UIKit
 
 class ButtonTransitionController: NSObject {
 
-    var rectangle = UIView()
+    var circle = UIView()
     
     var startingPoint = CGPoint.zero {
         didSet {
-            rectangle.center = startingPoint
+            circle.center = startingPoint
         }
     }
     
-    var recColor = UIColor.white
+    var circleColor = UIColor.white
     
     var duration = 0.3
     
-    enum RecTransitionMode:Int {
+    enum CircularTransitionMode:Int {
         case present, dismiss, pop
     }
     
-    var transitionMode:RecTransitionMode = .present
+    var transitionMode:CircularTransitionMode = .present
 }
 
 extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
@@ -37,22 +37,29 @@ extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
+        let screenBounds = UIScreen.main.bounds
+        
         let containerView = transitionContext.containerView
+        containerView.frame = CGRect.init(x:0, y: 0, width: screenBounds.width, height: 500)
         
         if transitionMode == .present {
+            
             if let presentedView = transitionContext.view(forKey: UITransitionContextViewKey.to){
+                
+                presentedView.frame = CGRect.init(x: 0, y: 0, width: screenBounds.width, height: 500)
+                
                 let viewCenter = presentedView.center
                 let viewSize = presentedView.frame.size
                 
-                rectangle = UIView()
+                circle = UIView()
+
+                circle.frame = frameForRectangle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
                 
-                rectangle.frame = frameForRectangle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
-                
-                rectangle.layer.cornerRadius = rectangle.frame.size.height / 2
-                rectangle.center = startingPoint
-                rectangle.backgroundColor = recColor
-                rectangle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-                containerView.addSubview(rectangle)
+                circle.layer.cornerRadius = circle.frame.size.height / 2
+                circle.center = startingPoint
+                circle.backgroundColor = circleColor
+                circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                containerView.addSubview(circle)
                 
                 
                 presentedView.center = startingPoint
@@ -61,7 +68,7 @@ extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
                 containerView.addSubview(presentedView)
                 
                 UIView.animate(withDuration: duration, animations: { 
-                    self.rectangle.transform = CGAffineTransform.identity
+                    self.circle.transform = CGAffineTransform.identity
                     presentedView.transform = CGAffineTransform.identity
                     presentedView.alpha = 1
                     presentedView.center = viewCenter
@@ -77,30 +84,34 @@ extension ButtonTransitionController:UIViewControllerAnimatedTransitioning {
             
             if let returningView = transitionContext.view(forKey: transitionModeKey) {
                 
+                let screenBounds = UIScreen.main.bounds
+                
+                returningView.frame = CGRect.init(x: 0, y: 0, width: screenBounds.width, height: 500)
+                
                 let viewCenter = returningView.center
                 let viewSize = returningView.frame.size
                 
-                rectangle.frame = frameForRectangle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
+                circle.frame = frameForRectangle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
                 
-                rectangle.layer.cornerRadius = rectangle.frame.size.height / 2
-                rectangle.center = startingPoint
+                circle.layer.cornerRadius = circle.frame.size.height / 2
+                circle.center = startingPoint
                 
                 UIView.animate(withDuration: duration, animations: { 
-                    self.rectangle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                    self.circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                     returningView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                     returningView.center = self.startingPoint
                     returningView.alpha = 0
                     
                     if self.transitionMode == .pop {
                         containerView.insertSubview(returningView, belowSubview: returningView)
-                        containerView.insertSubview(self.rectangle, belowSubview: returningView)
+                        containerView.insertSubview(self.circle, belowSubview: returningView)
                     }
                 }, completion: {    (success:Bool) in
                     
                     returningView.center = viewCenter
                     returningView.removeFromSuperview()
                     
-                    self.rectangle.removeFromSuperview()
+                    self.circle.removeFromSuperview()
                     
                     transitionContext.completeTransition(success)
                     
