@@ -55,14 +55,14 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
         try? realm?.write {
             realm?.add(photoInfo)
             
-            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }
         
         
     }
     
     @IBAction func clickCancelButton() {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     

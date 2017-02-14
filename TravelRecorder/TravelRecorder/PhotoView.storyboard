@@ -92,14 +92,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNM-Fd-Ct9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9U9-ny-fx9">
-                    <connections>
-                        <segue destination="4QE-Ug-6hD" kind="show" id="45q-GJ-8RS"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="bZg-dx-IAj">
                     <connections>
-                        <segue destination="4QE-Ug-6hD" kind="show" id="2T5-e8-pLt"/>
+                        <action selector="tapAddCell:" destination="X4u-ub-8Ny" id="AlO-4F-YGK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9U9-ny-fx9">
+                    <connections>
+                        <action selector="tapPhotoCell:" destination="X4u-ub-8Ny" id="V3C-fL-HdN"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -192,7 +192,4 @@
             <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="2T5-e8-pLt"/>
-    </inferredMetricsTieBreakers>
 </document>
