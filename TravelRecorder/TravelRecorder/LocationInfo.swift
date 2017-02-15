@@ -12,4 +12,6 @@ import RealmSwift
 class LocationInfo: Object {
     dynamic var labelLocation = ""
     dynamic var detailLocation = ""
+    
+    
 }
