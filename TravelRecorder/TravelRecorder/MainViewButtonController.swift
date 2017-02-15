@@ -21,7 +21,6 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         saveExitButton.layer.cornerRadius = saveExitButton.frame.size.width / 2
         
         
-        self.reloadInputViews()
     }
     
     
@@ -55,7 +54,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
 
             eventCreate.repPic = UIImageJPEGRepresentation(image, 1.0)
             
-        } else {
+        } else if self.eventMainPic.image == nil {
             
             let alert: UIAlertController
             alert = UIAlertController(title: "알림", message: "대표 이미지를 선택해주세요", preferredStyle: UIAlertControllerStyle.alert)
@@ -101,9 +100,11 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
             
         }
         
-        // 여행 날짜 변환 및 등록 (미완)
+        
+        /* 여행 날짜 변환 및 등록 (미완)
         var departCal = Date()
         var arrivCal = Date()
+        */
         
         
         // realm에게 eventCreate를 DB에 저장해달라고 요청
@@ -112,6 +113,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
             try? realm?.write {
                 realm?.add(eventCreate)
             }
+            
         } else {
             
             try? realm?.commitWrite()
@@ -123,10 +125,52 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     }
     
     
+    @IBAction func selectImage(_ sender: UITapGestureRecognizer) {
+        
+        let actionSheet: UIAlertController
+        actionSheet = UIAlertController(title: "액션 선택", message: "원하는 액션을 선택해주세요.", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let cancelAction: UIAlertAction
+        cancelAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: { (UIAlertAction) in
+            print("사용자가 취소를 눌렀습니다.")
+        })
+        
+        
+        let libraryAction: UIAlertAction
+        libraryAction = UIAlertAction(title: "대표 사진 갤러리에서 가져오기", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            
+            self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
+            
+        })
+        
+    
+        let deleteAction: UIAlertAction
+        deleteAction = UIAlertAction(title: "현재 사진 삭제", style: UIAlertActionStyle.destructive, handler: { (UIAlertAction) in
+            
+            self.eventMainPic.image = nil
+            
+        })
+        
+        
+        actionSheet.addAction(cancelAction)
+        actionSheet.addAction(libraryAction)
+        actionSheet.addAction(deleteAction)
+        
+        self.present(actionSheet, animated: true, completion: nil)
+    }
     
     
-    
-    
+    // 이미지피커 함수
+    func showImagePicker(type:UIImagePickerControllerSourceType) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = type
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        
+        self.present(imagePicker, animated: true, completion: nil)
+        
+    }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -141,5 +185,22 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         // 피커를 화면에서 내려줍니다
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let info = self.eventInfoFromPrevController {
+            
+            if let imageData = info.repPic {
+                self.eventMainPic?.image = UIImage(data: imageData, scale: 1.0)
+            }
+            
+        }
+        
+    }
+    
+    
     
 }
