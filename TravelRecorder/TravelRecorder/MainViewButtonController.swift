@@ -135,7 +135,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
 
         
         print("변경된 내용을 저장하고, 이벤트 추가 창을 닫습니다.")
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     

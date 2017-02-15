@@ -26,52 +26,12 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         let realm = try? Realm()
         self.events = realm?.objects(EventInfo.self)
         self.tableView.reloadData()
+        
+        print("\(events)")
         print("변경된 정보가 있는지 확인합니다")
     }
     
     
-    
-    
-    
-    
-    // 이벤트 추가 페이지로 연결
-    @IBOutlet weak var addEventButton: UIButton!
-    
-    let transition = ButtonTransitionController()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
-        
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let secondVC = segue.destination as! MainViewButtonController
-        secondVC.transitioningDelegate = self
-        secondVC.modalPresentationStyle = .custom
-    }
-    
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = addEventButton.center
-        transition.circleColor = addEventButton.backgroundColor!
-        
-        return transition
-    }
-    
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = addEventButton.center
-        transition.circleColor = addEventButton.backgroundColor!
-        
-        
-        return transition
-    }
-
     
     
     
@@ -90,7 +50,6 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! EventsTableViewCell
         
         
-        // 정보 출력이 안 되고 있음!!!!!!
         // 이벤트 썸네일 역할을 할 사진 정보를 가져와 출력
         if let info = self.events?[indexPath.row] {
             
@@ -137,6 +96,47 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
+    }
+    
+    
+    
+    
+    
+    // 이벤트 추가 페이지로 연결
+    @IBOutlet weak var addEventButton: UIButton!
+    
+    let transition = ButtonTransitionController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondVC = segue.destination as! MainViewButtonController
+        secondVC.transitioningDelegate = self
+        secondVC.modalPresentationStyle = .custom
+    }
+    
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = addEventButton.center
+        transition.circleColor = addEventButton.backgroundColor!
+        
+        return transition
+    }
+    
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = addEventButton.center
+        transition.circleColor = addEventButton.backgroundColor!
+                
+        return transition
     }
 
 }
