@@ -135,7 +135,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
 
         
         print("변경된 내용을 저장하고, 이벤트 추가 창을 닫습니다.")
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -151,7 +151,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         
         
         let libraryAction: UIAlertAction
-        libraryAction = UIAlertAction(title: "대표 사진 갤러리에서 가져오기", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+        libraryAction = UIAlertAction(title: "갤러리에서 사진 가져오기", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
             
             self.showImagePicker(type: UIImagePickerControllerSourceType.photoLibrary)
             
@@ -209,7 +209,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     
     
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let info = self.eventInfoFromPrevController {
