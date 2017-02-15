@@ -48,7 +48,6 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         let eventCreate = EventInfo()
         
         
-        
         // 여행 이벤트 생성 취소
         if (self.eventMainPic.image == nil) || (self.eventTitleTextField.text == nil) {
             
@@ -118,10 +117,8 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         }
         
         
-        /* 여행 날짜 변환 및 등록 (미완)
-        var departCal = Date()
-        var arrivCal = Date()
-        */
+        // 여행 날짜 변환 및 등록 (미완)
+        
         
         
         // realm에게 eventCreate를 DB에 저장해달라고 요청
@@ -202,6 +199,13 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         // 피커를 화면에서 내려줍니다
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        textView.endEditing(true)
+        return true
+    }
+    
     
     
     

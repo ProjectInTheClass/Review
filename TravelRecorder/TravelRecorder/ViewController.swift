@@ -98,14 +98,16 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             cell.eventWithWhomOutput?.text = info.withWhom
             
             if let imageData = info.repPic {
-                cell.eventsRepImage?.image = UIImage(data: imageData)
+                cell.eventsRepImage?.image = UIImage(data: imageData, scale: 1.0)
             }
             
-            /* 여행 날짜 세팅? */
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy.MM.dd"
             
+            let dateString = dateFormatter.string(from: info.eventDate)
+            cell.eventPeriodOutput?.text = dateString
         
         }
-        
         
         return cell
     }
