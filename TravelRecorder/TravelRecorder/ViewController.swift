@@ -86,11 +86,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         let cell: EventsTableViewCell
             cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! EventsTableViewCell
         
         
+        // 정보 출력이 안 되고 있음!!!!!!
         // 이벤트 썸네일 역할을 할 사진 정보를 가져와 출력
         if let info = self.events?[indexPath.row] {
             
