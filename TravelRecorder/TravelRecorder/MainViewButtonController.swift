@@ -47,6 +47,35 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         // eventCreate에 새로운 EventInfo를 생성
         let eventCreate = EventInfo()
         
+        
+        
+        // 여행 이벤트 생성 취소
+        if (self.eventMainPic.image == nil) || (self.eventTitleTextField.text == nil) {
+            
+            let actionSheet: UIAlertController
+            actionSheet = UIAlertController(title: "액션 선택", message: "여행 이벤트를 생성하기 위해 필요한 정보가 부족합니다. 이벤트 작성을 취소하시겠습니까?", preferredStyle: UIAlertControllerStyle.actionSheet)
+            
+            let cancelAction: UIAlertAction
+            cancelAction = UIAlertAction(title: "계속 작성하기", style: UIAlertActionStyle.cancel, handler: { (UIAlertAction) in
+                print("사용자가 취소를 눌렀습니다.")
+            })
+            
+            let quitAction: UIAlertAction
+            quitAction = UIAlertAction(title: "이벤트 생성 취소", style: UIAlertActionStyle.destructive, handler: { (UIAlertAction) in
+                
+                self.view.window?.rootViewController?.dismiss(animated: true,completion: nil)
+            })
+            
+            
+            actionSheet.addAction(cancelAction)
+            actionSheet.addAction(quitAction)
+            
+            self.present(actionSheet, animated: true, completion: nil)
+            
+            return
+        }
+        
+        
         // 여행 이벤트에 표시될 이미지 확인
         if let image = self.eventMainPic.image {
             
@@ -54,18 +83,6 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
 
             eventCreate.repPic = UIImageJPEGRepresentation(image, 1.0)
             
-        } else if self.eventMainPic.image == nil {
-            
-            let alert: UIAlertController
-            alert = UIAlertController(title: "알림", message: "대표 이미지를 선택해주세요", preferredStyle: UIAlertControllerStyle.alert)
-            
-            let okAction: UIAlertAction
-            okAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
-            
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            
-            return
         }
         
         

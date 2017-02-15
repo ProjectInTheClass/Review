@@ -80,11 +80,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     // 메인 뷰의 테이블셀(여행 이벤트) 정렬
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if self.events?.count == 0 {    // 사용자가 입력한 데이터가 없을 시엔 추가를 위한 cell 한 개만 보여준다.
-            return 0
-        } else {
-            return self.events?.count ?? 1  // 사용자가 입력한 데이터가 있을 시, 데이터 양만큼 보여준다.
-        }
+        return self.events?.count ?? 0
     }
     
     
@@ -96,11 +92,16 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         
         
         // 이벤트 썸네일 역할을 할 사진 정보를 가져와 출력
-        if let thumbnailInfo = self.events?[indexPath.row] {
+        if let info = self.events?[indexPath.row] {
             
-            cell.eventTitleOutput.text = thumbnailInfo.eventTitle
-            cell.eventWithWhomOutput.text = thumbnailInfo.withWhom
+            cell.eventTitleOutput?.text = info.eventTitle
+            cell.eventWithWhomOutput?.text = info.withWhom
             
+            if let imageData = info.repPic {
+                cell.eventsRepImage?.image = UIImage(data: imageData)
+            }
+            
+            /* 여행 날짜 세팅? */
             
         
         }
