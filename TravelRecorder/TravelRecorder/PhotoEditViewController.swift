@@ -17,8 +17,25 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var TextField: UITextView!
     @IBAction func clickSaveButton() {
         
-        let realm = try? Realm()
-        let photoInfo: PhotoInfo = PhotoInfo()
+        var realm: Realm? = nil
+        
+        do {
+            try realm = Realm()
+        } catch {
+            print(error)
+            print(error.localizedDescription)
+        }
+        
+        let photoInfo: PhotoInfo
+            
+        if let fromPrev = self.photoInfoFromPrevController {
+            photoInfo = fromPrev
+            
+            realm?.beginWrite() //기존의 사진 정보에 정보 수정하기 위해 호출해줌
+            
+        } else {
+            photoInfo = PhotoInfo()
+        }
         if let image = self.selectedImage.image {
             
             photoInfo.imageData = UIImageJPEGRepresentation(image, 1.0)
@@ -50,13 +67,36 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
             
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
+            
+            return
         }
         
-        try? realm?.write {
-            realm?.add(photoInfo)
+        if self.photoInfoFromPrevController != nil {
+            do {
+                try realm?.commitWrite()
+                self.dismiss(animated: true, completion: nil)
+            } catch {
+                print(error)
+                print(error.localizedDescription)
+            }
             
-            self.dismiss(animated: true, completion: nil)
+        } else {
+        
+            do {
+                try realm?.write {
+                    realm?.add(photoInfo)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            } catch {
+                print(error)
+                print(error.localizedDescription)
+            }
         }
+        
+//        try? realm?.write {
+//            realm?.add(photoInfo)
+//            
+//        }
         
         
     }

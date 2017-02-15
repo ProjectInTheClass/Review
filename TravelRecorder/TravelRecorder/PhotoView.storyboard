@@ -59,10 +59,10 @@
                                         </view>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="top" secondItem="P1G-Ul-XF6" secondAttribute="top" id="08h-dE-hrn"/>
-                                            <constraint firstAttribute="trailing" secondItem="bI4-zI-lNz" secondAttribute="trailing" id="dPI-FL-K0l"/>
-                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="leading" secondItem="P1G-Ul-XF6" secondAttribute="leading" id="hEX-4m-maR"/>
-                                            <constraint firstAttribute="bottom" secondItem="bI4-zI-lNz" secondAttribute="bottom" id="lsa-OJ-GHB"/>
+                                            <constraint firstAttribute="bottom" secondItem="bI4-zI-lNz" secondAttribute="bottom" id="Ce4-lN-6iG"/>
+                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="top" secondItem="P1G-Ul-XF6" secondAttribute="top" id="SAS-kt-gYk"/>
+                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="leading" secondItem="P1G-Ul-XF6" secondAttribute="leading" id="aTe-hd-qIi"/>
+                                            <constraint firstAttribute="trailing" secondItem="bI4-zI-lNz" secondAttribute="trailing" id="oBJ-3N-2oC"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="bI4-zI-lNz" id="AMc-yQ-ctD"/>

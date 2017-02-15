@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
 
@@ -25,23 +25,38 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 0 {
-            return 1
-        } else{
-            return self.photoInfos?.count ?? 0
+        if let count = self.photoInfos?.count {
+            return count + 1
         }
+        
+        return 1
     }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        var itemSize = self.collectionView.bounds.size
+        itemSize.height = (itemSize.height - 10) / 2.0
+        itemSize.width = itemSize.height
+        
+        return itemSize
+    }
+
+    
+//    func collectionView(_ collectionViewLayout: UICollectionViewLayout) {
+//        var collectionViewContentSize = CGSize{
+//        }
+//    }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.section == 0 {
+        if indexPath.item == 0 {
             
             let cell: UICollectionViewCell
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoAddCell", for: indexPath)
@@ -50,18 +65,26 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
-            if let info = self.photoInfos?[indexPath.item] {
+            if let info = self.photoInfos?[indexPath.item - 1] {
                 if let imageData = info.imageData {
                     cell.imageView.image = UIImage(data: imageData)
                 }
             }
             return cell
         }
-
-        }
-    
-
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") as? PhotoEditViewController,
+            let photoInfo = self.photoInfos?[indexPath.item - 1] {
+            
+            photoEditViewController.photoInfoFromPrevController = photoInfo
+            
+            self.present(photoEditViewController, animated: true, completion: nil)
+        }
+        return false
+    }
     
 
     @IBAction func tapAddCell(_ sender: UITapGestureRecognizer) {
@@ -73,13 +96,15 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     @IBAction func tapPhotoCell(_ sender: UITapGestureRecognizer) {
         
-        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
-            
-            self.present(photoEditViewController, animated: true, completion: nil)
-        }
+//        if let photoEditViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") {
+//            
+//            self.present(photoEditViewController, animated: true, completion: nil)
+//        }
         
         
     }
+    
+    
 
     
     
