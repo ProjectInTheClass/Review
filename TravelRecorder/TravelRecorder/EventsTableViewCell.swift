@@ -11,9 +11,11 @@ import UIKit
 class EventsTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var eventsRepImage: UIImageView!
     
-    
-    
+    @IBOutlet weak var eventPeriodOutput: UILabel!
+    @IBOutlet weak var eventTitleOutput: UILabel!
+    @IBOutlet weak var eventWithWhomOutput: UILabel!
     
     
     

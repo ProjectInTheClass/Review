@@ -71,6 +71,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="eventPeriodOutput" destination="XwG-jd-7xH" id="0tq-Ed-zGs"/>
+                                            <outlet property="eventTitleOutput" destination="2N3-1K-wa5" id="Xkq-Js-rtb"/>
+                                            <outlet property="eventWithWhomOutput" destination="eCZ-Ew-ShY" id="cwU-I1-ZPK"/>
+                                            <outlet property="eventsRepImage" destination="dbp-ss-uve" id="Pn4-gt-zCy"/>
                                             <segue destination="4jr-gm-PYi" kind="show" id="aZw-vR-gHy"/>
                                         </connections>
                                     </tableViewCell>
@@ -160,9 +164,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image File Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-FC-g3g">
                                 <rect key="frame" x="16" y="307" width="343" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="A3r-Vp-APM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Gmi-Lb-VtS" appends="YES" id="Qas-pe-JXV"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuG-MD-b6F">
                                 <rect key="frame" x="269" y="217" width="46" height="30"/>
@@ -344,6 +352,7 @@
                     <size key="freeformSize" width="375" height="500"/>
                     <connections>
                         <outlet property="addEventPopOver" destination="JTW-Wr-xEa" id="uch-6F-cbt"/>
+                        <outlet property="eventMainPic" destination="Nhe-FC-g3g" id="Uvu-Qd-HgL"/>
                         <outlet property="eventTitleTextField" destination="wwf-50-58P" id="bPJ-jQ-gDM"/>
                         <outlet property="fromDay" destination="22g-Eo-uOR" id="gkw-IK-gJU"/>
                         <outlet property="fromMonth" destination="LuG-MD-b6F" id="tU8-6W-xrt"/>
@@ -356,6 +365,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFn-nU-EKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gmi-Lb-VtS">
+                    <connections>
+                        <outlet property="delegate" destination="FvH-yM-Fjv" id="07l-z4-Knb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2021.7391304347827" y="-847.01086956521749"/>
         </scene>
@@ -475,7 +489,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

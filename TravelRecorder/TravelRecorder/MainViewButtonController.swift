@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class MainViewButtonController: UIViewController {
+class MainViewButtonController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var saveExitButton: UIButton!
     @IBOutlet weak var addEventPopOver: UIView!
@@ -26,6 +26,7 @@ class MainViewButtonController: UIViewController {
     
     
     
+    @IBOutlet weak var eventMainPic: UIImageView!
     @IBOutlet weak var eventTitleTextField: UITextField!
     @IBOutlet weak var withWhomTextField: UITextField!
     
@@ -44,7 +45,30 @@ class MainViewButtonController: UIViewController {
         
         let realm = try? Realm()
         
+        // eventCreate에 새로운 EventInfo를 생성
         let eventCreate = EventInfo()
+        
+        // 여행 이벤트에 표시될 이미지 확인
+        if let image = self.eventMainPic.image {
+            
+            print("사용자가 선택한 이미지가 있습니다")
+
+            eventCreate.repPic = UIImageJPEGRepresentation(image, 1.0)
+            
+        } else {
+            
+            let alert: UIAlertController
+            alert = UIAlertController(title: "알림", message: "대표 이미지를 선택해주세요", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction: UIAlertAction
+            okAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+            
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
         
         // 여행 이벤트 제목 확인
         if let title = self.eventTitleTextField.text, title.characters.count > 0 {
@@ -82,7 +106,7 @@ class MainViewButtonController: UIViewController {
         var arrivCal = Date()
         
         
-        // realm에게 photoInfo를 DB에 저장해달라고 요청
+        // realm에게 eventCreate를 DB에 저장해달라고 요청
         if self.eventInfoFromPrevController == nil {
             
             try? realm?.write {
@@ -97,6 +121,25 @@ class MainViewButtonController: UIViewController {
         print("변경된 내용을 저장하고, 이벤트 추가 창을 닫습니다.")
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("사용자가 이미지를 선택했어요")
+        
+        if let pickedImage: UIImage = info[UIImagePickerControllerEditedImage] as? UIImage {
 
-
+            self.eventMainPic.image = pickedImage
+        }
+        
+        
+        // 피커를 화면에서 내려줍니다
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
 }

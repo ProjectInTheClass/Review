@@ -32,6 +32,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     
     
     
+    
+    
     // 이벤트 추가 페이지로 연결
     @IBOutlet weak var addEventButton: UIButton!
     
@@ -71,11 +73,46 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     }
 
     
+    
+    
+    
+    
+    // 메인 뷰의 테이블셀(여행 이벤트) 정렬
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if self.events?.count == 0 {    // 사용자가 입력한 데이터가 없을 시엔 추가를 위한 cell 한 개만 보여준다.
+            return 0
+        } else {
+            return self.events?.count ?? 1  // 사용자가 입력한 데이터가 있을 시, 데이터 양만큼 보여준다.
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell: EventsTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! EventsTableViewCell
+        
+        
+        // 이벤트 썸네일 역할을 할 사진 정보를 가져와 출력
+        if let thumbnailInfo = self.events?[indexPath.row] {
+            
+            cell.eventTitleOutput.text = thumbnailInfo.eventTitle
+            cell.eventWithWhomOutput.text = thumbnailInfo.withWhom
+            
+            
+        
+        }
+        
+        
+        return cell
+    }
+    
+    
+    
+    
 
-    
-    
-    
-    
     // Swipe to delete cell 추가
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -98,43 +135,5 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
-
-
-    
-    
-    
-    
-    
-    // 메인 뷰의 테이블셀(여행 이벤트) 정렬
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if self.events?.count == 0 {    // 사용자가 입력한 데이터가 없을 시엔 추가를 위한 cell 한 개만 보여준다.
-            return 1
-        } else {
-            return self.events?.count ?? 1  // 사용자가 입력한 데이터가 있을 시, 데이터 양만큼 보여준다.
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        let cell: UITableViewCell
-            cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
-            
-            
-        // cell에 출력될 정보를 각각 label(IBOutlet으로 지정 후)로 연결 및 호출
-            
-        return cell
-
-    }
-    
-    
-    
-    
-
-    
-    
-
 
 }

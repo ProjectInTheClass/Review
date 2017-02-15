@@ -14,5 +14,6 @@ class EventInfo: Object {
     dynamic var eventTitle: String? = nil
     dynamic var eventDate: Date = Date()
     dynamic var withWhom: String? = nil
+    dynamic var repPic: Data? = nil
     
 }
