@@ -8,12 +8,11 @@
 
 import UIKit
 import RealmSwift
+import GooglePlaces
 
 class MapViewController: UIViewController {
     
     var labelLocation: String? = nil
-    var detailLocation: String? = nil
-    
     
     @IBAction func addLocation(_ sender: Any) {
         
@@ -31,10 +30,6 @@ class MapViewController: UIViewController {
             if let label: String = alertController.textFields?[0].text {
                 self.labelLocation = label
             }
-            if let detail: String = alertController.textFields?[1].text {
-                self.detailLocation = detail
-            }
-            
 
             // 입력받은 경로 저장
             self.saveNewLocation()
@@ -44,13 +39,6 @@ class MapViewController: UIViewController {
         // placeholder은 필드 설명을 위한 내용
         alertController.addTextField(configurationHandler: { (textField : UITextField) -> Void in
             textField.placeholder = "경로"
-            // textField자체가 아니라 textField.text를 저장해야한다
-            //self.labelLocation = textField.text
-            //print(self.labelLocation)
-        })
-        alertController.addTextField(configurationHandler: { (textField : UITextField) -> Void in
-            textField.placeholder = "상세경로"
-            //self.detailLocation = textField.text
         })
        
         
@@ -96,17 +84,6 @@ class MapViewController: UIViewController {
         }
  
         
-        // 상세경로
-     
-        if let forDetail = self.detailLocation, forDetail.characters.count > 0 {
-            print("상세 경로가 입력돼있습니다")
-            
-            // 사용자가 작성한 상세경로를 locationInfo에 저장
-            locationInfo.detailLocation = forDetail
-        } else {
-            print("입력된 상세경로가 없습니다")
-        }
-        
         try? realm?.write {
             realm?.add(locationInfo)
         }
@@ -118,11 +95,17 @@ class MapViewController: UIViewController {
     
     func putLocationButtons() {
         
+        print("putLocationButtons들어옴")
+        
         var locationInfo: Results<LocationInfo>?
         
         let realm = try? Realm()
         
         locationInfo = realm?.objects(LocationInfo.self)
+        
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        
         
         var constantX = 18
         var constantY = 50
@@ -130,6 +113,7 @@ class MapViewController: UIViewController {
         if locationInfo != nil {
             
             for loc in locationInfo! {
+                
                 
                 // 글자하나 width 5로 잡아봄
                 let buttonWidth = loc.labelLocation.characters.count * 10
@@ -146,21 +130,21 @@ class MapViewController: UIViewController {
                 button.backgroundColor = .gray
                 button.setTitle(loc.labelLocation, for: .normal)
                 button.sizeToFit()
-                //button.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
                 
                 self.view.addSubview(button)
-                
             }
         }
         
         
     }
 
-    
+    func buttonAction(_ sender: UIButton) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
 
-    
-    
-    
+    }
     
     
     
@@ -190,3 +174,63 @@ class MapViewController: UIViewController {
      */
     
 }
+
+
+
+extension MapViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+        let realm = try? Realm()
+        let locationInfo: LocationInfo = LocationInfo()
+        if let detail = place.formattedAddress {
+            locationInfo.detailLocation = detail
+        }
+        
+        locationInfo.latitude = place.coordinate.latitude
+        locationInfo.longitude = place.coordinate.longitude
+   
+        try? realm?.write {
+            realm?.add(locationInfo)
+        }
+        
+        loadView()
+        
+        print("Place name: \(place.name)")
+        print("Place address: \(place.formattedAddress)")
+        print("Place attributions: \(place.attributions)")
+        print("Place coordinate: \(place.coordinate)")
+        print("Place addressComponents: \(place.addressComponents)")
+        
+        dismiss(animated: true, completion: nil)
+    }
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

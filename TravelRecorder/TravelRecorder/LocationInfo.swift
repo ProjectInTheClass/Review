@@ -13,5 +13,6 @@ class LocationInfo: Object {
     dynamic var labelLocation = ""
     dynamic var detailLocation = ""
     
-    
+    dynamic var latitude: Double = 0
+    dynamic var longitude: Double = 0
 }
