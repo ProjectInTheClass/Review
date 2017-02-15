@@ -207,8 +207,14 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     }
     
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print("이벤트 추가 창이 닫혔습니다")
+    }
     
     
+    
+    
+    /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -221,6 +227,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         }
         
     }
+    */
     
     
     
