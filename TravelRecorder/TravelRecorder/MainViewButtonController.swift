@@ -135,7 +135,13 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
 
         
         print("변경된 내용을 저장하고, 이벤트 추가 창을 닫습니다.")
+        
         self.dismiss(animated: true, completion: nil)
+        
+        ///////////////////////////////////////
+        NotificationCenter.default.post(name: CloseEventPage, object: nil)
+        print("노티를 보냈다")
+        ///////////////////////////////////////
     }
     
     
@@ -208,11 +214,10 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         print("이벤트 추가 창이 닫혔습니다")
     }
-    
-    
-    
+   
     
     /*
     override func viewWillAppear(_ animated: Bool) {

@@ -9,6 +9,8 @@
 import UIKit
 import RealmSwift
 
+let CloseEventPage = NSNotification.Name("CloseEventPage")
+
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +32,6 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         print("\(events)")
         print("변경된 정보가 있는지 확인합니다")
     }
-    
     
     
     
@@ -110,6 +111,17 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     }
     
     
+    ///////////////////////
+    func reloadTable(noti: Notification){
+        
+        // Realm을 초기화하여 realm이라는 이름으로 사용합니다
+        let realm = try? Realm()
+        
+        self.events = realm?.objects(EventInfo.self)
+        
+        tableView.reloadData()
+    }
+    ///////////////////////
     
     
     
@@ -121,6 +133,13 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ////////////////////////////////
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTable(noti:)), name: CloseEventPage, object: nil)
+        ////////////////////////////////
+        
+        
+        
         addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
         
     }
@@ -131,6 +150,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         secondVC.transitioningDelegate = self
         secondVC.modalPresentationStyle = .custom
     }
+    
     
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
