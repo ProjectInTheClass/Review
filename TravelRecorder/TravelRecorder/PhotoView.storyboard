@@ -145,22 +145,32 @@
                                         <rect key="frame" x="0.0" y="610" width="375" height="37"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-IH-sQg">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="37"/>
                                                 <state key="normal" title="Save"/>
                                                 <connections>
                                                     <action selector="clickSaveButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="4kX-d4-oe8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihh-Hv-2xD">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="37"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="37"/>
                                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <action selector="clickCancelButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="XOb-BS-dGE"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-Xm-c7a">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="37"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickDeleteButton:" destination="4QE-Ug-6hD" eventType="touchUpInside" id="D2b-Mm-nM1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="m1o-Xm-c7a" firstAttribute="width" secondItem="Ihh-Hv-2xD" secondAttribute="width" id="IDT-tX-WVE"/>
                                             <constraint firstItem="Ihh-Hv-2xD" firstAttribute="width" secondItem="0Mn-IH-sQg" secondAttribute="width" id="qYI-Za-7Li"/>
                                         </constraints>
                                     </stackView>

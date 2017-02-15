@@ -27,7 +27,7 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         let photoInfo: PhotoInfo
-            
+        
         if let fromPrev = self.photoInfoFromPrevController {
             photoInfo = fromPrev
             
@@ -149,6 +149,24 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     
+    
+    @IBAction func clickDeleteButton(_ sender: UIButton) {
+        
+        let realm = try? Realm()
+        
+        if let photoinfo = self.photoInfoFromPrevController {
+            
+            try! realm?.write {
+                realm?.delete(photoinfo)
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            
+        }
+        
+        
+        
+    }
     
     
     
