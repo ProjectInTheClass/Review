@@ -12,7 +12,11 @@ import RealmSwift
 class EventInfo: Object {
     
     dynamic var eventTitle: String? = nil
-    dynamic var eventDate: Date = Date()
+    
+    dynamic var eventStartDate: NSDate? = nil
+    dynamic var eventFinishDate: NSDate? = nil
+    dynamic var eventDuration: DateInterval? = nil
+    
     dynamic var withWhom: String? = nil
     dynamic var repPic: Data? = nil
     

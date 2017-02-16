@@ -95,7 +95,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-cD-a1C">
-                                <rect key="frame" x="167.5" y="69" width="40" height="40"/>
+                                <rect key="frame" x="168" y="69" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="XJJ-TS-aF0"/>
@@ -171,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 기간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I17-t9-YBG">
-                                <rect key="frame" x="16" y="222" width="64" height="21"/>
+                                <rect key="frame" x="16" y="217" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -231,21 +231,31 @@
                                     <outletCollection property="gestureRecognizers" destination="Gmi-Lb-VtS" appends="YES" id="Qas-pe-JXV"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-G8-YnW">
+                                <rect key="frame" x="136" y="217" width="223" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="Pxe-xB-Kw7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="I17-t9-YBG" firstAttribute="top" secondItem="4kw-Iy-qcy" secondAttribute="bottom" constant="19" id="0HN-AL-Vk2"/>
                             <constraint firstItem="cVJ-7v-BxG" firstAttribute="bottom" secondItem="wwf-50-58P" secondAttribute="bottom" id="4pd-E4-gn2"/>
-                            <constraint firstItem="Gee-CQ-Wfb" firstAttribute="top" secondItem="4kw-Iy-qcy" secondAttribute="bottom" constant="39" id="558-za-1sa"/>
+                            <constraint firstItem="Gee-CQ-Wfb" firstAttribute="top" secondItem="I17-t9-YBG" secondAttribute="bottom" constant="4" id="5ZF-9M-deR"/>
                             <constraint firstItem="4kw-Iy-qcy" firstAttribute="top" secondItem="mdJ-G5-gAY" secondAttribute="top" id="5jI-cr-92V"/>
                             <constraint firstItem="Nhe-FC-g3g" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" constant="4" id="74S-67-3LJ"/>
+                            <constraint firstItem="I17-t9-YBG" firstAttribute="top" secondItem="Aty-G8-YnW" secondAttribute="top" id="85o-fh-dsn"/>
                             <constraint firstItem="Nhe-FC-g3g" firstAttribute="top" secondItem="ifg-bJ-cHd" secondAttribute="bottom" id="8Xv-bB-uw3"/>
                             <constraint firstItem="4kw-Iy-qcy" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="93j-HX-unu"/>
                             <constraint firstItem="mdJ-G5-gAY" firstAttribute="top" secondItem="wwf-50-58P" secondAttribute="bottom" constant="14" id="E7g-hH-Ae9"/>
                             <constraint firstItem="wwf-50-58P" firstAttribute="top" secondItem="ymD-9O-mDd" secondAttribute="bottom" constant="20" id="FFN-Dq-EC3"/>
                             <constraint firstItem="mdJ-G5-gAY" firstAttribute="leading" secondItem="4kw-Iy-qcy" secondAttribute="trailing" constant="8" id="IFQ-d3-KiQ"/>
+                            <constraint firstItem="Aty-G8-YnW" firstAttribute="top" secondItem="mdJ-G5-gAY" secondAttribute="bottom" constant="14" id="J8O-JT-IpM"/>
                             <constraint firstItem="GaE-fd-T83" firstAttribute="top" secondItem="hAi-EN-K4p" secondAttribute="bottom" constant="85" id="L8g-yU-82Y"/>
-                            <constraint firstItem="TP3-C1-rax" firstAttribute="top" secondItem="I17-t9-YBG" secondAttribute="bottom" constant="11" id="MXh-vg-Shi"/>
+                            <constraint firstItem="Aty-G8-YnW" firstAttribute="trailing" secondItem="JTW-Wr-xEa" secondAttribute="trailingMargin" id="Mtz-nQ-3eM"/>
                             <constraint firstItem="Gee-CQ-Wfb" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="PnU-TM-gJs"/>
                             <constraint firstItem="TP3-C1-rax" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="T76-ky-EWF"/>
                             <constraint firstItem="VY9-W7-kBs" firstAttribute="top" secondItem="Gee-CQ-Wfb" secondAttribute="bottom" constant="95" id="VAd-PZ-0sn"/>
@@ -259,8 +269,10 @@
                             <constraint firstItem="wwf-50-58P" firstAttribute="leading" secondItem="cVJ-7v-BxG" secondAttribute="trailing" constant="8" id="gcU-DE-chp"/>
                             <constraint firstItem="4kw-Iy-qcy" firstAttribute="bottom" secondItem="mdJ-G5-gAY" secondAttribute="bottom" id="iGu-w9-thL"/>
                             <constraint firstItem="ifg-bJ-cHd" firstAttribute="trailing" secondItem="JTW-Wr-xEa" secondAttribute="trailingMargin" id="kBp-E1-rCR"/>
+                            <constraint firstItem="I17-t9-YBG" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="l08-KU-ytk"/>
                             <constraint firstItem="I17-t9-YBG" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="luq-uA-4V1"/>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="n6j-Mq-Rsf"/>
+                            <constraint firstItem="I17-t9-YBG" firstAttribute="bottom" secondItem="Aty-G8-YnW" secondAttribute="bottom" id="nAL-9G-PW2"/>
                             <constraint firstItem="hAi-EN-K4p" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="ny4-bO-zj5"/>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="top" secondItem="Vph-Dv-Dae" secondAttribute="bottom" constant="49" id="o5C-kb-ZE8"/>
                             <constraint firstItem="cVJ-7v-BxG" firstAttribute="top" secondItem="wwf-50-58P" secondAttribute="top" id="qEB-dm-QqF"/>
@@ -274,9 +286,12 @@
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="500"/>
                     <connections>
                         <outlet property="addEventPopOver" destination="JTW-Wr-xEa" id="uch-6F-cbt"/>
+                        <outlet property="endDate" destination="ifg-bJ-cHd" id="9b9-0M-4Mh"/>
                         <outlet property="eventMainPic" destination="Nhe-FC-g3g" id="Uvu-Qd-HgL"/>
                         <outlet property="eventTitleTextField" destination="wwf-50-58P" id="bPJ-jQ-gDM"/>
                         <outlet property="saveExitButton" destination="ymD-9O-mDd" id="RLJ-x5-yJP"/>
+                        <outlet property="startDate" destination="TP3-C1-rax" id="zxh-Fm-w5g"/>
+                        <outlet property="strDate" destination="Aty-G8-YnW" id="nEN-t0-Gnd"/>
                         <outlet property="withWhomTextField" destination="mdJ-G5-gAY" id="71J-mr-XxX"/>
                     </connections>
                 </viewController>
@@ -388,7 +403,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
