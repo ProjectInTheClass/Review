@@ -51,7 +51,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! EventsTableViewCell
         
         
-        // 이벤트 cell에 출력될 정보를 가져와 지정
+        // 이벤트 썸네일 역할을 할 사진 정보를 가져와 출력
         if let info = self.events?[indexPath.row] {
             
             cell.eventTitleOutput?.text = info.eventTitle
@@ -60,6 +60,12 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
             if let imageData = info.repPic {
                 cell.eventsRepImage?.image = UIImage(data: imageData, scale: 1.0)
             }
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy.MM.dd"
+            
+            let dateString = dateFormatter.string(from: info.eventDate)
+            cell.eventPeriodOutput?.text = dateString
         
         }
         
