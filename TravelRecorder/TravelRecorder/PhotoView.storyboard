@@ -37,9 +37,19 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stack of Photos-50" translatesAutoresizingMaskIntoConstraints="NO" id="tTG-MK-GKy">
+                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="tTG-MK-GKy" firstAttribute="leading" secondItem="Pfz-c5-3Q9" secondAttribute="leading" constant="5" id="19N-rd-Ld5"/>
+                                            <constraint firstItem="tTG-MK-GKy" firstAttribute="top" secondItem="Pfz-c5-3Q9" secondAttribute="top" constant="5" id="DOg-bX-10l"/>
+                                            <constraint firstAttribute="bottom" secondItem="tTG-MK-GKy" secondAttribute="bottom" constant="5" id="OHw-TY-qvE"/>
+                                            <constraint firstAttribute="trailing" secondItem="tTG-MK-GKy" secondAttribute="trailing" constant="5" id="RpY-GB-f58"/>
+                                        </constraints>
                                         <size key="customSize" width="50" height="50"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="bZg-dx-IAj" appends="YES" id="VTT-5y-9rK"/>
@@ -117,7 +127,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-sR-fSa">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-sR-fSa">
                                 <rect key="frame" x="0.0" y="55" width="375" height="612"/>
                                 <subviews>
                                     <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-zD-bqY">
@@ -132,27 +142,27 @@
                                         </connections>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-vZ-sNf">
-                                        <rect key="frame" x="0.0" y="310" width="375" height="265"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="240"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="265" id="hRg-fm-m0D"/>
+                                            <constraint firstAttribute="height" constant="240" id="hRg-fm-m0D"/>
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-da-Cms">
-                                        <rect key="frame" x="0.0" y="575" width="375" height="37"/>
+                                        <rect key="frame" x="0.0" y="570" width="375" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-IH-sQg">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="42"/>
                                                 <state key="normal" title="Save"/>
                                                 <connections>
                                                     <action selector="clickSaveButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="4kX-d4-oe8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihh-Hv-2xD">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="37"/>
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="42"/>
                                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <connections>
@@ -204,4 +214,7 @@
             <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Stack of Photos-50" width="25" height="25"/>
+    </resources>
 </document>

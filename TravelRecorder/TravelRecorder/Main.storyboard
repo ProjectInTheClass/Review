@@ -406,52 +406,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nFJ-g5-PaH">
-                                <rect key="frame" x="10" y="110" width="355" height="551"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nFJ-g5-PaH">
+                                <rect key="frame" x="2" y="64" width="371" height="603"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-U6-jUl">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="256"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-Mj-Htu">
+                                        <rect key="frame" x="0.0" y="0.0" width="371" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showDateButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bjm-cE-EgY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="n일차">
+                                            <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showCalendarButton:" destination="4jr-gm-PYi" eventType="touchUpInside" id="SGD-av-3Wt"/>
+                                        </connections>
+                                    </button>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-U6-jUl">
+                                        <rect key="frame" x="0.0" y="58" width="371" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="Dls-iP-4EA"/>
+                                        </constraints>
                                         <connections>
                                             <segue destination="NND-Hq-zCW" kind="embed" id="yZW-34-F2w"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELS-Ou-4f7">
-                                        <rect key="frame" x="0.0" y="264" width="355" height="287"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELS-Ou-4f7">
+                                        <rect key="frame" x="0.0" y="316" width="371" height="287"/>
                                         <connections>
                                             <segue destination="YLS-2d-ZbN" kind="embed" id="Qoa-6N-5Xm"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-Ud-JF7">
-                                <rect key="frame" x="8" y="72" width="40" height="40"/>
-                                <accessibility key="accessibilityConfiguration" identifier="beforeDayButton"/>
-                                <state key="normal" image="Chevron Left_40"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-we-3sX">
-                                <rect key="frame" x="327" y="72" width="40" height="40"/>
-                                <accessibility key="accessibilityConfiguration" identifier="nextDayButton"/>
-                                <state key="normal" image="Chevron Right_40"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-Mj-Htu">
-                                <rect key="frame" x="56" y="72" width="263" height="40"/>
-                                <accessibility key="accessibilityConfiguration" identifier="showDateButton"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="263" id="wOv-9R-IIo"/>
+                                    <constraint firstItem="RkH-U6-jUl" firstAttribute="width" secondItem="kOt-Mj-Htu" secondAttribute="width" id="9hb-pD-ne3"/>
+                                    <constraint firstItem="ELS-Ou-4f7" firstAttribute="width" secondItem="kOt-Mj-Htu" secondAttribute="width" id="TCo-Ym-eH2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="n일차">
-                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showCalendarButton:" destination="4jr-gm-PYi" eventType="touchUpInside" id="SGD-av-3Wt"/>
-                                </connections>
-                            </button>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-c4-rzA">
-                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="mcU-4E-igA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
+                            </stackView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-c4-rzA">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mcU-4E-igA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -459,15 +455,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P5p-we-3sX" firstAttribute="top" secondItem="dRO-tb-JF8" secondAttribute="bottom" constant="8" id="4C3-Ou-wfb"/>
-                            <constraint firstItem="ZeK-Ud-JF7" firstAttribute="leading" secondItem="2MX-X7-oNC" secondAttribute="leading" constant="8" id="4aH-3f-6rG"/>
-                            <constraint firstItem="kOt-Mj-Htu" firstAttribute="top" secondItem="dRO-tb-JF8" secondAttribute="bottom" constant="8" id="6NM-og-kKv"/>
-                            <constraint firstAttribute="trailing" secondItem="P5p-we-3sX" secondAttribute="trailing" constant="8" id="Ger-mi-tfB"/>
-                            <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="P5p-we-3sX" secondAttribute="bottom" constant="8" id="JSH-cU-lNo"/>
-                            <constraint firstItem="ZeK-Ud-JF7" firstAttribute="top" secondItem="dRO-tb-JF8" secondAttribute="bottom" constant="8" id="Rc8-Tw-aC6"/>
-                            <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="ZeK-Ud-JF7" secondAttribute="bottom" constant="8" id="WaJ-MC-9WT"/>
-                            <constraint firstItem="kOt-Mj-Htu" firstAttribute="centerX" secondItem="2MX-X7-oNC" secondAttribute="centerX" id="e0l-2m-wlz"/>
-                            <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="kOt-Mj-Htu" secondAttribute="bottom" constant="8" id="jRe-MI-4WL"/>
+                            <constraint firstAttribute="bottom" secondItem="nFJ-g5-PaH" secondAttribute="bottom" id="2Ux-jo-94U"/>
+                            <constraint firstItem="vUS-6H-3gZ" firstAttribute="top" secondItem="7f8-c4-rzA" secondAttribute="bottom" id="5ph-tP-ddT"/>
+                            <constraint firstItem="7f8-c4-rzA" firstAttribute="top" secondItem="2MX-X7-oNC" secondAttribute="top" constant="120" id="E5N-e5-wUV"/>
+                            <constraint firstAttribute="trailing" secondItem="7f8-c4-rzA" secondAttribute="trailing" id="KBR-IX-7a9"/>
+                            <constraint firstItem="7f8-c4-rzA" firstAttribute="leading" secondItem="2MX-X7-oNC" secondAttribute="leading" id="Z4h-sK-c0L"/>
+                            <constraint firstItem="nFJ-g5-PaH" firstAttribute="leading" secondItem="2MX-X7-oNC" secondAttribute="leading" constant="2" id="cHa-MU-o50"/>
+                            <constraint firstAttribute="trailing" secondItem="nFJ-g5-PaH" secondAttribute="trailing" constant="2" id="hhn-rH-M8S"/>
+                            <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="dRO-tb-JF8" secondAttribute="bottom" id="sSH-DF-9ey"/>
                         </constraints>
                     </view>
                     <connections>
@@ -591,8 +586,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chevron Left_40" width="40" height="40"/>
-        <image name="Chevron Right_40" width="40" height="40"/>
         <image name="Image File Filled-50" width="50" height="50"/>
         <image name="Ok Filled-40" width="40" height="40"/>
         <image name="Plus Math_40" width="40" height="40"/>
