@@ -146,7 +146,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let secondVC = segue.destination as! NthDayViewController
+
+        let secondVC = segue.destination as! MainViewButtonController
         secondVC.transitioningDelegate = self
         secondVC.modalPresentationStyle = .custom
     }
