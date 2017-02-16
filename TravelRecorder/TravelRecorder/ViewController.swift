@@ -138,7 +138,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTable(noti:)), name: CloseEventPage, object: nil)
         ////////////////////////////////
         
-        
+    
         
         addEventButton.layer.cornerRadius = addEventButton.frame.size.width / 2
         
