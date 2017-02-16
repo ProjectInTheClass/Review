@@ -107,44 +107,53 @@ class MapViewController: UIViewController {
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
         
-        var constantX = 18
-        var constantY = 50
+        
+        
+        
+        let buttonStackView = UIStackView()
+        
+        buttonStackView.axis = .horizontal
+        buttonStackView.distribution = UIStackViewDistribution.equalSpacing
+        buttonStackView.alignment = UIStackViewAlignment.center
+        buttonStackView.spacing = 8
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(buttonStackView)
         
         if locationInfo != nil {
             
+            
+            
+            
             for loc in locationInfo! {
                 
-                
-                // 글자하나 width 5로 잡아봄
-                let buttonWidth = loc.labelLocation.characters.count * 10
-                
-                // 라벨당 간격 4
-                
-                constantX = constantX + buttonWidth
-                
-                // 수정 요함
-                let buttonX = constantX
-                let buttonY = constantY
-                
                 let button = UIButton()
-                button.backgroundColor = .gray
+                button.backgroundColor = .white
+                button.setTitleColor(.black, for: .normal)
                 button.setTitle(loc.labelLocation, for: .normal)
                 button.sizeToFit()
                 button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
                 
-                self.view.addSubview(button)
+                buttonStackView.addArrangedSubview(button)
+              
             }
+            
+            
         }
         
         
     }
 
+    
     func buttonAction(_ sender: UIButton) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         present(autocompleteController, animated: true, completion: nil)
 
     }
+    
+    
+    
     
     
     
@@ -194,7 +203,7 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
             realm?.add(locationInfo)
         }
         
-        loadView()
+        //loadView()
         
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")

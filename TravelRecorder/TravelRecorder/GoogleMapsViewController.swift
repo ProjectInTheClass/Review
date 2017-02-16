@@ -18,7 +18,11 @@ class GoogleMapsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
- 
+    override func viewWillAppear(_ animated: Bool) {
+        loadView()
+    }
+    
+    
     override func loadView() {
         
         var cameraLatitude: Double = 0
@@ -58,11 +62,13 @@ class GoogleMapsViewController: UIViewController {
                 
                 // 마커 추가
                 print("마커 위치")
+                print(loc.labelLocation)
+                print(loc.detailLocation)
                 print(loc.latitude)
                 print(loc.longitude)
                 let position = CLLocationCoordinate2D(latitude: loc.latitude, longitude: loc.longitude)
                 let marker = GMSMarker(position: position)
-                marker.title = "Hello"
+                marker.title = loc.labelLocation
                 marker.map = mapView
                 
                 // 마커 제거
