@@ -22,12 +22,6 @@ class NthDayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // view가 켜졌을 때, 블러 effect가 비활성화 상태이도록 지정
-        effect = visualEffectView.effect
-        visualEffectView.effect = nil
-        
-        
-        calendarPopView.layer.cornerRadius = 5
     }
     
     
