@@ -54,6 +54,7 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy.MM.dd"
         
+        
         startDateOutput.text = formatter.string(from: sender.date)
         
     }
@@ -80,6 +81,8 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         
         return true
     }
+    
+    
     
     
     
@@ -165,6 +168,8 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         
         // 여행 날짜 변환 및 등록 (미완)
         
+        let eventDuration: String = "\(startDateOutput.text!) - \(endDateOutput.text!)"
+        eventCreate.eventDate = eventDuration
         
         
         // realm에게 eventCreate를 DB에 저장해달라고 요청
