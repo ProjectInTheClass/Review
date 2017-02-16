@@ -34,16 +34,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-ss-uve">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                    <rect key="frame" x="6" y="6" width="363" height="172.5"/>
                                                     <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="0FV-ws-gvL"/>
-                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
-                                                    <rect key="frame" x="6" y="6" width="363" height="169"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="6" y="6" width="363" height="172.5"/>
+                                                    <color key="backgroundColor" red="0.58873334390862941" green="0.55345017331212176" blue="0.54791987922348984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동행" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-Ew-ShY">
                                                     <rect key="frame" x="174.5" y="115" width="26" height="18"/>
@@ -65,14 +74,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dbp-ss-uve" secondAttribute="bottom" constant="6" id="AJx-Bx-xE7"/>
                                                 <constraint firstItem="XwG-jd-7xH" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="topMargin" constant="40" id="Dvc-VJ-DwK"/>
                                                 <constraint firstItem="eCZ-Ew-ShY" firstAttribute="centerX" secondItem="ksS-Hr-Tvy" secondAttribute="centerX" id="Nxx-3P-iKh"/>
                                                 <constraint firstItem="XeC-WI-Q4h" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" constant="6" id="Om2-vA-hS4"/>
-                                                <constraint firstAttribute="trailing" secondItem="dbp-ss-uve" secondAttribute="trailing" id="ViZ-Rk-n4n"/>
+                                                <constraint firstAttribute="trailing" secondItem="dbp-ss-uve" secondAttribute="trailing" constant="6" id="ViZ-Rk-n4n"/>
                                                 <constraint firstItem="eCZ-Ew-ShY" firstAttribute="top" secondItem="2N3-1K-wa5" secondAttribute="bottom" constant="20" id="YQ3-w9-ZbC"/>
-                                                <constraint firstItem="dbp-ss-uve" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" id="b8x-4Y-Xub"/>
-                                                <constraint firstAttribute="bottom" secondItem="XeC-WI-Q4h" secondAttribute="bottom" constant="10" id="eWR-nD-PsZ"/>
-                                                <constraint firstItem="dbp-ss-uve" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" id="gAU-C8-kjm"/>
+                                                <constraint firstItem="dbp-ss-uve" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" constant="6" id="b8x-4Y-Xub"/>
+                                                <constraint firstAttribute="bottom" secondItem="XeC-WI-Q4h" secondAttribute="bottom" constant="6" id="eWR-nD-PsZ"/>
+                                                <constraint firstItem="dbp-ss-uve" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" constant="6" id="gAU-C8-kjm"/>
                                                 <constraint firstItem="2N3-1K-wa5" firstAttribute="top" secondItem="XwG-jd-7xH" secondAttribute="bottom" constant="3" id="k6n-0y-7Vf"/>
                                                 <constraint firstItem="XwG-jd-7xH" firstAttribute="centerX" secondItem="ksS-Hr-Tvy" secondAttribute="centerX" id="vPL-0J-LQd"/>
                                                 <constraint firstItem="XeC-WI-Q4h" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" constant="6" id="w3K-hN-SBa"/>
