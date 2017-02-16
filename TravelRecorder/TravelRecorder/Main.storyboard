@@ -43,19 +43,19 @@
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동행" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-Ew-ShY">
-                                                    <rect key="frame" x="161" y="114.5" width="53" height="18"/>
+                                                    <rect key="frame" x="161" y="115" width="53" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-jd-7xH">
-                                                    <rect key="frame" x="175" y="48" width="24.5" height="17"/>
+                                                    <rect key="frame" x="175" y="48" width="25" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N3-1K-wa5">
-                                                    <rect key="frame" x="146" y="68" width="82" height="26.5"/>
+                                                    <rect key="frame" x="146" y="68" width="82" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -171,6 +171,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 기간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I17-t9-YBG">
+                                <rect key="frame" x="16" y="222" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1) 출발일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-CQ-Wfb">
+                                <rect key="frame" x="16" y="242" width="52" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image File Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="hAi-EN-K4p">
+                                <rect key="frame" x="162" y="532" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SVO-fK-dUd"/>
+                                    <constraint firstAttribute="width" constant="50" id="gp7-Lk-GbL"/>
+                                </constraints>
+                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-FC-g3g">
                                 <rect key="frame" x="20" y="467" width="335" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -188,16 +207,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image File Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="hAi-EN-K4p">
-                                <rect key="frame" x="162" y="532" width="50" height="50"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TP3-C1-rax">
+                                <rect key="frame" x="16" y="254" width="343" height="105"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="SVO-fK-dUd"/>
-                                    <constraint firstAttribute="width" constant="50" id="gp7-Lk-GbL"/>
+                                    <constraint firstAttribute="height" constant="105" id="X4I-WH-0BB"/>
                                 </constraints>
-                            </imageView>
+                                <date key="date" timeIntervalSinceReferenceDate="508921897.95813501">
+                                    <!--2017-02-16 07:11:37 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2) 도착일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY9-W7-kBs">
+                                <rect key="frame" x="16" y="353" width="54" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-bJ-cHd">
+                                <rect key="frame" x="16" y="362" width="343" height="105"/>
+                                <color key="tintColor" white="1" alpha="0.70366010270000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="Fmo-xy-BPr"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="508921897.95813501">
+                                    <!--2017-02-16 07:11:37 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ifg-bJ-cHd" firstAttribute="trailing" secondItem="JTW-Wr-xEa" secondAttribute="trailingMargin" id="0Fm-b6-0Fy"/>
+                            <constraint firstItem="TP3-C1-rax" firstAttribute="top" secondItem="I17-t9-YBG" secondAttribute="bottom" constant="11" id="0p0-Uv-r8s"/>
                             <constraint firstItem="Nhe-FC-g3g" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="28R-Qb-FRo"/>
                             <constraint firstItem="GaE-fd-T83" firstAttribute="top" secondItem="hAi-EN-K4p" secondAttribute="bottom" constant="85" id="2Bg-0n-qdV"/>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="Ane-SR-vow"/>
@@ -206,17 +245,29 @@
                             <constraint firstItem="4kw-Iy-qcy" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="HK8-NI-ydi"/>
                             <constraint firstItem="Nhe-FC-g3g" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" constant="4" id="Io6-EJ-res"/>
                             <constraint firstItem="wwf-50-58P" firstAttribute="leading" secondItem="cVJ-7v-BxG" secondAttribute="trailing" constant="8" id="JCG-rM-Wyy"/>
+                            <constraint firstItem="VY9-W7-kBs" firstAttribute="top" secondItem="Gee-CQ-Wfb" secondAttribute="bottom" constant="95" id="JqW-SO-rpo"/>
+                            <constraint firstItem="Gee-CQ-Wfb" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="LR7-nU-hus"/>
+                            <constraint firstItem="Gee-CQ-Wfb" firstAttribute="top" secondItem="4kw-Iy-qcy" secondAttribute="bottom" constant="43" id="LcX-oJ-AhR"/>
+                            <constraint firstItem="TP3-C1-rax" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="MAQ-2b-IAk"/>
                             <constraint firstItem="ymD-9O-mDd" firstAttribute="top" secondItem="Vph-Dv-Dae" secondAttribute="bottom" constant="49" id="QXi-l7-19u"/>
                             <constraint firstItem="hAi-EN-K4p" firstAttribute="centerX" secondItem="JTW-Wr-xEa" secondAttribute="centerX" id="SwO-HL-A5F"/>
                             <constraint firstItem="wwf-50-58P" firstAttribute="top" secondItem="ymD-9O-mDd" secondAttribute="bottom" constant="20" id="TYx-Tb-3K2"/>
                             <constraint firstItem="mdJ-G5-gAY" firstAttribute="leading" secondItem="4kw-Iy-qcy" secondAttribute="trailing" constant="8" id="WeH-4J-nib"/>
+                            <constraint firstItem="ifg-bJ-cHd" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="XTQ-Tr-bkC"/>
+                            <constraint firstItem="I17-t9-YBG" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="aCP-kM-nk6"/>
                             <constraint firstItem="mdJ-G5-gAY" firstAttribute="leading" secondItem="4kw-Iy-qcy" secondAttribute="trailing" constant="8" id="aOw-Tf-Qgo"/>
+                            <constraint firstItem="TP3-C1-rax" firstAttribute="trailing" secondItem="JTW-Wr-xEa" secondAttribute="trailingMargin" id="dG8-Fg-cG3"/>
                             <constraint firstItem="cVJ-7v-BxG" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="evD-F5-Dwl"/>
+                            <constraint firstItem="ifg-bJ-cHd" firstAttribute="top" secondItem="TP3-C1-rax" secondAttribute="bottom" constant="3" id="fA1-sa-Fju"/>
                             <constraint firstItem="GaE-fd-T83" firstAttribute="top" secondItem="Nhe-FC-g3g" secondAttribute="bottom" constant="20" id="gej-LO-RMc"/>
                             <constraint firstItem="cVJ-7v-BxG" firstAttribute="top" secondItem="Vph-Dv-Dae" secondAttribute="bottom" constant="114" id="mU6-Wn-ZhM"/>
+                            <constraint firstItem="I17-t9-YBG" firstAttribute="top" secondItem="4kw-Iy-qcy" secondAttribute="bottom" constant="23" id="oci-IF-0pn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nhe-FC-g3g" secondAttribute="trailing" constant="4" id="pwn-zX-Ivl"/>
                             <constraint firstItem="4kw-Iy-qcy" firstAttribute="top" secondItem="cVJ-7v-BxG" secondAttribute="bottom" constant="23" id="qEA-TE-ngQ"/>
+                            <constraint firstItem="Nhe-FC-g3g" firstAttribute="top" secondItem="ifg-bJ-cHd" secondAttribute="bottom" id="rHv-xN-Mgg"/>
+                            <constraint firstItem="ifg-bJ-cHd" firstAttribute="top" secondItem="TP3-C1-rax" secondAttribute="bottom" constant="3" id="sTf-OQ-sSi"/>
                             <constraint firstItem="wwf-50-58P" firstAttribute="trailing" secondItem="JTW-Wr-xEa" secondAttribute="trailingMargin" id="sdF-zD-3BL"/>
+                            <constraint firstItem="VY9-W7-kBs" firstAttribute="leading" secondItem="JTW-Wr-xEa" secondAttribute="leadingMargin" id="zll-0q-Ql0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ouv-I7-xq5"/>
@@ -237,7 +288,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2021.7391304347827" y="-847.01086956521749"/>
+            <point key="canvasLocation" x="2021.5999999999999" y="-847.82608695652175"/>
         </scene>
         <!--Nth Day View Controller-->
         <scene sceneID="Bpz-t0-gXw">
