@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ecY-gd-1hu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Rk-ct-6KU">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="287"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="collection" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-TC-UFX">
-                                <rect key="frame" x="0.0" y="20" width="355" height="480"/>
+                                <rect key="frame" x="0.0" y="20" width="355" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cgk-wD-Epc">
                                     <size key="itemSize" width="50" height="50"/>
@@ -33,27 +32,23 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoAddCell" id="Pfz-c5-3Q9">
-                                        <rect key="frame" x="204" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kk-KM-Ooz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stack of Photos-50" translatesAutoresizingMaskIntoConstraints="NO" id="tTG-MK-GKy">
+                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="8Kk-KM-Ooz" secondAttribute="trailing" id="8Wg-dy-MfQ"/>
-                                            <constraint firstItem="8Kk-KM-Ooz" firstAttribute="leading" secondItem="Pfz-c5-3Q9" secondAttribute="leading" id="Lnk-wG-59Z"/>
-                                            <constraint firstAttribute="bottom" secondItem="8Kk-KM-Ooz" secondAttribute="bottom" id="aeA-hl-OsR"/>
-                                            <constraint firstItem="8Kk-KM-Ooz" firstAttribute="top" secondItem="Pfz-c5-3Q9" secondAttribute="top" id="kXX-1I-jEz"/>
+                                            <constraint firstItem="tTG-MK-GKy" firstAttribute="leading" secondItem="Pfz-c5-3Q9" secondAttribute="leading" constant="5" id="19N-rd-Ld5"/>
+                                            <constraint firstItem="tTG-MK-GKy" firstAttribute="top" secondItem="Pfz-c5-3Q9" secondAttribute="top" constant="5" id="DOg-bX-10l"/>
+                                            <constraint firstAttribute="bottom" secondItem="tTG-MK-GKy" secondAttribute="bottom" constant="5" id="OHw-TY-qvE"/>
+                                            <constraint firstAttribute="trailing" secondItem="tTG-MK-GKy" secondAttribute="trailing" constant="5" id="RpY-GB-f58"/>
                                         </constraints>
                                         <size key="customSize" width="50" height="50"/>
                                         <connections>
@@ -61,44 +56,26 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCollectionViewCell" id="P1G-Ul-XF6" customClass="PhotoCollectionViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="458" height="207"/>
+                                        <rect key="frame" x="0.0" y="72" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="458" height="207"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ji3-Al-5En">
-                                                    <rect key="frame" x="0.0" y="0.0" width="381" height="255"/>
-                                                    <subviews>
-                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-zI-lNz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="341" height="159"/>
-                                                        </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDB-AM-Kpp">
-                                                            <rect key="frame" x="0.0" y="159" width="341" height="48"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="fDB-AM-Kpp" firstAttribute="width" secondItem="bI4-zI-lNz" secondAttribute="width" id="7IY-F7-CNB"/>
-                                                        <constraint firstItem="fDB-AM-Kpp" firstAttribute="height" secondItem="bI4-zI-lNz" secondAttribute="height" multiplier="0.3" id="VoE-1S-lG1"/>
-                                                    </constraints>
-                                                </stackView>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-zI-lNz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ji3-Al-5En" secondAttribute="bottom" id="7o3-Mk-i38"/>
-                                            <constraint firstItem="ji3-Al-5En" firstAttribute="top" secondItem="P1G-Ul-XF6" secondAttribute="top" id="Tik-SS-Cpf"/>
-                                            <constraint firstAttribute="trailing" secondItem="ji3-Al-5En" secondAttribute="trailing" id="VbJ-KS-SAI"/>
-                                            <constraint firstItem="ji3-Al-5En" firstAttribute="leading" secondItem="P1G-Ul-XF6" secondAttribute="leading" id="iNm-WG-1Vu"/>
+                                            <constraint firstAttribute="bottom" secondItem="bI4-zI-lNz" secondAttribute="bottom" id="Ce4-lN-6iG"/>
+                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="top" secondItem="P1G-Ul-XF6" secondAttribute="top" id="SAS-kt-gYk"/>
+                                            <constraint firstItem="bI4-zI-lNz" firstAttribute="leading" secondItem="P1G-Ul-XF6" secondAttribute="leading" id="aTe-hd-qIi"/>
+                                            <constraint firstAttribute="trailing" secondItem="bI4-zI-lNz" secondAttribute="trailing" id="oBJ-3N-2oC"/>
                                         </constraints>
-                                        <size key="customSize" width="458" height="207"/>
                                         <connections>
                                             <outlet property="imageView" destination="bI4-zI-lNz" id="AMc-yQ-ctD"/>
-                                            <outlet property="textView" destination="fDB-AM-Kpp" id="QBR-Zf-dLq"/>
                                             <outletCollection property="gestureRecognizers" destination="9U9-ny-fx9" appends="YES" id="uah-su-OzC"/>
                                         </connections>
                                     </collectionViewCell>
@@ -119,7 +96,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="355" height="500"/>
+                    <size key="freeformSize" width="355" height="287"/>
                     <connections>
                         <outlet property="collectionView" destination="LQP-TC-UFX" id="fTN-zO-o1I"/>
                     </connections>
@@ -199,10 +176,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="M2t-gQ-KrR">
-                                <rect key="frame" x="0.0" y="332" width="375" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-Xm-c7a">
                                 <rect key="frame" x="317" y="20" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -241,4 +214,7 @@
             <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Stack of Photos-50" width="25" height="25"/>
+    </resources>
 </document>

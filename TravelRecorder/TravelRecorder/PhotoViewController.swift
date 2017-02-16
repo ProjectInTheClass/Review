@@ -40,23 +40,12 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if indexPath.item == 0 {
-            
-            var itemSize = self.collectionView.bounds.size
-            itemSize.height = (itemSize.height - 10)
-            itemSize.width = (itemSize.height) / 5.0
-            return itemSize
-            
-        } else {
-            var itemSize = self.collectionView.bounds.size
-            itemSize.height = (itemSize.height - 10)
-            itemSize.width = itemSize.height
-            
-            return itemSize
-        }
+        var itemSize = self.collectionView.bounds.size
+        itemSize.height = (itemSize.height - 10) / 2.0
+        itemSize.width = itemSize.height
         
+        return itemSize
     }
-    
 
     
 //    func collectionView(_ collectionViewLayout: UICollectionViewLayout) {
@@ -79,9 +68,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             if let info = self.photoInfos?[indexPath.item - 1] {
                 if let imageData = info.imageData {
                     cell.imageView.image = UIImage(data: imageData)
-                }
-                if let text = info.text {
-                    cell.textView.text = text
                 }
             }
             return cell
