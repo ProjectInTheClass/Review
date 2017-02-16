@@ -30,13 +30,6 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var withWhomTextField: UITextField!
     
     
-    @IBOutlet weak var fromYear: UITextField!
-    @IBOutlet weak var fromMonth: UITextField!
-    @IBOutlet weak var fromDay: UITextField!
-    
-    @IBOutlet weak var toYear: UITextField!
-    @IBOutlet weak var toMonth: UITextField!
-    @IBOutlet weak var toDay: UITextField!
     
     
     // return 키로 키보드 dismiss
