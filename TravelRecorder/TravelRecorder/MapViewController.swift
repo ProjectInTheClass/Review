@@ -58,14 +58,14 @@ class MapViewController: UIViewController {
         let realm = try? Realm()
         
         // 경로 정보를 담을 locationInfo
-        let locationInfo: LocationInfo = LocationInfo()
+        let labelInfo: Label = Label()
         
         // 라벨용 경로
         if let forLabel = self.labelLocation, NSString(string:forLabel).length > 0 {
             print("라벨용 경로가 입력돼있습니다")
             
             // 사용자가 작성한 라벨용 경로를 locationInfo에 저장
-            locationInfo.labelLocation = forLabel
+            labelInfo.labelLocation = forLabel
 
             
         } else {
@@ -85,7 +85,7 @@ class MapViewController: UIViewController {
  
         
         try? realm?.write {
-            realm?.add(locationInfo)
+            realm?.add(labelInfo)
         }
         
         putLocationButtons()
@@ -97,11 +97,11 @@ class MapViewController: UIViewController {
         
         print("putLocationButtons들어옴")
         
-        var locationInfo: Results<LocationInfo>?
+        var labelInfo: Results<Label>?
         
         let realm = try? Realm()
         
-        locationInfo = realm?.objects(LocationInfo.self)
+        labelInfo = realm?.objects(Label.self)
         
         
         print(Realm.Configuration.defaultConfiguration.fileURL)
@@ -120,12 +120,12 @@ class MapViewController: UIViewController {
         
         self.view.addSubview(buttonStackView)
         
-        if locationInfo != nil {
+        if labelInfo != nil {
             
             
             
             
-            for loc in locationInfo! {
+            for loc in labelInfo! {
                 
                 let button = UIButton()
                 button.backgroundColor = .white
@@ -191,16 +191,16 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         
         let realm = try? Realm()
-        let locationInfo: LocationInfo = LocationInfo()
+        let detailInfo: Detail = Detail()
         if let detail = place.formattedAddress {
-            locationInfo.detailLocation = detail
+            detailInfo.detailLocation = detail
         }
-        
-        locationInfo.latitude = place.coordinate.latitude
-        locationInfo.longitude = place.coordinate.longitude
+        detailInfo.simpleLocation = place.name
+        detailInfo.latitude = place.coordinate.latitude
+        detailInfo.longitude = place.coordinate.longitude
    
         try? realm?.write {
-            realm?.add(locationInfo)
+            realm?.add(detailInfo)
         }
         
         //loadView()
