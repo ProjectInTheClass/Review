@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class MainViewButtonController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MainViewButtonController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var saveExitButton: UIButton!
     @IBOutlet weak var addEventPopOver: UIView!
@@ -37,6 +37,19 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var toYear: UITextField!
     @IBOutlet weak var toMonth: UITextField!
     @IBOutlet weak var toDay: UITextField!
+    
+    
+    // return 키로 키보드 dismiss
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        eventTitleTextField.endEditing(true)
+        withWhomTextField.endEditing(true)
+        
+        return true
+    }
+    
+    
+    
     
     var eventInfoFromPrevController: EventInfo?
     
