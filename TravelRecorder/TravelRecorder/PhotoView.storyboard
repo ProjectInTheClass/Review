@@ -39,12 +39,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추가" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-rd-42J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <color key="backgroundColor" white="0.54465060763888884" alpha="1" colorSpace="calibratedWhite"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-rd-42J">
+                                                    <rect key="frame" x="5" y="0.0" width="45" height="50"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                         </view>
@@ -52,7 +58,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="3wa-rd-42J" secondAttribute="trailing" id="0uf-II-bFF"/>
                                             <constraint firstAttribute="bottom" secondItem="3wa-rd-42J" secondAttribute="bottom" id="IvO-nC-n0G"/>
-                                            <constraint firstItem="3wa-rd-42J" firstAttribute="leading" secondItem="Pfz-c5-3Q9" secondAttribute="leading" id="Zxs-Bf-Ncx"/>
+                                            <constraint firstItem="3wa-rd-42J" firstAttribute="leading" secondItem="Pfz-c5-3Q9" secondAttribute="leading" constant="5" id="Zxs-Bf-Ncx"/>
                                             <constraint firstItem="3wa-rd-42J" firstAttribute="top" secondItem="Pfz-c5-3Q9" secondAttribute="top" id="gvF-UI-O6A"/>
                                         </constraints>
                                         <size key="customSize" width="50" height="50"/>
@@ -67,14 +73,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-pe-zYh">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-pe-zYh">
                                                     <rect key="frame" x="-20" y="0.0" width="383" height="235"/>
                                                     <subviews>
                                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-zI-lNz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="142.5"/>
                                                         </imageView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-uY-QVO">
-                                                            <rect key="frame" x="0.0" y="150" width="343" height="45"/>
+                                                            <rect key="frame" x="0.0" y="152.5" width="343" height="42.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -151,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-sR-fSa">
-                                <rect key="frame" x="10" y="60" width="355" height="597"/>
+                                <rect key="frame" x="10" y="63" width="355" height="594"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-zD-bqY">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="260"/>
@@ -160,6 +166,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="260" id="97S-DJ-MV0"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="bby-hk-GKl" appends="YES" id="Dev-ox-kqk"/>
                                         </connections>
@@ -173,21 +185,41 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-da-Cms">
-                                        <rect key="frame" x="0.0" y="560" width="355" height="37"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-da-Cms">
+                                        <rect key="frame" x="0.0" y="560" width="355" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-IH-sQg">
-                                                <rect key="frame" x="0.0" y="0.0" width="178" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Save"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="clickSaveButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="4kX-d4-oe8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihh-Hv-2xD">
-                                                <rect key="frame" x="178" y="0.0" width="177" height="37"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihh-Hv-2xD">
+                                                <rect key="frame" x="187.5" y="0.0" width="167.5" height="34"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="clickCancelButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="XOb-BS-dGE"/>
                                                 </connections>
@@ -204,25 +236,31 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-Xm-c7a">
-                                <rect key="frame" x="305" y="20" width="60" height="40"/>
+                                <rect key="frame" x="305" y="20" width="60" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9aw-xF-0UJ"/>
+                                    <constraint firstAttribute="height" constant="34" id="9aw-xF-0UJ"/>
                                     <constraint firstAttribute="width" constant="60" id="gOe-3r-Bh5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clickDeleteButton:" destination="4QE-Ug-6hD" eventType="touchUpInside" id="D2b-Mm-nM1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.83843315969999999" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3MQ-sR-fSa" firstAttribute="leading" secondItem="lCb-EP-tMM" secondAttribute="leading" constant="10" id="GHF-CL-dgE"/>
                             <constraint firstAttribute="bottom" secondItem="3MQ-sR-fSa" secondAttribute="bottom" constant="10" id="Ho6-Lr-8dl"/>
-                            <constraint firstItem="3MQ-sR-fSa" firstAttribute="top" secondItem="XGx-aJ-C6z" secondAttribute="bottom" constant="40" id="ceN-Y5-fEs"/>
+                            <constraint firstItem="3MQ-sR-fSa" firstAttribute="top" secondItem="XGx-aJ-C6z" secondAttribute="bottom" constant="43" id="ceN-Y5-fEs"/>
                             <constraint firstAttribute="trailing" secondItem="3MQ-sR-fSa" secondAttribute="trailing" constant="10" id="g4v-cX-19Y"/>
                             <constraint firstItem="m1o-Xm-c7a" firstAttribute="top" secondItem="XGx-aJ-C6z" secondAttribute="bottom" id="qQO-3K-0oC"/>
                             <constraint firstAttribute="trailing" secondItem="m1o-Xm-c7a" secondAttribute="trailing" constant="10" id="xXm-qy-D0T"/>
