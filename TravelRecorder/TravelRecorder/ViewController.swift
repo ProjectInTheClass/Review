@@ -150,6 +150,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
         let secondVC = segue.destination as! MainViewButtonController
         secondVC.transitioningDelegate = self
         secondVC.modalPresentationStyle = .custom
+        
     }
     
     
