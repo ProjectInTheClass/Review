@@ -145,11 +145,26 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
     }
     
     
+    // transition
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        if segue.identifier == "addVC" {
+            
+            let addView = segue.destination as! MainViewButtonController
+            addView.transitioningDelegate = self
+            addView.modalPresentationStyle = .custom
+            
+        } else if segue.identifier == "nthVC" {
+            
+            let nextView = segue.destination as! NthDayViewController
+            
+        }
+        
+        /*
         let secondVC = segue.destination as! MainViewButtonController
         secondVC.transitioningDelegate = self
         secondVC.modalPresentationStyle = .custom
+        */
         
     }
     

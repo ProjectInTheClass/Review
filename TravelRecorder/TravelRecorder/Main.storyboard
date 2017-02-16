@@ -85,7 +85,7 @@
                                             <outlet property="eventTitleOutput" destination="2N3-1K-wa5" id="Xkq-Js-rtb"/>
                                             <outlet property="eventWithWhomOutput" destination="eCZ-Ew-ShY" id="cwU-I1-ZPK"/>
                                             <outlet property="eventsRepImage" destination="dbp-ss-uve" id="Pn4-gt-zCy"/>
-                                            <segue destination="4jr-gm-PYi" kind="show" id="aZw-vR-gHy"/>
+                                            <segue destination="4jr-gm-PYi" kind="show" identifier="nthVC" id="aZw-vR-gHy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +103,7 @@
                                 </constraints>
                                 <state key="normal" image="Plus Math_40"/>
                                 <connections>
-                                    <segue destination="FvH-yM-Fjv" kind="presentation" id="dmg-T8-kFX"/>
+                                    <segue destination="FvH-yM-Fjv" kind="presentation" identifier="addVC" id="dmg-T8-kFX"/>
                                 </connections>
                             </button>
                         </subviews>
