@@ -255,10 +255,10 @@
                                 <rect key="frame" x="2" y="64" width="371" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-Mj-Htu">
-                                        <rect key="frame" x="0.0" y="0.0" width="371" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="371" height="44"/>
                                         <accessibility key="accessibilityConfiguration" identifier="showDateButton"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="bjm-cE-EgY"/>
+                                            <constraint firstAttribute="height" constant="44" id="bjm-cE-EgY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="n일차">
@@ -269,7 +269,7 @@
                                         </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-U6-jUl">
-                                        <rect key="frame" x="0.0" y="58" width="371" height="250"/>
+                                        <rect key="frame" x="0.0" y="52" width="371" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="Dls-iP-4EA"/>
                                         </constraints>
@@ -278,7 +278,7 @@
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELS-Ou-4f7">
-                                        <rect key="frame" x="0.0" y="316" width="371" height="287"/>
+                                        <rect key="frame" x="0.0" y="310" width="371" height="293"/>
                                         <connections>
                                             <segue destination="YLS-2d-ZbN" kind="embed" id="Qoa-6N-5Xm"/>
                                         </connections>
