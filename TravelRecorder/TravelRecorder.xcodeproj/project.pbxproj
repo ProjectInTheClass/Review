@@ -17,11 +17,11 @@
 		662C1FBD1E517E8B00ECF54F /* NthDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662C1FBC1E517E8B00ECF54F /* NthDayViewController.swift */; };
 		669EBA101E486762004F5CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA0F1E486762004F5CCB /* AppDelegate.swift */; };
 		669EBA121E486762004F5CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBA111E486762004F5CCB /* ViewController.swift */; };
-		669EBA151E486762004F5CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA131E486762004F5CCB /* Main.storyboard */; };
 		669EBA171E486762004F5CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA161E486762004F5CCB /* Assets.xcassets */; };
 		669EBA1A1E486762004F5CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669EBA181E486762004F5CCB /* LaunchScreen.storyboard */; };
 		66D3DBB01E4AEB7E00864139 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */; };
 		66D3DBB21E4AEB8A00864139 /* PhotoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */; };
+		66FFBFD31E555465004D80BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FFBFD21E555465004D80BF /* Main.storyboard */; };
 		7AE1051D1E5046290059F9C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051C1E5046290059F9C0 /* MapViewController.swift */; };
 		7AE1051F1E5046380059F9C0 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */; };
 		A8EE6CE00B8DC2DA33064D2D /* Pods_TravelRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD93E712FE6612876F5A7FB /* Pods_TravelRecorder.framework */; };
@@ -43,12 +43,12 @@
 		669EBA0C1E486762004F5CCB /* TravelRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669EBA0F1E486762004F5CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669EBA111E486762004F5CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		669EBA141E486762004F5CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		669EBA161E486762004F5CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		669EBA191E486762004F5CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		669EBA1B1E486762004F5CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		66D3DBB11E4AEB8A00864139 /* PhotoView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoView.storyboard; sourceTree = "<group>"; };
+		66FFBFD21E555465004D80BF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7AE1051C1E5046290059F9C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7AE1051E1E5046380059F9C0 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		A2E7B9A4069EA2032B81C1C4 /* Pods-TravelRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelRecorder/Pods-TravelRecorder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				669EBA0F1E486762004F5CCB /* AppDelegate.swift */,
-				669EBA131E486762004F5CCB /* Main.storyboard */,
+				66FFBFD21E555465004D80BF /* Main.storyboard */,
 				669EBA111E486762004F5CCB /* ViewController.swift */,
 				C1DAF5131E5205E900FF7D90 /* SeparatedMainstoryboard */,
 				66D3DBAF1E4AEB7E00864139 /* MapView.storyboard */,
@@ -205,10 +205,10 @@
 			files = (
 				66D3DBB21E4AEB8A00864139 /* PhotoView.storyboard in Resources */,
 				662C1FBB1E5177AB00ECF54F /* CVCalendar in Resources */,
+				66FFBFD31E555465004D80BF /* Main.storyboard in Resources */,
 				669EBA1A1E486762004F5CCB /* LaunchScreen.storyboard in Resources */,
 				669EBA171E486762004F5CCB /* Assets.xcassets in Resources */,
 				66D3DBB01E4AEB7E00864139 /* MapView.storyboard in Resources */,
-				669EBA151E486762004F5CCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +287,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		669EBA131E486762004F5CCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				669EBA141E486762004F5CCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		669EBA181E486762004F5CCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
