@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="183" id="hcM-M9-HZc" customClass="EventsTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="183"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="185" id="hcM-M9-HZc" customClass="EventsTableViewCell" customModule="TravelRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="185"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hcM-M9-HZc" id="ksS-Hr-Tvy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-ss-uve">
@@ -42,7 +42,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
-                                                    <rect key="frame" x="4" y="4" width="367" height="174.5"/>
+                                                    <rect key="frame" x="4" y="4" width="367" height="176.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동행" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-Ew-ShY">
