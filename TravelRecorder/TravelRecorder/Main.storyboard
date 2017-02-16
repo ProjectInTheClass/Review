@@ -38,7 +38,7 @@
                                                     <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
+                                                <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
                                                     <rect key="frame" x="4" y="4" width="367" height="171"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
@@ -444,22 +444,10 @@
                                     <constraint firstItem="ELS-Ou-4f7" firstAttribute="width" secondItem="kOt-Mj-Htu" secondAttribute="width" id="TCo-Ym-eH2"/>
                                 </constraints>
                             </stackView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-c4-rzA">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mcU-4E-igA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="nFJ-g5-PaH" secondAttribute="bottom" id="2Ux-jo-94U"/>
-                            <constraint firstItem="vUS-6H-3gZ" firstAttribute="top" secondItem="7f8-c4-rzA" secondAttribute="bottom" id="5ph-tP-ddT"/>
-                            <constraint firstItem="7f8-c4-rzA" firstAttribute="top" secondItem="2MX-X7-oNC" secondAttribute="top" constant="120" id="E5N-e5-wUV"/>
-                            <constraint firstAttribute="trailing" secondItem="7f8-c4-rzA" secondAttribute="trailing" id="KBR-IX-7a9"/>
-                            <constraint firstItem="7f8-c4-rzA" firstAttribute="leading" secondItem="2MX-X7-oNC" secondAttribute="leading" id="Z4h-sK-c0L"/>
                             <constraint firstItem="nFJ-g5-PaH" firstAttribute="leading" secondItem="2MX-X7-oNC" secondAttribute="leading" constant="2" id="cHa-MU-o50"/>
                             <constraint firstAttribute="trailing" secondItem="nFJ-g5-PaH" secondAttribute="trailing" constant="2" id="hhn-rH-M8S"/>
                             <constraint firstItem="nFJ-g5-PaH" firstAttribute="top" secondItem="dRO-tb-JF8" secondAttribute="bottom" id="sSH-DF-9ey"/>
@@ -467,7 +455,6 @@
                     </view>
                     <connections>
                         <outlet property="calendarPopView" destination="ElO-Wt-qZu" id="JpP-ov-35D"/>
-                        <outlet property="visualEffectView" destination="7f8-c4-rzA" id="Xg1-IY-hks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVU-uv-U0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -505,7 +492,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
