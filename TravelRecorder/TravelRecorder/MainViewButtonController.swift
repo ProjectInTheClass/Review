@@ -35,13 +35,17 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-        startDateOutput.inputView = datePicker
-        endDateOutput.inputView = datePicker
+        let datePicker1 = UIDatePicker()
+        datePicker1.datePickerMode = .date
+        startDateOutput.inputView = datePicker1
+        
+        let datePicker2 = UIDatePicker()
+        datePicker2.datePickerMode = .date
+        endDateOutput.inputView = datePicker2
         
         // datepicker의 value가 바뀌면 그것을 알려준다.
-        datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+        datePicker1.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+        datePicker2.addTarget(self, action: #selector(datePickerChanged2), for: .valueChanged)
     }
     
     // formatter: NSDate -> String, 그리고 텍스트필드에 변환된 결과값을 보여준다.
@@ -51,6 +55,14 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         formatter.dateFormat = "yyyy.MM.dd"
         
         startDateOutput.text = formatter.string(from: sender.date)
+        
+    }
+    
+    func datePickerChanged2(sender: UIDatePicker) {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyy.MM.dd"
+        
         endDateOutput.text = formatter.string(from: sender.date)
         
     }
@@ -63,6 +75,8 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
         
         eventTitleTextField.endEditing(true)
         withWhomTextField.endEditing(true)
+        startDateOutput.endEditing(true)
+        endDateOutput.endEditing(true)
         
         return true
     }

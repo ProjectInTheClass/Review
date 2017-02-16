@@ -41,10 +41,6 @@
                                                         <constraint firstAttribute="height" constant="180" id="0FV-ws-gvL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
-                                                    <rect key="frame" x="4" y="4" width="367" height="176"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동행" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-Ew-ShY">
                                                     <rect key="frame" x="161" y="115" width="53" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -63,23 +59,27 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-WI-Q4h" userLabel="Darken">
+                                                    <rect key="frame" x="6" y="6" width="363" height="168.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="XwG-jd-7xH" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="topMargin" constant="40" id="Dvc-VJ-DwK"/>
                                                 <constraint firstItem="eCZ-Ew-ShY" firstAttribute="centerX" secondItem="ksS-Hr-Tvy" secondAttribute="centerX" id="Nxx-3P-iKh"/>
                                                 <constraint firstItem="eCZ-Ew-ShY" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leadingMargin" constant="153" id="Oiz-q2-XWE"/>
-                                                <constraint firstItem="XeC-WI-Q4h" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" constant="4" id="Om2-vA-hS4"/>
+                                                <constraint firstItem="XeC-WI-Q4h" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" constant="6" id="Om2-vA-hS4"/>
                                                 <constraint firstAttribute="trailing" secondItem="dbp-ss-uve" secondAttribute="trailing" id="ViZ-Rk-n4n"/>
                                                 <constraint firstItem="eCZ-Ew-ShY" firstAttribute="top" secondItem="2N3-1K-wa5" secondAttribute="bottom" constant="20" id="YQ3-w9-ZbC"/>
-                                                <constraint firstAttribute="bottom" secondItem="XeC-WI-Q4h" secondAttribute="bottom" constant="4" id="YkR-Hb-6tD"/>
                                                 <constraint firstItem="dbp-ss-uve" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" id="b8x-4Y-Xub"/>
-                                                <constraint firstItem="XeC-WI-Q4h" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" constant="4" id="eOR-7l-6jc"/>
+                                                <constraint firstAttribute="bottom" secondItem="XeC-WI-Q4h" secondAttribute="bottom" constant="10" id="eWR-nD-PsZ"/>
                                                 <constraint firstItem="dbp-ss-uve" firstAttribute="leading" secondItem="ksS-Hr-Tvy" secondAttribute="leading" id="gAU-C8-kjm"/>
                                                 <constraint firstItem="2N3-1K-wa5" firstAttribute="top" secondItem="XwG-jd-7xH" secondAttribute="bottom" constant="3" id="k6n-0y-7Vf"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eCZ-Ew-ShY" secondAttribute="trailing" constant="153" id="lzC-nO-l8K"/>
                                                 <constraint firstItem="XwG-jd-7xH" firstAttribute="centerX" secondItem="ksS-Hr-Tvy" secondAttribute="centerX" id="vPL-0J-LQd"/>
+                                                <constraint firstItem="XeC-WI-Q4h" firstAttribute="top" secondItem="ksS-Hr-Tvy" secondAttribute="top" constant="6" id="w3K-hN-SBa"/>
                                                 <constraint firstItem="2N3-1K-wa5" firstAttribute="centerX" secondItem="ksS-Hr-Tvy" secondAttribute="centerX" id="x1X-XL-ip6"/>
-                                                <constraint firstAttribute="trailing" secondItem="XeC-WI-Q4h" secondAttribute="trailing" constant="4" id="yH3-gx-td1"/>
+                                                <constraint firstAttribute="trailing" secondItem="XeC-WI-Q4h" secondAttribute="trailing" constant="6" id="yH3-gx-td1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -405,7 +405,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPE-9b-MvM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fB6-aS-SY5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fB6-aS-SY5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
