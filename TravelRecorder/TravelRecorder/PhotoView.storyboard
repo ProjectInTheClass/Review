@@ -78,13 +78,25 @@
                                                     <subviews>
                                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-zI-lNz">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="142.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-uY-QVO">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-uY-QVO">
                                                             <rect key="frame" x="0.0" y="152.5" width="343" height="42.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </textView>
                                                     </subviews>
                                                     <constraints>
@@ -156,12 +168,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image File Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-27-Tcf">
+                                <rect key="frame" x="150" y="154" width="75" height="93"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-sR-fSa">
                                 <rect key="frame" x="10" y="63" width="355" height="594"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-zD-bqY">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="260"/>
-                                        <color key="backgroundColor" red="0.83323963310000004" green="0.84148953049999997" blue="0.84148953049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="260" id="97S-DJ-MV0"/>
@@ -195,22 +210,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-da-Cms">
                                         <rect key="frame" x="0.0" y="560" width="355" height="34"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-IH-sQg">
-                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Save"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="clickSaveButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="4kX-d4-oe8"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihh-Hv-2xD">
-                                                <rect key="frame" x="187.5" y="0.0" width="167.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Cancel"/>
@@ -222,6 +223,20 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="clickCancelButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="XOb-BS-dGE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-IH-sQg">
+                                                <rect key="frame" x="187.5" y="0.0" width="167.5" height="34"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Save"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickSaveButton" destination="4QE-Ug-6hD" eventType="touchUpInside" id="4kX-d4-oe8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -258,10 +273,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.83843315969999999" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EiM-27-Tcf" secondAttribute="trailing" constant="150" id="ABV-rG-ZJn"/>
                             <constraint firstItem="3MQ-sR-fSa" firstAttribute="leading" secondItem="lCb-EP-tMM" secondAttribute="leading" constant="10" id="GHF-CL-dgE"/>
                             <constraint firstAttribute="bottom" secondItem="3MQ-sR-fSa" secondAttribute="bottom" constant="10" id="Ho6-Lr-8dl"/>
                             <constraint firstItem="3MQ-sR-fSa" firstAttribute="top" secondItem="XGx-aJ-C6z" secondAttribute="bottom" constant="43" id="ceN-Y5-fEs"/>
+                            <constraint firstItem="EiM-27-Tcf" firstAttribute="leading" secondItem="lCb-EP-tMM" secondAttribute="leading" constant="150" id="djJ-sq-NjP"/>
                             <constraint firstAttribute="trailing" secondItem="3MQ-sR-fSa" secondAttribute="trailing" constant="10" id="g4v-cX-19Y"/>
+                            <constraint firstItem="EiM-27-Tcf" firstAttribute="top" secondItem="m1o-Xm-c7a" secondAttribute="bottom" constant="100" id="idO-52-LBZ"/>
+                            <constraint firstItem="RwR-rG-Pre" firstAttribute="top" secondItem="EiM-27-Tcf" secondAttribute="bottom" constant="420" id="ijg-99-bJV"/>
                             <constraint firstItem="m1o-Xm-c7a" firstAttribute="top" secondItem="XGx-aJ-C6z" secondAttribute="bottom" id="qQO-3K-0oC"/>
                             <constraint firstAttribute="trailing" secondItem="m1o-Xm-c7a" secondAttribute="trailing" constant="10" id="xXm-qy-D0T"/>
                         </constraints>
@@ -283,4 +302,7 @@
             <point key="canvasLocation" x="-28" y="260.41979010494754"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image File Filled-50" width="50" height="50"/>
+    </resources>
 </document>
