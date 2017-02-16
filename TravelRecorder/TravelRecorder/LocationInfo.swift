@@ -9,10 +9,14 @@
 import Foundation
 import RealmSwift
 
-class LocationInfo: Object {
+class Label: Object {
     dynamic var labelLocation = ""
-    dynamic var detailLocation = ""
     
+}
+
+class Detail: Object {
+    dynamic var detailLocation = ""
+    dynamic var simpleLocation = ""
     dynamic var latitude: Double = 0
     dynamic var longitude: Double = 0
 }
