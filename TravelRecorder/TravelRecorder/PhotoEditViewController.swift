@@ -131,8 +131,8 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func textViewShouldReturn(_ textView: UITextView) -> Bool {
-        textView.endEditing(true)
+    func textViewShouldReturn(_ textField: UITextView) -> Bool {
+        textField.endEditing(true)
         return true
     }
     
@@ -154,19 +154,35 @@ class PhotoEditViewController: UIViewController, UIImagePickerControllerDelegate
         
         let realm = try? Realm()
         
-        if let photoinfo = self.photoInfoFromPrevController {
-            
-            try! realm?.write {
-                realm?.delete(photoinfo)
-                self.dismiss(animated: true, completion: nil)
+        let alert: UIAlertController
+        alert = UIAlertController(title: "경고", message: "삭제하시겠습니까?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let deleteAction: UIAlertAction
+        deleteAction = UIAlertAction(title: "삭제", style: UIAlertActionStyle.destructive, handler: { (UIAlertAction) in
+            if let photoInfo = self.photoInfoFromPrevController {
+                try! realm?.write {
+                    realm?.delete(photoInfo)
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
+        })
+        
+        let cancelAction: UIAlertAction
+        cancelAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        return
+        
+      
             
             
         }
         
         
-        
-    }
+    
     
     
     

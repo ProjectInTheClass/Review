@@ -97,9 +97,11 @@ class MapViewController: UIViewController {
         
         putLocationButtons()
     }
-*/
+     */
     
     
+    
+    /*
     func putLocationButtons() {
         
         print("putLocationButtons들어옴")
@@ -121,9 +123,15 @@ class MapViewController: UIViewController {
         
         buttonStackView.axis = .horizontal
         buttonStackView.distribution = UIStackViewDistribution.equalSpacing
-        buttonStackView.alignment = UIStackViewAlignment.center
+        //buttonStackView.alignment = UIStackViewAlignment.center
         buttonStackView.spacing = 8
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        //buttonStackView.layoutMargins.left = 50
+        buttonStackView.layoutMargins.top = 213
+        
+        
+        buttonStackView.isLayoutMarginsRelativeArrangement = true
         
         self.view.addSubview(buttonStackView)
         
@@ -151,18 +159,52 @@ class MapViewController: UIViewController {
         
     }
 
-    
+    */
 
     
     
-    
+    func putLocationLabels() {
+        
+        var locationInfo: Results<LocationInfo>?
+        
+        let realm = try? Realm()
+        
+        locationInfo = realm?.objects(LocationInfo.self)
+        
+        var labelStr: String = ""
+        
+        if locationInfo != nil {
+            
+            for loc in locationInfo! {
+                
+                labelStr += loc.labelLocation
+                labelStr += " → "
+            }
+            
+            labelStr.characters.dropLast(3)
+            /*
+            let button = UIButton()
+            button.setTitleColor(.black, for: .normal)
+            button.setTitle(labelStr, for: .normal)
+            button.sizeToFit()
+            */
+            let label = UILabel(frame: CGRect(x: 45, y: 222, width: 0, height: 0))
+            label.text = labelStr
+            label.font = UIFont(name: label.font.fontName, size: 15)
+            label.sizeToFit()
+            
+            self.view.addSubview(label)
+        }
+        
+
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        putLocationButtons()
+        putLocationLabels()
         
         // Do any additional setup after loading the view.
     }
@@ -202,14 +244,13 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
             realm?.add(locationInfo)
         }
         
-        
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
         print("Place coordinate: \(place.coordinate)")
         print("Place addressComponents: \(place.addressComponents)")
         
-        putLocationButtons()
+        putLocationLabels()
         
         dismiss(animated: true, completion: nil)
     }

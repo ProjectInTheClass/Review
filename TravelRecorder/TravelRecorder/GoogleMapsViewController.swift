@@ -42,7 +42,7 @@ class GoogleMapsViewController: UIViewController {
         //// 지도 객체 추가
         
         // 지도의 중앙과 확대/축소 수준 지정
-        let camera = GMSCameraPosition.camera(withLatitude: cameraLatitude, longitude: cameraLongitude, zoom: 6)
+        let camera = GMSCameraPosition.camera(withLatitude: cameraLatitude, longitude: cameraLongitude, zoom: 10)
         
         // GMSCameraPosition 객체를 필수 매개변수로 전달
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)

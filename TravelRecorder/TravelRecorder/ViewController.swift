@@ -61,11 +61,13 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, U
                 cell.eventsRepImage?.image = UIImage(data: imageData, scale: 1.0)
             }
             
+            /*
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy.MM.dd"
             
             let dateString = dateFormatter.string(from: info.eventDate)
-            cell.eventPeriodOutput?.text = dateString
+            */
+            cell.eventPeriodOutput?.text = info.eventDate
         
         }
         
