@@ -284,7 +284,9 @@
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="500"/>
                     <connections>
                         <outlet property="addEventPopOver" destination="JTW-Wr-xEa" id="uch-6F-cbt"/>
+                        <outlet property="eventEnd" destination="ifg-bJ-cHd" id="N8S-1x-RHR"/>
                         <outlet property="eventMainPic" destination="Nhe-FC-g3g" id="Uvu-Qd-HgL"/>
+                        <outlet property="eventStart" destination="TP3-C1-rax" id="TZu-Xg-KlX"/>
                         <outlet property="eventTitleTextField" destination="wwf-50-58P" id="bPJ-jQ-gDM"/>
                         <outlet property="saveExitButton" destination="ymD-9O-mDd" id="RLJ-x5-yJP"/>
                         <outlet property="withWhomTextField" destination="mdJ-G5-gAY" id="71J-mr-XxX"/>

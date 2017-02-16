@@ -29,6 +29,8 @@ class MainViewButtonController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var eventTitleTextField: UITextField!
     @IBOutlet weak var withWhomTextField: UITextField!
     
+    @IBOutlet weak var eventStart: UIDatePicker!
+    @IBOutlet weak var eventEnd: UIDatePicker!
     
     
     
