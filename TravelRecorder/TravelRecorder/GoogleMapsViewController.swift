@@ -28,13 +28,13 @@ class GoogleMapsViewController: UIViewController {
         var cameraLatitude: Double = 0
         var cameraLongitude: Double = 0
         
-        var detailInfo: Results<Detail>?
+        var locationInfo: Results<LocationInfo>?
         
         let realm = try? Realm()
         
-        detailInfo = realm?.objects(Detail.self)
+        locationInfo = realm?.objects(LocationInfo.self)
  
-        if let loc = detailInfo?.last {
+        if let loc = locationInfo?.last {
             cameraLatitude = loc.latitude
             cameraLongitude = loc.longitude
             
@@ -54,21 +54,20 @@ class GoogleMapsViewController: UIViewController {
         
         
       
-        if detailInfo != nil {
+        if locationInfo != nil {
             
-            for loc in detailInfo! {
+            for loc in locationInfo! {
             
                 //// 마커
                 
                 // 마커 추가
                 print("마커 위치")
-                print(loc.simpleLocation)
-                print(loc.detailLocation)
+                print(loc.labelLocation)
                 print(loc.latitude)
                 print(loc.longitude)
                 let position = CLLocationCoordinate2D(latitude: loc.latitude, longitude: loc.longitude)
                 let marker = GMSMarker(position: position)
-                marker.title = loc.simpleLocation
+                marker.title = loc.labelLocation
                 marker.map = mapView
                 
                 // 마커 제거

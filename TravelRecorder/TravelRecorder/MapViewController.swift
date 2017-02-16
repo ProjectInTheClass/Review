@@ -17,7 +17,13 @@ class MapViewController: UIViewController {
     @IBAction func addLocation(_ sender: Any) {
         
         
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
         
+        
+        
+        /*
         print("경로 추가 버튼을 눌렀습니다")
         // 경로 추가 팝업창 띄우기
         let alertController = UIAlertController(title: "경로를 추가해주세요", message: "상세경로는 지도에 표시됩니다", preferredStyle: .alert)
@@ -46,11 +52,12 @@ class MapViewController: UIViewController {
         alertController.addAction(addAction)
         
         self.present(alertController, animated: true, completion: nil)
+        */
         
         
     }
     
-
+/*
     func saveNewLocation() {
         print("새로 입력된 경로를 LocationInfo에 저장합니다")
         
@@ -90,18 +97,18 @@ class MapViewController: UIViewController {
         
         putLocationButtons()
     }
-
+*/
     
     
     func putLocationButtons() {
         
         print("putLocationButtons들어옴")
         
-        var labelInfo: Results<Label>?
+        var locationInfo: Results<LocationInfo>?
         
         let realm = try? Realm()
         
-        labelInfo = realm?.objects(Label.self)
+        locationInfo = realm?.objects(LocationInfo.self)
         
         
         print(Realm.Configuration.defaultConfiguration.fileURL)
@@ -120,19 +127,19 @@ class MapViewController: UIViewController {
         
         self.view.addSubview(buttonStackView)
         
-        if labelInfo != nil {
+        if locationInfo != nil {
             
             
             
             
-            for loc in labelInfo! {
+            for loc in locationInfo! {
                 
                 let button = UIButton()
                 button.backgroundColor = .white
                 button.setTitleColor(.black, for: .normal)
                 button.setTitle(loc.labelLocation, for: .normal)
                 button.sizeToFit()
-                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                //button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
                 
                 buttonStackView.addArrangedSubview(button)
               
@@ -145,13 +152,7 @@ class MapViewController: UIViewController {
     }
 
     
-    func buttonAction(_ sender: UIButton) {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
 
-    }
-    
     
     
     
@@ -191,25 +192,24 @@ extension MapViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         
         let realm = try? Realm()
-        let detailInfo: Detail = Detail()
-        if let detail = place.formattedAddress {
-            detailInfo.detailLocation = detail
-        }
-        detailInfo.simpleLocation = place.name
-        detailInfo.latitude = place.coordinate.latitude
-        detailInfo.longitude = place.coordinate.longitude
+        let locationInfo: LocationInfo = LocationInfo()
+        
+        locationInfo.labelLocation = place.name
+        locationInfo.latitude = place.coordinate.latitude
+        locationInfo.longitude = place.coordinate.longitude
    
         try? realm?.write {
-            realm?.add(detailInfo)
+            realm?.add(locationInfo)
         }
         
-        //loadView()
         
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
         print("Place coordinate: \(place.coordinate)")
         print("Place addressComponents: \(place.addressComponents)")
+        
+        putLocationButtons()
         
         dismiss(animated: true, completion: nil)
     }
